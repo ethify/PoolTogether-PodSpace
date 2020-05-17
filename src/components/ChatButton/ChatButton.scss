@@ -1,0 +1,14 @@
+.chat-bar {
+  position: absolute;
+  .sc-launcher {
+    // left: 25px !important;
+    right: 352px !important;
+    border: 1px solid var(--themeLabelColor);
+  }
+
+  .popupChat {
+    .sc-chat-window {
+      right: 352px !important;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.Toolbar {
+  display: flex;
+  padding: 12px 2em;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+
+  .app-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 800;
+    font-size: 32px;
+    margin-left: 12px;
+    color: var(--white);
+    font-family: var(--appNameFont);
+    letter-spacing: 0.9px;
+  }
+
+  .wallet-container {
+    padding: 12px 32px;
+    border: 1px solid var(--white);
+    border-radius: 3rem;
+    color: var(--white);
+    font-size: 0.9rem;
+    background-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 500;
+
+    .address-container {
+      display: flex;
+      align-items: center;
+      .address-blockie {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        margin-left: 10px;
+      }
+
+      .metamask-icon {
+        height: 20px;
+        width: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .connected {
+    color: var(--themeColorBlue);
+    border: 1px solid var(--themeColorBlue);
+  }
+}
