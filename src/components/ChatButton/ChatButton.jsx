@@ -4,7 +4,7 @@ import ChatBox from "3box-chatbox-react";
 import Box from "3box";
 
 class ChatButton extends React.Component {
-  SPACE_NAME = "PodConnect";
+  SPACE_NAME = "PodChatSpace";
   THREAD_NAME = "globalChat";
   constructor(props) {
     super(props);
@@ -21,6 +21,7 @@ class ChatButton extends React.Component {
     this.setState({ box });
   }
   async componentDidUpdate() {
+    console.log('threadName', this.props.threadName)
     if (this.props.walletAddress !== this.state.myAddress) {
       // console.log("Entering", this.props.walletAddress, this.state.myAddress);
       this.handleLogin();
@@ -47,7 +48,7 @@ class ChatButton extends React.Component {
             // spaceName='3boxtestcomments'
             // threadName='ghostChatTest5'
             spaceName={this.SPACE_NAME}
-            threadName={this.THREAD_NAME}
+            threadName={this.props.threadName}
             // case A & B
             box={box}
             currentUserAddr={myAddress}

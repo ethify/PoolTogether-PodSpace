@@ -2,9 +2,12 @@ import Onboard from "bnc-onboard";
 import * as Web3 from "web3";
 import * as Box from "3box";
 import * as contract from "@truffle/contract";
-import Pod from "../pods/contracts/Pod.sol";
+import Pod from "../pods/build/contracts/Pod.json";
+import ERC20 from "../pods/build/contracts/ERC20.json";
 import { request } from "graphql-request";
 import { IdentityWallet } from "identity-wallet";
+import * as BigNumber from "bignumber.js"
+
 
 let web3;
 let boxInstance;
@@ -12,12 +15,11 @@ let space;
 
 const seed =
   "0x7acca0ba544b6bb4f6ad3cfccd375b76a2c1587250f0036f00d1d476bbb679b3";
-const daiAddress = "";
-const DAI = "";
+const daiAddress = "0x4F96Fe3b7A6Cf9725f59d353F723c1bDb64CA6Aa";
 
 const onboard = Onboard({
   dappId: "052b3fe9-87d5-4614-b2e9-6dd81115979a",
-  networkId: 4,
+  networkId: 42,
   subscriptions: {
     wallet: (wallet) => {
       web3 = new Web3(wallet.provider);
@@ -33,9 +35,11 @@ export const getAccount = async () => {
 
   return currentState.address;
 };
+
 const getConsent = async ({ type, origin, spaces }) => {
   return true;
 };
+
 export const getGlobal3BoxInstance = async () => {
   const idWallet = new IdentityWallet(getConsent, {
     seed,
@@ -49,7 +53,7 @@ export const getGlobal3BoxInstance = async () => {
 };
 
 export const getUser3BoxInstance = async () => {
-  const currentUser = getBalance();
+  const currentUser = await defaultAddress();
   const spaceData = await Box.getSpace(currentUser, "PodChatSpace");
 
   return spaceData;
@@ -57,7 +61,7 @@ export const getUser3BoxInstance = async () => {
 
 export const getUserPods = async () => {
   const userSpace = await getUser3BoxInstance();
-  let pods = space.public.get("userPodList");
+  let pods = userSpace.public.get("userPodList");
   return pods;
 };
 
@@ -81,9 +85,9 @@ export const getBalance = (address) => {
 };
 
 export const getDAIBalance = async () => {
-  const currentUser = getBalance();
+  const currentUser = await defaultAddress();
 
-  const daiContract = contract(DAI);
+  const daiContract = contract(ERC20);
   daiContract.setProvider(web3.currentProvider);
   const daiInstance = await daiContract.at(daiAddress);
 
@@ -93,19 +97,21 @@ export const getDAIBalance = async () => {
 };
 
 export const depositToPod = async (podAddress, amount) => {
+  const currentUser = await defaultAddress()
   const pod = contract(Pod);
   pod.setProvider(web3.currentProvider);
   let podInstance = await pod.at(podAddress);
 
-  const daiContract = contract(DAI);
+  const daiContract = contract(ERC20);
   daiContract.setProvider(web3.currentProvider);
   const daiInstance = await daiContract.at(daiAddress);
 
-  //Transaction 1
-  daiInstance.approve(podAddress, amount);
+  const depositAmount = new BigNumber(amount * new BigNumber(10 ** 18))
 
+  //Transaction 1
+  await daiInstance.approve(podAddress, depositAmount,{from: currentUser});
   //Transaction 2
-  podInstance.deposit(amount, []);
+  await podInstance.deposit(depositAmount, [],{from: currentUser});
 };
 
 export const redeemFromPod = async (podAddress, amount) => {
@@ -136,7 +142,7 @@ export const createPod = async (podName) => {
 export const getPodQuery = async (podAddress) => {
   const query = `
   {
-    pod(address: "${podAddress}"){
+    pod(id: "${podAddress}"){
       id
       address
       podPlayers{
@@ -144,7 +150,6 @@ export const getPodQuery = async (podAddress) => {
         address
         balance
         balanceUnderlying
-        pendingDeposit
         version
       }
       podPlayersCount
@@ -163,7 +168,7 @@ export const getPodQuery = async (podAddress) => {
   `;
 
   return request(
-    "https://api.thegraph.com/subgraphs/name/pooltogether/pooltogether",
+    "https://api.thegraph.com/subgraphs/name/pooltogether/pooltogether-kovan",
     query
   );
 };
