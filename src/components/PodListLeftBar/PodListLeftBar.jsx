@@ -3,7 +3,7 @@ import "./PodListLeftBar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
-function PodListLeftBar() {
+function PodListLeftBar(props) {
   return (
     <div className="pod-list-left-bar">
       <div className="pod-list-header-container">
@@ -20,8 +20,15 @@ function PodListLeftBar() {
         </button>
       </div>
       <div className="pod-list-container">
-        <div className="pod-list-item"># Pod 1</div>
-        <div className="pod-list-item"># Pod 2</div>
+        {props.userPods.map((pod, key) => (
+          <div
+            key={key}
+            onClick={(e) => props.setCurrentPod(pod)}
+            className="pod-list-item"
+          >
+            {pod.name}
+          </div>
+        ))}
       </div>
     </div>
   );
