@@ -4,43 +4,44 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
 import makeBlockie from "ethereum-blockies-base64";
 import { shortenAddress } from "../../utils";
+import { ActionContext } from "../../hooks";
 
 function MemberListRightBar(props) {
   let address = "0xa7B5B93BF8B322023BDa57e2C86B57f4DDb4F4a1";
-  console.log('props',props.membersList)
+  console.log("props", props.membersList);
+  const { toggleModal } = React.useContext(ActionContext);
+  const openModal = () => {
+    toggleModal({
+      openModal: true,
+      modalConfig: { inviteLink: `http://localhost:3001/${address}/join` },
+    });
+  };
   return (
     <div className="member-list-right-bar">
       <div className="member-list-header">Pod Member List</div>
       <div className="member-list-container">
-        {props.membersList.length > 0
-          ? props.membersList.map((member) => (
-              <div>
-                <div className="member-list-item">
-                  <img
-                    src={makeBlockie(member)}
-                    alt="address blockie"
-                    className="member-address-blockie"
-                  />
-                  <span className="member-address">
-                    {shortenAddress(member)}
-                  </span>
-                </div>
-              </div>
-            ))
-          : (
+        {props.membersList.length > 0 ? (
+          props.membersList.map((member) => (
             <div>
-              <h4>
-              No Members Selected
-              </h4>
+              <div className="member-list-item">
+                <img
+                  src={makeBlockie(member)}
+                  alt="address blockie"
+                  className="member-address-blockie"
+                />
+                <span className="member-address">{shortenAddress(member)}</span>
+              </div>
             </div>
-          )}
+          ))
+        ) : (
+          <div>
+            <h4>No Members Selected</h4>
+          </div>
+        )}
       </div>
       <div className="member-invite-link">
         <span className="member-invite-title">Invite Members</span>
-        <button
-          className="member-invite-button"
-          // onClick={(e) => this.setNodeProperties(true)}
-        >
+        <button className="member-invite-button" onClick={(e) => openModal()}>
           <span>
             <FontAwesomeIcon icon={faShareAlt} />
           </span>

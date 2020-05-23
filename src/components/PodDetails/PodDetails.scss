@@ -4,7 +4,7 @@
   overflow-y: auto;
 
   .pool-together-details-container {
-    margin: 3em 6em 2em 6em;
+    margin: 2em 6em 2em 6em;
     padding: 2em 4em;
     color: var(--white);
     background-color: var(--themeColorHover);
@@ -16,7 +16,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 36px;
+      font-size: 32px;
       color: var(--themeLabelColor);
       span {
         margin: 0px 8px;
@@ -39,10 +39,26 @@
         }
       }
     }
+    .pool-together-estimate-prize {
+      text-align: center;
+      margin-top: 1.2em;
+      .pool-together-estimate-prize-title {
+        color: var(--themeColorBlue);
+      }
+      .pool-together-estimate-prize-value {
+        font-size: 48px;
+        font-weight: 600;
+        margin-top: -6px;
+        .pool-together-estimate-prize-icon {
+          font-size: 42px;
+          font-weight: 500;
+        }
+      }
+    }
     .pool-together-details-stats-container {
       display: flex;
-      justify-content: space-between;
-      margin-top: 2em;
+      justify-content: space-around;
+      margin-top: 1.2em;
 
       .pool-together-details-stats-item {
         text-align: center;
@@ -50,7 +66,7 @@
           color: var(--themeColorBlue);
         }
         .pool-together-details-stats-value {
-          font-size: 36px;
+          font-size: 32px;
           font-weight: 600;
           margin-top: -6px;
         }
@@ -59,8 +75,8 @@
   }
 
   .pod-details-container {
-    margin: 3em 6em 2em 6em;
-    padding: 2em 4em;
+    margin: 1.5em 6em 2em 6em;
+    padding: 1.5em 4em;
     color: var(--white);
     background-color: var(--themeColorHover);
     border-radius: 3em;
@@ -71,7 +87,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 36px;
+      font-size: 32px;
       color: var(--themeLabelColor);
       span {
         margin: 0px 8px;
@@ -99,7 +115,7 @@
     .pod-details-stats-container {
       display: flex;
       justify-content: space-around;
-      margin-top: 2em;
+      margin-top: 1.5em;
 
       .pod-details-stats-item {
         text-align: center;
@@ -108,7 +124,7 @@
         }
 
         .pod-details-stats-value {
-          font-size: 36px;
+          font-size: 32px;
           font-weight: 600;
           margin-top: -6px;
         }
@@ -117,7 +133,7 @@
   }
 
   .pod-actions-container {
-    margin: 3em 6em 2em 6em;
+    margin: 2.5em 6em 2em 6em;
     display: flex;
     align-items: center;
 
@@ -153,7 +169,7 @@
         .pod-actions-item-input {
           border: 0;
           background: transparent;
-          font-size: 18px;
+          font-size: 16px;
           color: var(--white);
           flex: 1;
           outline: none;
