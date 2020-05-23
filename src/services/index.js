@@ -59,10 +59,21 @@ export const getUser3BoxInstance = async () => {
   return spaceData;
 };
 
+export const getAllPods = async () => {
+  const globalSpace = await getGlobal3BoxInstance()
+  
+  const allPodsList = await globalSpace.public.get('podsList')
+  return allPodsList
+}
+
 export const getUserPods = async () => {
   const userSpace = await getUser3BoxInstance();
   let pods = userSpace.public.get("userPodList");
-  return pods;
+
+  const allPodsList = await getAllPods()
+  const userPods = allPodsList.filter((pod) => { pods.includes(pod.address) })
+
+  return userPods
 };
 
 export const addPodtoUser = async (podAddress) => {
