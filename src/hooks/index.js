@@ -18,11 +18,19 @@ export const AppProvider = (props) => {
             ...prevState,
             walletAddress: "",
           };
+        case "OPEN_MODAL":
+          return {
+            ...prevState,
+            openModal: action.modal.openModal,
+            modalConfig: action.modal.modalConfig,
+          };
         default:
       }
     },
     {
       walletAddress: "",
+      openModal: false,
+      modalConfig: {},
     }
   );
 
@@ -34,6 +42,9 @@ export const AppProvider = (props) => {
       },
       signOut: () => {
         dispatch({ type: "SIGN_OUT" });
+      },
+      toggleModal: (modal) => {
+        dispatch({ type: "OPEN_MODAL", modal });
       },
     }),
     []
