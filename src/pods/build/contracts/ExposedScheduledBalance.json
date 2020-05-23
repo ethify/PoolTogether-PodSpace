@@ -1,0 +1,1456 @@
+{
+  "contractName": "ExposedScheduledBalance",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "currentTimestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "currentTimestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "balanceAt",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "withdrawAll",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"currentTimestamp\",\"type\":\"uint256\"}],\"name\":\"balanceAt\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"currentTimestamp\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"withdrawAll\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/test/ExposedScheduledBalance.sol\":\"ExposedScheduledBalance\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/ScheduledBalance.sol\":{\"keccak256\":\"0x9a3d212338a68b4f0fe4f8d54f44436cd24b73e1ba4381beda32c87ae95b588d\",\"urls\":[\"bzz-raw://203a60f505340fc27f5b0d3f364a04c02f775247c5886532079f59c469dce3b9\",\"dweb:/ipfs/QmZJ51sgKtDVx13aXZCEB77jqUpA2NGvp7NfRQaAo3aY87\"]},\"/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/test/ExposedScheduledBalance.sol\":{\"keccak256\":\"0x385642cf8ceb6754979b2f9d3bfac90de81ece0e336b178ac1a633e51e1ffa95\",\"urls\":[\"bzz-raw://64c56cb816a51fcd825bc450035ea9e33a888fc29f2643bd440a99e77b6148df\",\"dweb:/ipfs/QmPLUxLUCurNY8oUkxHa7t3eux5nsPCwiQsqNdPR1pNJr5\"]},\"@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x640b6dee7a4b830bdfd52b5031a07fc2b12209f5b2e29e5d364a7d37f69d8076\",\"urls\":[\"bzz-raw://31113152e1ddb78fe7a4197f247591ca894e93f916867beb708d8e747b6cc74f\",\"dweb:/ipfs/QmbZaJyXdpsYGykVhHH9qpVGQg9DGCxE2QufbCUy3daTgq\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506103c8806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80632e1a7d4d146100515780637a0b450b14610070578063853828b61461009f578063e2bbb158146100a7575b600080fd5b61006e6004803603602081101561006757600080fd5b50356100ca565b005b61008d6004803603602081101561008657600080fd5b50356100de565b60408051918252519081900360200190f35b61008d6100f6565b61006e600480360360408110156100bd57600080fd5b5080359060200135610105565b6100db60008263ffffffff61011b16565b50565b60006100f0818363ffffffff61018916565b92915050565b6000610102600061019f565b90565b6101176000838363ffffffff6101ac16565b5050565b8154811115610171576040805162461bcd60e51b815260206004820152601760248201527f5363686564756c656442616c616e63652f696e73756666000000000000000000604482015290519081900360640190fd5b8154610183908263ffffffff61023a16565b90915550565b6000806101968484610283565b50949350505050565b6000600182018190559055565b8260010154811015610205576040805162461bcd60e51b815260206004820152601a60248201527f5363686564756c656442616c616e63652f6261636b7761726473000000000000604482015290519081900360640190fd5b808360010154141561022a578254610223908363ffffffff6102a216565b8355610235565b818355600183018190555b505050565b600061027c83836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f7700008152506102fc565b9392505050565b6000808284600101541161029b575050815460018301545b9250929050565b60008282018381101561027c576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b6000818484111561038b5760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b83811015610350578181015183820152602001610338565b50505050905090810190601f16801561037d5780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b50505090039056fea265627a7a723158209267287b3670195621930b729dab1861a3046a7cc13d452133b0ed17e4d157f864736f6c634300050c0032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80632e1a7d4d146100515780637a0b450b14610070578063853828b61461009f578063e2bbb158146100a7575b600080fd5b61006e6004803603602081101561006757600080fd5b50356100ca565b005b61008d6004803603602081101561008657600080fd5b50356100de565b60408051918252519081900360200190f35b61008d6100f6565b61006e600480360360408110156100bd57600080fd5b5080359060200135610105565b6100db60008263ffffffff61011b16565b50565b60006100f0818363ffffffff61018916565b92915050565b6000610102600061019f565b90565b6101176000838363ffffffff6101ac16565b5050565b8154811115610171576040805162461bcd60e51b815260206004820152601760248201527f5363686564756c656442616c616e63652f696e73756666000000000000000000604482015290519081900360640190fd5b8154610183908263ffffffff61023a16565b90915550565b6000806101968484610283565b50949350505050565b6000600182018190559055565b8260010154811015610205576040805162461bcd60e51b815260206004820152601a60248201527f5363686564756c656442616c616e63652f6261636b7761726473000000000000604482015290519081900360640190fd5b808360010154141561022a578254610223908363ffffffff6102a216565b8355610235565b818355600183018190555b505050565b600061027c83836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f7700008152506102fc565b9392505050565b6000808284600101541161029b575050815460018301545b9250929050565b60008282018381101561027c576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b6000818484111561038b5760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b83811015610350578181015183820152602001610338565b50505050905090810190601f16801561037d5780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b50505090039056fea265627a7a723158209267287b3670195621930b729dab1861a3046a7cc13d452133b0ed17e4d157f864736f6c634300050c0032",
+  "sourceMap": "710:595:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;710:595:5;;;;;;;",
+  "deployedSourceMap": "710:595:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;710:595:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;978:87;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;978:87:5;;:::i;:::-;;1069:139;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1069:139:5;;:::i;:::-;;;;;;;;;;;;;;;;1212:91;;;:::i;845:129::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;845:129:5;;;;;;;:::i;978:87::-;1027:33;:16;1053:6;1027:33;:25;:33;:::i;:::-;978:87;:::o;1069:139::-;1137:7;1159:44;1137:7;1186:16;1159:44;:26;:44;:::i;:::-;1152:51;1069:139;-1:-1:-1;;1069:139:5:o;1212:91::-;1253:7;1268:30;:16;:28;:30::i;:::-;1212:91;:::o;845:129::-;919:50;:16;944:6;952:16;919:50;:24;:50;:::i;:::-;845:129;;:::o;2538:189:3:-;2625:16;;2615:26;;;2607:62;;;;;-1:-1:-1;;;2607:62:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;2694:16;;:28;;2715:6;2694:28;:20;:28;:::i;:::-;2675:47;;;-1:-1:-1;2538:189:3:o;3017:186::-;3105:7;3121:15;3141:37;3155:4;3161:16;3141:13;:37::i;:::-;-1:-1:-1;3120:58:3;3017:186;-1:-1:-1;;;;3017:186:3:o;4067:115::-;4123:25;4130:18;;;4123:25;;;4154:23;;4067:115::o;2013:378::-;2135:4;:18;;;2115:16;:38;;2107:77;;;;;-1:-1:-1;;;2107:77:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;2216:16;2194:4;:18;;;:38;2190:197;;;2261:16;;:28;;2282:6;2261:28;:20;:28;:::i;:::-;2242:47;;2190:197;;;2310:25;;;2343:18;;;:37;;;2190:197;2013:378;;;:::o;1274:134:12:-;1332:7;1358:43;1362:1;1365;1358:43;;;;;;;;;;;;;;;;;:3;:43::i;:::-;1351:50;1274:134;-1:-1:-1;;;1274:134:12:o;3652:306:3:-;3756:15;3773:17;3824:16;3802:4;:18;;;:38;3798:123;;-1:-1:-1;;3860:16:3;;3896:18;;;;3798:123;3652:306;;;;;:::o;834:176:12:-;892:7;923:5;;;946:6;;;;938:46;;;;;-1:-1:-1;;;938:46:12;;;;;;;;;;;;;;;;;;;;;;;;;;;1732:187;1818:7;1853:12;1845:6;;;;1837:29;;;;-1:-1:-1;;;1837:29:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;1837:29:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1888:5:12;;;1732:187::o",
+  "source": "/**\nCopyright 2020 PoolTogether Inc.\n\nThis file is part of PoolTogether.\n\nPoolTogether is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation under version 3 of the License.\n\nPoolTogether is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with PoolTogether.  If not, see <https://www.gnu.org/licenses/>.\n*/\n\npragma solidity 0.5.12;\n\nimport \"../ScheduledBalance.sol\";\n\ncontract ExposedScheduledBalance {\n  using ScheduledBalance for ScheduledBalance.State;\n\n  ScheduledBalance.State scheduledBalance;\n\n  function deposit(uint256 amount, uint256 currentTimestamp) external {\n    scheduledBalance.deposit(amount, currentTimestamp);\n  }\n\n  function withdraw(uint256 amount) external {\n    scheduledBalance.withdraw(amount);\n  }\n\n  function balanceAt(uint256 currentTimestamp) external view returns (uint256) {\n    return scheduledBalance.balanceAt(currentTimestamp);\n  }\n\n  function withdrawAll() external returns (uint256) {\n    scheduledBalance.withdrawAll();\n  }\n}",
+  "sourcePath": "/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/test/ExposedScheduledBalance.sol",
+  "ast": {
+    "absolutePath": "/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/test/ExposedScheduledBalance.sol",
+    "exportedSymbols": {
+      "ExposedScheduledBalance": [
+        2027
+      ]
+    },
+    "id": 2028,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1969,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "650:23:5"
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/ScheduledBalance.sol",
+        "file": "../ScheduledBalance.sol",
+        "id": 1970,
+        "nodeType": "ImportDirective",
+        "scope": 2028,
+        "sourceUnit": 1831,
+        "src": "675:33:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2027,
+        "linearizedBaseContracts": [
+          2027
+        ],
+        "name": "ExposedScheduledBalance",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 1973,
+            "libraryName": {
+              "contractScope": null,
+              "id": 1971,
+              "name": "ScheduledBalance",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1830,
+              "src": "753:16:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ScheduledBalance_$1830",
+                "typeString": "library ScheduledBalance"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "747:50:5",
+            "typeName": {
+              "contractScope": null,
+              "id": 1972,
+              "name": "ScheduledBalance.State",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1691,
+              "src": "774:22:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_State_$1691_storage_ptr",
+                "typeString": "struct ScheduledBalance.State"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 1975,
+            "name": "scheduledBalance",
+            "nodeType": "VariableDeclaration",
+            "scope": 2027,
+            "src": "801:39:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_State_$1691_storage",
+              "typeString": "struct ScheduledBalance.State"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1974,
+              "name": "ScheduledBalance.State",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1691,
+              "src": "801:22:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_State_$1691_storage_ptr",
+                "typeString": "struct ScheduledBalance.State"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1989,
+              "nodeType": "Block",
+              "src": "913:61:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1985,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1977,
+                        "src": "944:6:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1986,
+                        "name": "currentTimestamp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1979,
+                        "src": "952:16:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1982,
+                        "name": "scheduledBalance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1975,
+                        "src": "919:16:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$1691_storage",
+                          "typeString": "struct ScheduledBalance.State storage ref"
+                        }
+                      },
+                      "id": 1984,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "deposit",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1738,
+                      "src": "919:24:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_State_$1691_storage_ptr_$_t_uint256_$_t_uint256_$returns$__$bound_to$_t_struct$_State_$1691_storage_ptr_$",
+                        "typeString": "function (struct ScheduledBalance.State storage pointer,uint256,uint256)"
+                      }
+                    },
+                    "id": 1987,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "919:50:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1988,
+                  "nodeType": "ExpressionStatement",
+                  "src": "919:50:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1990,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1980,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1977,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1990,
+                  "src": "862:14:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1976,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "862:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1979,
+                  "name": "currentTimestamp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1990,
+                  "src": "878:24:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1978,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "878:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "861:42:5"
+            },
+            "returnParameters": {
+              "id": 1981,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "913:0:5"
+            },
+            "scope": 2027,
+            "src": "845:129:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2001,
+              "nodeType": "Block",
+              "src": "1021:44:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1998,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1992,
+                        "src": "1053:6:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1995,
+                        "name": "scheduledBalance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1975,
+                        "src": "1027:16:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$1691_storage",
+                          "typeString": "struct ScheduledBalance.State storage ref"
+                        }
+                      },
+                      "id": 1997,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "withdraw",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1764,
+                      "src": "1027:25:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_State_$1691_storage_ptr_$_t_uint256_$returns$__$bound_to$_t_struct$_State_$1691_storage_ptr_$",
+                        "typeString": "function (struct ScheduledBalance.State storage pointer,uint256)"
+                      }
+                    },
+                    "id": 1999,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1027:33:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2000,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1027:33:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2002,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1993,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1992,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2002,
+                  "src": "996:14:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1991,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "996:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "995:16:5"
+            },
+            "returnParameters": {
+              "id": 1994,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1021:0:5"
+            },
+            "scope": 2027,
+            "src": "978:87:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2014,
+              "nodeType": "Block",
+              "src": "1146:62:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2011,
+                        "name": "currentTimestamp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2004,
+                        "src": "1186:16:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2009,
+                        "name": "scheduledBalance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1975,
+                        "src": "1159:16:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$1691_storage",
+                          "typeString": "struct ScheduledBalance.State storage ref"
+                        }
+                      },
+                      "id": 2010,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "balanceAt",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1783,
+                      "src": "1159:26:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_State_$1691_storage_ptr_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_State_$1691_storage_ptr_$",
+                        "typeString": "function (struct ScheduledBalance.State storage pointer,uint256) view returns (uint256)"
+                      }
+                    },
+                    "id": 2012,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1159:44:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 2008,
+                  "id": 2013,
+                  "nodeType": "Return",
+                  "src": "1152:51:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2015,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceAt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2005,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2004,
+                  "name": "currentTimestamp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2015,
+                  "src": "1088:24:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2003,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1088:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1087:26:5"
+            },
+            "returnParameters": {
+              "id": 2008,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2007,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2015,
+                  "src": "1137:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2006,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1137:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1136:9:5"
+            },
+            "scope": 2027,
+            "src": "1069:139:5",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2025,
+              "nodeType": "Block",
+              "src": "1262:41:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2020,
+                        "name": "scheduledBalance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1975,
+                        "src": "1268:16:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$1691_storage",
+                          "typeString": "struct ScheduledBalance.State storage ref"
+                        }
+                      },
+                      "id": 2022,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "withdrawAll",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1829,
+                      "src": "1268:28:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_State_$1691_storage_ptr_$returns$__$bound_to$_t_struct$_State_$1691_storage_ptr_$",
+                        "typeString": "function (struct ScheduledBalance.State storage pointer)"
+                      }
+                    },
+                    "id": 2023,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1268:30:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2024,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1268:30:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2026,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawAll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2016,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1232:2:5"
+            },
+            "returnParameters": {
+              "id": 2019,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2018,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2026,
+                  "src": "1253:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2017,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1253:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1252:9:5"
+            },
+            "scope": 2027,
+            "src": "1212:91:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2028,
+        "src": "710:595:5"
+      }
+    ],
+    "src": "650:655:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/test/ExposedScheduledBalance.sol",
+    "exportedSymbols": {
+      "ExposedScheduledBalance": [
+        2027
+      ]
+    },
+    "id": 2028,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1969,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "650:23:5"
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/ScheduledBalance.sol",
+        "file": "../ScheduledBalance.sol",
+        "id": 1970,
+        "nodeType": "ImportDirective",
+        "scope": 2028,
+        "sourceUnit": 1831,
+        "src": "675:33:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2027,
+        "linearizedBaseContracts": [
+          2027
+        ],
+        "name": "ExposedScheduledBalance",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 1973,
+            "libraryName": {
+              "contractScope": null,
+              "id": 1971,
+              "name": "ScheduledBalance",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1830,
+              "src": "753:16:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ScheduledBalance_$1830",
+                "typeString": "library ScheduledBalance"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "747:50:5",
+            "typeName": {
+              "contractScope": null,
+              "id": 1972,
+              "name": "ScheduledBalance.State",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1691,
+              "src": "774:22:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_State_$1691_storage_ptr",
+                "typeString": "struct ScheduledBalance.State"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 1975,
+            "name": "scheduledBalance",
+            "nodeType": "VariableDeclaration",
+            "scope": 2027,
+            "src": "801:39:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_State_$1691_storage",
+              "typeString": "struct ScheduledBalance.State"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1974,
+              "name": "ScheduledBalance.State",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1691,
+              "src": "801:22:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_State_$1691_storage_ptr",
+                "typeString": "struct ScheduledBalance.State"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1989,
+              "nodeType": "Block",
+              "src": "913:61:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1985,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1977,
+                        "src": "944:6:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1986,
+                        "name": "currentTimestamp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1979,
+                        "src": "952:16:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1982,
+                        "name": "scheduledBalance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1975,
+                        "src": "919:16:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$1691_storage",
+                          "typeString": "struct ScheduledBalance.State storage ref"
+                        }
+                      },
+                      "id": 1984,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "deposit",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1738,
+                      "src": "919:24:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_State_$1691_storage_ptr_$_t_uint256_$_t_uint256_$returns$__$bound_to$_t_struct$_State_$1691_storage_ptr_$",
+                        "typeString": "function (struct ScheduledBalance.State storage pointer,uint256,uint256)"
+                      }
+                    },
+                    "id": 1987,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "919:50:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1988,
+                  "nodeType": "ExpressionStatement",
+                  "src": "919:50:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1990,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1980,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1977,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1990,
+                  "src": "862:14:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1976,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "862:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1979,
+                  "name": "currentTimestamp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1990,
+                  "src": "878:24:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1978,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "878:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "861:42:5"
+            },
+            "returnParameters": {
+              "id": 1981,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "913:0:5"
+            },
+            "scope": 2027,
+            "src": "845:129:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2001,
+              "nodeType": "Block",
+              "src": "1021:44:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1998,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1992,
+                        "src": "1053:6:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1995,
+                        "name": "scheduledBalance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1975,
+                        "src": "1027:16:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$1691_storage",
+                          "typeString": "struct ScheduledBalance.State storage ref"
+                        }
+                      },
+                      "id": 1997,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "withdraw",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1764,
+                      "src": "1027:25:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_State_$1691_storage_ptr_$_t_uint256_$returns$__$bound_to$_t_struct$_State_$1691_storage_ptr_$",
+                        "typeString": "function (struct ScheduledBalance.State storage pointer,uint256)"
+                      }
+                    },
+                    "id": 1999,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1027:33:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2000,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1027:33:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2002,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1993,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1992,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2002,
+                  "src": "996:14:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1991,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "996:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "995:16:5"
+            },
+            "returnParameters": {
+              "id": 1994,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1021:0:5"
+            },
+            "scope": 2027,
+            "src": "978:87:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2014,
+              "nodeType": "Block",
+              "src": "1146:62:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2011,
+                        "name": "currentTimestamp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2004,
+                        "src": "1186:16:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2009,
+                        "name": "scheduledBalance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1975,
+                        "src": "1159:16:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$1691_storage",
+                          "typeString": "struct ScheduledBalance.State storage ref"
+                        }
+                      },
+                      "id": 2010,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "balanceAt",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1783,
+                      "src": "1159:26:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_State_$1691_storage_ptr_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_State_$1691_storage_ptr_$",
+                        "typeString": "function (struct ScheduledBalance.State storage pointer,uint256) view returns (uint256)"
+                      }
+                    },
+                    "id": 2012,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1159:44:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 2008,
+                  "id": 2013,
+                  "nodeType": "Return",
+                  "src": "1152:51:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2015,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceAt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2005,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2004,
+                  "name": "currentTimestamp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2015,
+                  "src": "1088:24:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2003,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1088:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1087:26:5"
+            },
+            "returnParameters": {
+              "id": 2008,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2007,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2015,
+                  "src": "1137:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2006,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1137:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1136:9:5"
+            },
+            "scope": 2027,
+            "src": "1069:139:5",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2025,
+              "nodeType": "Block",
+              "src": "1262:41:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2020,
+                        "name": "scheduledBalance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1975,
+                        "src": "1268:16:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$1691_storage",
+                          "typeString": "struct ScheduledBalance.State storage ref"
+                        }
+                      },
+                      "id": 2022,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "withdrawAll",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1829,
+                      "src": "1268:28:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_State_$1691_storage_ptr_$returns$__$bound_to$_t_struct$_State_$1691_storage_ptr_$",
+                        "typeString": "function (struct ScheduledBalance.State storage pointer)"
+                      }
+                    },
+                    "id": 2023,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1268:30:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2024,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1268:30:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2026,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawAll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2016,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1232:2:5"
+            },
+            "returnParameters": {
+              "id": 2019,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2018,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2026,
+                  "src": "1253:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2017,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1253:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1252:9:5"
+            },
+            "scope": 2027,
+            "src": "1212:91:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2028,
+        "src": "710:595:5"
+      }
+    ],
+    "src": "650:655:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-05-19T21:28:44.952Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

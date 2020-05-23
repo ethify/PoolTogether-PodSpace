@@ -1,0 +1,3510 @@
+{
+  "contractName": "ExposedExchangeRateTracker",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "length",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "get",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "baseExchangeRateMantissa",
+          "type": "uint256"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokens",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "collateral",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "collateralizationChanged",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokens",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenToCollateralValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "collateral",
+          "type": "uint256"
+        }
+      ],
+      "name": "collateralToTokenValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokens",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenToCollateralValueAt",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "collateral",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "collateralToTokenValueAt",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "drawId",
+          "type": "uint256"
+        }
+      ],
+      "name": "search",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"collateral\",\"type\":\"uint256\"}],\"name\":\"collateralToTokenValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"collateral\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"name\":\"collateralToTokenValueAt\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokens\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"collateral\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"name\":\"collateralizationChanged\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"get\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"baseExchangeRateMantissa\",\"type\":\"uint256\"}],\"name\":\"initialize\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"length\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"drawId\",\"type\":\"uint256\"}],\"name\":\"search\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokens\",\"type\":\"uint256\"}],\"name\":\"tokenToCollateralValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokens\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"name\":\"tokenToCollateralValueAt\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/test/ExposedExchangeRateTracker.sol\":\"ExposedExchangeRateTracker\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/ExchangeRateTracker.sol\":{\"keccak256\":\"0x8ed42fc5749741a351c0da23d91787618956e34c4912d23fd35662858b8ccf1e\",\"urls\":[\"bzz-raw://c2e0dfe102859efa8bf567230cc47012834deafda1aefa75c7a7f7f4841d07b8\",\"dweb:/ipfs/QmV7QxX9SeZV6TSv8qefrFwm6tRuSrQVzciFgm2KRogRP5\"]},\"/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/FixedPoint.sol\":{\"keccak256\":\"0x1705dc68a77f6a23167bac3ff2d987d9a3194c0cb2db5a67dd1d083407d10a5c\",\"urls\":[\"bzz-raw://9f9bbbc0adebc3f83e1d3c66ecc4c17cf7560c8d8d86bbf114af2ae4c901347c\",\"dweb:/ipfs/QmayBKpyW5ZuUrK6uig4rBanWktmeaAoWURDuaDxmMXaCk\"]},\"/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/test/ExposedExchangeRateTracker.sol\":{\"keccak256\":\"0xe9327d5b7ab60185c8fd311026cc3aa74db0b30d70bed4123a6f050e6376454b\",\"urls\":[\"bzz-raw://9db452674cd1ae05cd87e4212106b0191847a0d3f108c5e160ba04af514bdafc\",\"dweb:/ipfs/QmSvQ8sUPXwHR8suyT7yR5znnYekHgGa8W6JJiN5VFSYyH\"]},\"@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x640b6dee7a4b830bdfd52b5031a07fc2b12209f5b2e29e5d364a7d37f69d8076\",\"urls\":[\"bzz-raw://31113152e1ddb78fe7a4197f247591ca894e93f916867beb708d8e747b6cc74f\",\"dweb:/ipfs/QmbZaJyXdpsYGykVhHH9qpVGQg9DGCxE2QufbCUy3daTgq\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610838806100206000396000f3fe608060405234801561001057600080fd5b50600436106100935760003560e01c8063d67d7a7d11610066578063d67d7a7d1461010f578063e49c2f151461012c578063fb1808a014610155578063fc156fe014610178578063fe4b84df1461019557610093565b80631f7b6d3214610098578063242d39b5146100b25780638adce39d146100d55780639507d39a146100f2575b600080fd5b6100a06101b4565b60408051918252519081900360200190f35b6100a0600480360360408110156100c857600080fd5b50803590602001356101ba565b6100a0600480360360208110156100eb57600080fd5b50356101d4565b6100a06004803603602081101561010857600080fd5b50356101ec565b6100a06004803603602081101561012557600080fd5b5035610216565b6100a06004803603606081101561014257600080fd5b5080359060208101359060400135610228565b6100a06004803603604081101561016b57600080fd5b5080359060200135610244565b6100a06004803603602081101561018e57600080fd5b5035610257565b6101b2600480360360208110156101ab57600080fd5b5035610269565b005b60005490565b60006101cd81848463ffffffff61027d16565b9392505050565b60006101e6818363ffffffff61033716565b92915050565b60008060000182815481106101fd57fe5b9060005260206000209060020201600001549050919050565b60006101e6818363ffffffff6103cb16565b600061023c8185858563ffffffff61042c16565b509392505050565b60006101cd81848463ffffffff61058d16565b60006101e6818363ffffffff61061216565b61027a60008263ffffffff61067c16565b50565b60008061028a8584610612565b905073__FixedPoint____________________________6364fb38b7858760000184815481106102b657fe5b90600052602060002090600202016001016040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b15801561030257600080fd5b505af4158015610316573d6000803e3d6000fd5b505050506040513d602081101561032c57600080fd5b505195945050505050565b600073__FixedPoint____________________________6373710cd861035c85610768565b846040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b15801561039857600080fd5b505af41580156103ac573d6000803e3d6000fd5b505050506040513d60208110156103c257600080fd5b50519392505050565b600073__FixedPoint____________________________6364fb38b7836103f186610768565b6040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b15801561039857600080fd5b60006104378561079d565b845482908690600019810190811061044b57fe5b90600052602060002090600202016000015411156104b0576040805162461bcd60e51b815260206004820152601d60248201527f45786368616e676552617465547261636b65722f746f6f2d6561726c79000000604482015290519081900360640190fd5b6104b86107f0565b604051806020016040528073__FixedPoint____________________________63a94b733488886040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b15801561051a57600080fd5b505af415801561052e573d6000803e3d6000fd5b505050506040513d602081101561054457600080fd5b50519052604080518082019091528481526020818101838152895460018181018c5560008c81529390932093516002909102909301928355515191015551915050949350505050565b60008061059a8584610612565b905073__FixedPoint____________________________6373710cd88660000183815481106105c557fe5b9060005260206000209060020201600101866040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b15801561030257600080fd5b600061061d8361079d565b82546000905b6001810382101561067057845460028383030483019086908290811061064557fe5b9060005260206000209060020201600001548510156106665780915061066a565b8092505b50610623565b60001901949350505050565b600081116106d1576040805162461bcd60e51b815260206004820152601c60248201527f45786368616e676552617465547261636b65722f6e6f6e2d7a65726f00000000604482015290519081900360640190fd5b815415610725576040805162461bcd60e51b815260206004820152601d60248201527f45786368616e676552617465547261636b65722f696e69742d70726576000000604482015290519081900360640190fd5b6040805180820182526000808252825160208181019094529384528282019384528454600181810187559582529290209051600290920201908155905151910155565b60006107738261079d565b81548290600019810190811061078557fe5b90600052602060002090600202016001019050919050565b805461027a576040805162461bcd60e51b815260206004820152601c60248201527f45786368616e676552617465547261636b65722f6e6f742d696e697400000000604482015290519081900360640190fd5b604051806020016040528060008152509056fea265627a7a723158204f5c8960a0fd1e12c53dd4a7f581307646a6e7072fc21a85d3ebd1f9e1997faf64736f6c634300050c0032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100935760003560e01c8063d67d7a7d11610066578063d67d7a7d1461010f578063e49c2f151461012c578063fb1808a014610155578063fc156fe014610178578063fe4b84df1461019557610093565b80631f7b6d3214610098578063242d39b5146100b25780638adce39d146100d55780639507d39a146100f2575b600080fd5b6100a06101b4565b60408051918252519081900360200190f35b6100a0600480360360408110156100c857600080fd5b50803590602001356101ba565b6100a0600480360360208110156100eb57600080fd5b50356101d4565b6100a06004803603602081101561010857600080fd5b50356101ec565b6100a06004803603602081101561012557600080fd5b5035610216565b6100a06004803603606081101561014257600080fd5b5080359060208101359060400135610228565b6100a06004803603604081101561016b57600080fd5b5080359060200135610244565b6100a06004803603602081101561018e57600080fd5b5035610257565b6101b2600480360360208110156101ab57600080fd5b5035610269565b005b60005490565b60006101cd81848463ffffffff61027d16565b9392505050565b60006101e6818363ffffffff61033716565b92915050565b60008060000182815481106101fd57fe5b9060005260206000209060020201600001549050919050565b60006101e6818363ffffffff6103cb16565b600061023c8185858563ffffffff61042c16565b509392505050565b60006101cd81848463ffffffff61058d16565b60006101e6818363ffffffff61061216565b61027a60008263ffffffff61067c16565b50565b60008061028a8584610612565b905073__FixedPoint____________________________6364fb38b7858760000184815481106102b657fe5b90600052602060002090600202016001016040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b15801561030257600080fd5b505af4158015610316573d6000803e3d6000fd5b505050506040513d602081101561032c57600080fd5b505195945050505050565b600073__FixedPoint____________________________6373710cd861035c85610768565b846040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b15801561039857600080fd5b505af41580156103ac573d6000803e3d6000fd5b505050506040513d60208110156103c257600080fd5b50519392505050565b600073__FixedPoint____________________________6364fb38b7836103f186610768565b6040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b15801561039857600080fd5b60006104378561079d565b845482908690600019810190811061044b57fe5b90600052602060002090600202016000015411156104b0576040805162461bcd60e51b815260206004820152601d60248201527f45786368616e676552617465547261636b65722f746f6f2d6561726c79000000604482015290519081900360640190fd5b6104b86107f0565b604051806020016040528073__FixedPoint____________________________63a94b733488886040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b15801561051a57600080fd5b505af415801561052e573d6000803e3d6000fd5b505050506040513d602081101561054457600080fd5b50519052604080518082019091528481526020818101838152895460018181018c5560008c81529390932093516002909102909301928355515191015551915050949350505050565b60008061059a8584610612565b905073__FixedPoint____________________________6373710cd88660000183815481106105c557fe5b9060005260206000209060020201600101866040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b15801561030257600080fd5b600061061d8361079d565b82546000905b6001810382101561067057845460028383030483019086908290811061064557fe5b9060005260206000209060020201600001548510156106665780915061066a565b8092505b50610623565b60001901949350505050565b600081116106d1576040805162461bcd60e51b815260206004820152601c60248201527f45786368616e676552617465547261636b65722f6e6f6e2d7a65726f00000000604482015290519081900360640190fd5b815415610725576040805162461bcd60e51b815260206004820152601d60248201527f45786368616e676552617465547261636b65722f696e69742d70726576000000604482015290519081900360640190fd5b6040805180820182526000808252825160208181019094529384528282019384528454600181810187559582529290209051600290920201908155905151910155565b60006107738261079d565b81548290600019810190811061078557fe5b90600052602060002090600202016001019050919050565b805461027a576040805162461bcd60e51b815260206004820152601c60248201527f45786368616e676552617465547261636b65722f6e6f742d696e697400000000604482015290519081900360640190fd5b604051806020016040528060008152509056fea265627a7a723158204f5c8960a0fd1e12c53dd4a7f581307646a6e7072fc21a85d3ebd1f9e1997faf64736f6c634300050c0032",
+  "sourceMap": "741:1404:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;741:1404:4;;;;;;;",
+  "deployedSourceMap": "741:1404:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;741:1404:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;877:94;;;:::i;:::-;;;;;;;;;;;;;;;;1689:168;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1689:168:4;;;;;;;:::i;1543:142::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1543:142:4;;:::i;975:114::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;975:114:4;;:::i;1405:134::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1405:134:4;;:::i;1213:188::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1213:188:4;;;;;;;;;;;;:::i;1861:176::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1861:176:4;;;;;;;:::i;2041:102::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2041:102:4;;:::i;1093:116::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1093:116:4;;:::i;:::-;;877:94;918:7;940:26;877:94;:::o;1689:168::-;1781:7;1803:49;1781:7;1834:6;1842:9;1803:49;:30;:49;:::i;:::-;1796:56;1689:168;-1:-1:-1;;;1689:168:4:o;1543:142::-;1618:7;1640:40;1618:7;1669:10;1640:40;:28;:40;:::i;:::-;1633:47;1543:142;-1:-1:-1;;1543:142:4:o;975:114::-;1026:7;1048:5;:19;;1068:5;1048:26;;;;;;;;;;;;;;;;;;:36;;;1041:43;;975:114;;;:::o;1405:134::-;1476:7;1498:36;1476:7;1527:6;1498:36;:28;:36;:::i;1213:188::-;1320:7;1335:61;1320:7;1366:6;1374:10;1386:9;1335:61;:30;:61;:::i;:::-;;1213:188;;;;;:::o;1861:176::-;1957:7;1979:53;1957:7;2010:10;2022:9;1979:53;:30;:53;:::i;2041:102::-;2096:7;2118:20;2096:7;2131:6;2118:20;:12;:20;:::i;1093:116::-;1162:42;:5;1179:24;1162:42;:16;:42;:::i;:::-;1093:116;:::o;3904:284:0:-;4016:7;4031:25;4059:23;4066:4;4072:9;4059:6;:23::i;:::-;4031:51;;4095:10;:28;4124:6;4132:4;:18;;4151:17;4132:37;;;;;;;;;;;;;;;;;;:50;;4095:88;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;4095:88:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;4095:88:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;4095:88:0;;3904:284;-1:-1:-1;;;;;3904:284:0:o;3391:184::-;3486:7;3508:10;:23;3532:25;3552:4;3532:19;:25::i;:::-;3559:10;3508:62;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3508:62:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;3508:62:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;3508:62:0;;3391:184;-1:-1:-1;;;3391:184:0:o;2992:181::-;3083:7;3105:10;:28;3134:6;3142:25;3162:4;3142:19;:25::i;:::-;3105:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;2281:500:0;2428:7;2443:20;2458:4;2443:14;:20::i;:::-;2496:25;;2540:9;;2477:4;;-1:-1:-1;;2496:29:0;;;2477:49;;;;;;;;;;;;;;;;:59;;;:72;;2469:114;;;;;-1:-1:-1;;;2469:114:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;2589:30;;:::i;:::-;2622:68;;;;;;;;2641:10;:28;2670:6;2678:10;2641:48;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2641:48:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;2641:48:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;2641:48:0;2622:68;;2720:29;;;;;;;;;;;;2641:48;2720:29;;;;;;27:10:-1;;39:1;23:18;;;45:23;;2696:18:0;:54;;;;;;;;;;;;;;;;;;;;;;;;2763:13;;-1:-1:-1;;2281:500:0;;;;;;:::o;4525:287::-;4641:7;4656:25;4684:23;4691:4;4697:9;4684:6;:23::i;:::-;4656:51;;4720:10;:23;4744:4;:18;;4763:17;4744:37;;;;;;;;;;;;;;;;;;:50;;4796:10;4720:87;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5609:507:0;5687:7;5702:20;5717:4;5702:14;:20::i;:::-;5778:25;;5729:18;;5810:274;5843:1;5830:10;:14;5817:10;:27;5810:274;;;5944:28;;5916:1;5889:23;;;5888:29;5875:42;;;5944:4;;5875:42;;5944:28;;;;;;;;;;;;;;;;:38;;;5932:9;:50;5928:150;;;6009:8;5996:21;;5928:150;;;6059:8;6046:21;;5928:150;5810:274;;;;-1:-1:-1;;6097:14:0;;5609:507;-1:-1:-1;;;;5609:507:0:o;1436:333::-;1560:1;1533:24;:28;1525:69;;;;;-1:-1:-1;;;1525:69:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;1608:25;;:30;1600:72;;;;;-1:-1:-1;;;1600:72:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;1702:61;;;;;;;;1678:18;1702:61;;;1718:44;;1702:61;1718:44;;;;;;;;;1702:61;;;;;;27:10:-1;;39:1;23:18;;;45:23;;1678:86:0;;;;;;;;;;;;;;;;;;;;;;1436:333::o;5007:206::-;5079:26;5113:20;5128:4;5113:14;:20::i;:::-;5165:25;;5146:4;;-1:-1:-1;;5165:29:0;;;5146:49;;;;;;;;;;;;;;;;:62;;5139:69;;5007:206;;;:::o;6120:139::-;6192:25;;6184:70;;;;;-1:-1:-1;;;6184:70:0;;;;;;;;;;;;;;;;;;;;;;;;;;;741:1404:4;;;;;;;;;;;;;;:::o",
+  "source": "/**\nCopyright 2020 PoolTogether Inc.\n\nThis file is part of PoolTogether.\n\nPoolTogether is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation under version 3 of the License.\n\nPoolTogether is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with PoolTogether.  If not, see <https://www.gnu.org/licenses/>.\n*/\n\npragma solidity 0.5.12;\n\nimport \"../ExchangeRateTracker.sol\";\nimport \"../FixedPoint.sol\";\n\ncontract ExposedExchangeRateTracker {\n  using ExchangeRateTracker for ExchangeRateTracker.State;\n\n  ExchangeRateTracker.State state;\n\n  function length() external view returns (uint256) {\n    return state.exchangeRates.length;\n  }\n\n  function get(uint256 index) external view returns (uint256) {\n    return state.exchangeRates[index].timestamp;\n  }\n\n  function initialize(uint256 baseExchangeRateMantissa) external {\n    state.initialize(baseExchangeRateMantissa);\n  }\n\n  function collateralizationChanged(uint256 tokens, uint256 collateral, uint256 timestamp) external returns (uint256) {\n    state.collateralizationChanged(tokens, collateral, timestamp);\n  }\n\n  function tokenToCollateralValue(uint256 tokens) external view returns (uint256) {\n    return state.tokenToCollateralValue(tokens);\n  }\n\n  function collateralToTokenValue(uint256 collateral) external view returns (uint256) {\n    return state.collateralToTokenValue(collateral);\n  }\n\n  function tokenToCollateralValueAt(uint256 tokens, uint256 timestamp) external view returns (uint256) {\n    return state.tokenToCollateralValueAt(tokens, timestamp);\n  }\n\n  function collateralToTokenValueAt(uint256 collateral, uint256 timestamp) external view returns (uint256) {\n    return state.collateralToTokenValueAt(collateral, timestamp);\n  }\n\n  function search(uint256 drawId) external view returns (uint256) {\n    return state.search(drawId);\n  }\n}",
+  "sourcePath": "/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/test/ExposedExchangeRateTracker.sol",
+  "ast": {
+    "absolutePath": "/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/test/ExposedExchangeRateTracker.sol",
+    "exportedSymbols": {
+      "ExposedExchangeRateTracker": [
+        1967
+      ]
+    },
+    "id": 1968,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1832,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "650:23:4"
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/ExchangeRateTracker.sol",
+        "file": "../ExchangeRateTracker.sol",
+        "id": 1833,
+        "nodeType": "ImportDirective",
+        "scope": 1968,
+        "sourceUnit": 306,
+        "src": "675:36:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/FixedPoint.sol",
+        "file": "../FixedPoint.sol",
+        "id": 1834,
+        "nodeType": "ImportDirective",
+        "scope": 1968,
+        "sourceUnit": 414,
+        "src": "712:27:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1967,
+        "linearizedBaseContracts": [
+          1967
+        ],
+        "name": "ExposedExchangeRateTracker",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 1837,
+            "libraryName": {
+              "contractScope": null,
+              "id": 1835,
+              "name": "ExchangeRateTracker",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 305,
+              "src": "787:19:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ExchangeRateTracker_$305",
+                "typeString": "library ExchangeRateTracker"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "781:56:4",
+            "typeName": {
+              "contractScope": null,
+              "id": 1836,
+              "name": "ExchangeRateTracker.State",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 11,
+              "src": "811:25:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_State_$11_storage_ptr",
+                "typeString": "struct ExchangeRateTracker.State"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 1839,
+            "name": "state",
+            "nodeType": "VariableDeclaration",
+            "scope": 1967,
+            "src": "841:31:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_State_$11_storage",
+              "typeString": "struct ExchangeRateTracker.State"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1838,
+              "name": "ExchangeRateTracker.State",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 11,
+              "src": "841:25:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_State_$11_storage_ptr",
+                "typeString": "struct ExchangeRateTracker.State"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1848,
+              "nodeType": "Block",
+              "src": "927:44:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1844,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "940:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$11_storage",
+                          "typeString": "struct ExchangeRateTracker.State storage ref"
+                        }
+                      },
+                      "id": 1845,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "exchangeRates",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 10,
+                      "src": "940:19:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_ExchangeRate_$7_storage_$dyn_storage",
+                        "typeString": "struct ExchangeRateTracker.ExchangeRate storage ref[] storage ref"
+                      }
+                    },
+                    "id": 1846,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "940:26:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1843,
+                  "id": 1847,
+                  "nodeType": "Return",
+                  "src": "933:33:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1849,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "length",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1840,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "892:2:4"
+            },
+            "returnParameters": {
+              "id": 1843,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1842,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1849,
+                  "src": "918:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1841,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "918:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "917:9:4"
+            },
+            "scope": 1967,
+            "src": "877:94:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1862,
+              "nodeType": "Block",
+              "src": "1035:54:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1856,
+                          "name": "state",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1839,
+                          "src": "1048:5:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_State_$11_storage",
+                            "typeString": "struct ExchangeRateTracker.State storage ref"
+                          }
+                        },
+                        "id": 1857,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "exchangeRates",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 10,
+                        "src": "1048:19:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_ExchangeRate_$7_storage_$dyn_storage",
+                          "typeString": "struct ExchangeRateTracker.ExchangeRate storage ref[] storage ref"
+                        }
+                      },
+                      "id": 1859,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1858,
+                        "name": "index",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1851,
+                        "src": "1068:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1048:26:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ExchangeRate_$7_storage",
+                        "typeString": "struct ExchangeRateTracker.ExchangeRate storage ref"
+                      }
+                    },
+                    "id": 1860,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "timestamp",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 4,
+                    "src": "1048:36:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1855,
+                  "id": 1861,
+                  "nodeType": "Return",
+                  "src": "1041:43:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1863,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "get",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1852,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1851,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1863,
+                  "src": "988:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1850,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "988:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "987:15:4"
+            },
+            "returnParameters": {
+              "id": 1855,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1854,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1863,
+                  "src": "1026:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1853,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1026:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1025:9:4"
+            },
+            "scope": 1967,
+            "src": "975:114:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1874,
+              "nodeType": "Block",
+              "src": "1156:53:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1871,
+                        "name": "baseExchangeRateMantissa",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1865,
+                        "src": "1179:24:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1868,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "1162:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$11_storage",
+                          "typeString": "struct ExchangeRateTracker.State storage ref"
+                        }
+                      },
+                      "id": 1870,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "initialize",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 49,
+                      "src": "1162:16:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_State_$11_storage_ptr_$_t_uint256_$returns$__$bound_to$_t_struct$_State_$11_storage_ptr_$",
+                        "typeString": "function (struct ExchangeRateTracker.State storage pointer,uint256)"
+                      }
+                    },
+                    "id": 1872,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1162:42:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1873,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1162:42:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1875,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initialize",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1866,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1865,
+                  "name": "baseExchangeRateMantissa",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1875,
+                  "src": "1113:32:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1864,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1113:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1112:34:4"
+            },
+            "returnParameters": {
+              "id": 1867,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1156:0:4"
+            },
+            "scope": 1967,
+            "src": "1093:116:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1894,
+              "nodeType": "Block",
+              "src": "1329:72:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1889,
+                        "name": "tokens",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1877,
+                        "src": "1366:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1890,
+                        "name": "collateral",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1879,
+                        "src": "1374:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1891,
+                        "name": "timestamp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1881,
+                        "src": "1386:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1886,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "1335:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$11_storage",
+                          "typeString": "struct ExchangeRateTracker.State storage ref"
+                        }
+                      },
+                      "id": 1888,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "collateralizationChanged",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 109,
+                      "src": "1335:30:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_State_$11_storage_ptr_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_State_$11_storage_ptr_$",
+                        "typeString": "function (struct ExchangeRateTracker.State storage pointer,uint256,uint256,uint256) returns (uint256)"
+                      }
+                    },
+                    "id": 1892,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1335:61:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1893,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1335:61:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1895,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collateralizationChanged",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1882,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1877,
+                  "name": "tokens",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1895,
+                  "src": "1247:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1876,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1247:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1879,
+                  "name": "collateral",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1895,
+                  "src": "1263:18:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1878,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1263:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1881,
+                  "name": "timestamp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1895,
+                  "src": "1283:17:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1880,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1283:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1246:55:4"
+            },
+            "returnParameters": {
+              "id": 1885,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1884,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1895,
+                  "src": "1320:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1883,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1320:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1319:9:4"
+            },
+            "scope": 1967,
+            "src": "1213:188:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1907,
+              "nodeType": "Block",
+              "src": "1485:54:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1904,
+                        "name": "tokens",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1897,
+                        "src": "1527:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1902,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "1498:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$11_storage",
+                          "typeString": "struct ExchangeRateTracker.State storage ref"
+                        }
+                      },
+                      "id": 1903,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "tokenToCollateralValue",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 127,
+                      "src": "1498:28:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_State_$11_storage_ptr_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_State_$11_storage_ptr_$",
+                        "typeString": "function (struct ExchangeRateTracker.State storage pointer,uint256) view returns (uint256)"
+                      }
+                    },
+                    "id": 1905,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1498:36:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1901,
+                  "id": 1906,
+                  "nodeType": "Return",
+                  "src": "1491:43:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1908,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "tokenToCollateralValue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1898,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1897,
+                  "name": "tokens",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1908,
+                  "src": "1437:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1896,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1437:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1436:16:4"
+            },
+            "returnParameters": {
+              "id": 1901,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1900,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1908,
+                  "src": "1476:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1899,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1476:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1475:9:4"
+            },
+            "scope": 1967,
+            "src": "1405:134:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1920,
+              "nodeType": "Block",
+              "src": "1627:58:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1917,
+                        "name": "collateral",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1910,
+                        "src": "1669:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1915,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "1640:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$11_storage",
+                          "typeString": "struct ExchangeRateTracker.State storage ref"
+                        }
+                      },
+                      "id": 1916,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "collateralToTokenValue",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 145,
+                      "src": "1640:28:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_State_$11_storage_ptr_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_State_$11_storage_ptr_$",
+                        "typeString": "function (struct ExchangeRateTracker.State storage pointer,uint256) view returns (uint256)"
+                      }
+                    },
+                    "id": 1918,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1640:40:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1914,
+                  "id": 1919,
+                  "nodeType": "Return",
+                  "src": "1633:47:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1921,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collateralToTokenValue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1911,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1910,
+                  "name": "collateral",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1921,
+                  "src": "1575:18:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1909,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1575:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1574:20:4"
+            },
+            "returnParameters": {
+              "id": 1914,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1913,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1921,
+                  "src": "1618:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1912,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1618:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1617:9:4"
+            },
+            "scope": 1967,
+            "src": "1543:142:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1936,
+              "nodeType": "Block",
+              "src": "1790:67:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1932,
+                        "name": "tokens",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1923,
+                        "src": "1834:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1933,
+                        "name": "timestamp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1925,
+                        "src": "1842:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1930,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "1803:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$11_storage",
+                          "typeString": "struct ExchangeRateTracker.State storage ref"
+                        }
+                      },
+                      "id": 1931,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "tokenToCollateralValueAt",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 174,
+                      "src": "1803:30:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_State_$11_storage_ptr_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_State_$11_storage_ptr_$",
+                        "typeString": "function (struct ExchangeRateTracker.State storage pointer,uint256,uint256) view returns (uint256)"
+                      }
+                    },
+                    "id": 1934,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1803:49:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1929,
+                  "id": 1935,
+                  "nodeType": "Return",
+                  "src": "1796:56:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1937,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "tokenToCollateralValueAt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1926,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1923,
+                  "name": "tokens",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1937,
+                  "src": "1723:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1922,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1723:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1925,
+                  "name": "timestamp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1937,
+                  "src": "1739:17:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1924,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1739:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1722:35:4"
+            },
+            "returnParameters": {
+              "id": 1929,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1928,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1937,
+                  "src": "1781:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1927,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1781:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1780:9:4"
+            },
+            "scope": 1967,
+            "src": "1689:168:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1952,
+              "nodeType": "Block",
+              "src": "1966:71:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1948,
+                        "name": "collateral",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1939,
+                        "src": "2010:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1949,
+                        "name": "timestamp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1941,
+                        "src": "2022:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1946,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "1979:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$11_storage",
+                          "typeString": "struct ExchangeRateTracker.State storage ref"
+                        }
+                      },
+                      "id": 1947,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "collateralToTokenValueAt",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 203,
+                      "src": "1979:30:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_State_$11_storage_ptr_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_State_$11_storage_ptr_$",
+                        "typeString": "function (struct ExchangeRateTracker.State storage pointer,uint256,uint256) view returns (uint256)"
+                      }
+                    },
+                    "id": 1950,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1979:53:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1945,
+                  "id": 1951,
+                  "nodeType": "Return",
+                  "src": "1972:60:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1953,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collateralToTokenValueAt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1942,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1939,
+                  "name": "collateral",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1953,
+                  "src": "1895:18:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1938,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1895:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1941,
+                  "name": "timestamp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1953,
+                  "src": "1915:17:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1940,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1915:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1894:39:4"
+            },
+            "returnParameters": {
+              "id": 1945,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1944,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1953,
+                  "src": "1957:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1943,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1957:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1956:9:4"
+            },
+            "scope": 1967,
+            "src": "1861:176:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1965,
+              "nodeType": "Block",
+              "src": "2105:38:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1962,
+                        "name": "drawId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1955,
+                        "src": "2131:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1960,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "2118:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$11_storage",
+                          "typeString": "struct ExchangeRateTracker.State storage ref"
+                        }
+                      },
+                      "id": 1961,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "search",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 289,
+                      "src": "2118:12:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_State_$11_storage_ptr_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_State_$11_storage_ptr_$",
+                        "typeString": "function (struct ExchangeRateTracker.State storage pointer,uint256) view returns (uint256)"
+                      }
+                    },
+                    "id": 1963,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2118:20:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1959,
+                  "id": 1964,
+                  "nodeType": "Return",
+                  "src": "2111:27:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1966,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "search",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1956,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1955,
+                  "name": "drawId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1966,
+                  "src": "2057:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1954,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2057:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2056:16:4"
+            },
+            "returnParameters": {
+              "id": 1959,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1958,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1966,
+                  "src": "2096:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1957,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2096:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2095:9:4"
+            },
+            "scope": 1967,
+            "src": "2041:102:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1968,
+        "src": "741:1404:4"
+      }
+    ],
+    "src": "650:1495:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/test/ExposedExchangeRateTracker.sol",
+    "exportedSymbols": {
+      "ExposedExchangeRateTracker": [
+        1967
+      ]
+    },
+    "id": 1968,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1832,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "650:23:4"
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/ExchangeRateTracker.sol",
+        "file": "../ExchangeRateTracker.sol",
+        "id": 1833,
+        "nodeType": "ImportDirective",
+        "scope": 1968,
+        "sourceUnit": 306,
+        "src": "675:36:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/pooltogether-mypods/src/pods/contracts/FixedPoint.sol",
+        "file": "../FixedPoint.sol",
+        "id": 1834,
+        "nodeType": "ImportDirective",
+        "scope": 1968,
+        "sourceUnit": 414,
+        "src": "712:27:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1967,
+        "linearizedBaseContracts": [
+          1967
+        ],
+        "name": "ExposedExchangeRateTracker",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 1837,
+            "libraryName": {
+              "contractScope": null,
+              "id": 1835,
+              "name": "ExchangeRateTracker",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 305,
+              "src": "787:19:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ExchangeRateTracker_$305",
+                "typeString": "library ExchangeRateTracker"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "781:56:4",
+            "typeName": {
+              "contractScope": null,
+              "id": 1836,
+              "name": "ExchangeRateTracker.State",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 11,
+              "src": "811:25:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_State_$11_storage_ptr",
+                "typeString": "struct ExchangeRateTracker.State"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 1839,
+            "name": "state",
+            "nodeType": "VariableDeclaration",
+            "scope": 1967,
+            "src": "841:31:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_State_$11_storage",
+              "typeString": "struct ExchangeRateTracker.State"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1838,
+              "name": "ExchangeRateTracker.State",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 11,
+              "src": "841:25:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_State_$11_storage_ptr",
+                "typeString": "struct ExchangeRateTracker.State"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1848,
+              "nodeType": "Block",
+              "src": "927:44:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1844,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "940:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$11_storage",
+                          "typeString": "struct ExchangeRateTracker.State storage ref"
+                        }
+                      },
+                      "id": 1845,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "exchangeRates",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 10,
+                      "src": "940:19:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_ExchangeRate_$7_storage_$dyn_storage",
+                        "typeString": "struct ExchangeRateTracker.ExchangeRate storage ref[] storage ref"
+                      }
+                    },
+                    "id": 1846,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "940:26:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1843,
+                  "id": 1847,
+                  "nodeType": "Return",
+                  "src": "933:33:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1849,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "length",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1840,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "892:2:4"
+            },
+            "returnParameters": {
+              "id": 1843,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1842,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1849,
+                  "src": "918:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1841,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "918:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "917:9:4"
+            },
+            "scope": 1967,
+            "src": "877:94:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1862,
+              "nodeType": "Block",
+              "src": "1035:54:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1856,
+                          "name": "state",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1839,
+                          "src": "1048:5:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_State_$11_storage",
+                            "typeString": "struct ExchangeRateTracker.State storage ref"
+                          }
+                        },
+                        "id": 1857,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "exchangeRates",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 10,
+                        "src": "1048:19:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_ExchangeRate_$7_storage_$dyn_storage",
+                          "typeString": "struct ExchangeRateTracker.ExchangeRate storage ref[] storage ref"
+                        }
+                      },
+                      "id": 1859,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1858,
+                        "name": "index",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1851,
+                        "src": "1068:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1048:26:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ExchangeRate_$7_storage",
+                        "typeString": "struct ExchangeRateTracker.ExchangeRate storage ref"
+                      }
+                    },
+                    "id": 1860,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "timestamp",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 4,
+                    "src": "1048:36:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1855,
+                  "id": 1861,
+                  "nodeType": "Return",
+                  "src": "1041:43:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1863,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "get",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1852,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1851,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1863,
+                  "src": "988:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1850,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "988:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "987:15:4"
+            },
+            "returnParameters": {
+              "id": 1855,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1854,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1863,
+                  "src": "1026:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1853,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1026:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1025:9:4"
+            },
+            "scope": 1967,
+            "src": "975:114:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1874,
+              "nodeType": "Block",
+              "src": "1156:53:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1871,
+                        "name": "baseExchangeRateMantissa",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1865,
+                        "src": "1179:24:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1868,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "1162:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$11_storage",
+                          "typeString": "struct ExchangeRateTracker.State storage ref"
+                        }
+                      },
+                      "id": 1870,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "initialize",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 49,
+                      "src": "1162:16:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_State_$11_storage_ptr_$_t_uint256_$returns$__$bound_to$_t_struct$_State_$11_storage_ptr_$",
+                        "typeString": "function (struct ExchangeRateTracker.State storage pointer,uint256)"
+                      }
+                    },
+                    "id": 1872,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1162:42:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1873,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1162:42:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1875,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initialize",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1866,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1865,
+                  "name": "baseExchangeRateMantissa",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1875,
+                  "src": "1113:32:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1864,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1113:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1112:34:4"
+            },
+            "returnParameters": {
+              "id": 1867,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1156:0:4"
+            },
+            "scope": 1967,
+            "src": "1093:116:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1894,
+              "nodeType": "Block",
+              "src": "1329:72:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1889,
+                        "name": "tokens",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1877,
+                        "src": "1366:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1890,
+                        "name": "collateral",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1879,
+                        "src": "1374:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1891,
+                        "name": "timestamp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1881,
+                        "src": "1386:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1886,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "1335:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$11_storage",
+                          "typeString": "struct ExchangeRateTracker.State storage ref"
+                        }
+                      },
+                      "id": 1888,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "collateralizationChanged",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 109,
+                      "src": "1335:30:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_State_$11_storage_ptr_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_State_$11_storage_ptr_$",
+                        "typeString": "function (struct ExchangeRateTracker.State storage pointer,uint256,uint256,uint256) returns (uint256)"
+                      }
+                    },
+                    "id": 1892,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1335:61:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1893,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1335:61:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1895,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collateralizationChanged",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1882,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1877,
+                  "name": "tokens",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1895,
+                  "src": "1247:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1876,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1247:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1879,
+                  "name": "collateral",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1895,
+                  "src": "1263:18:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1878,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1263:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1881,
+                  "name": "timestamp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1895,
+                  "src": "1283:17:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1880,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1283:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1246:55:4"
+            },
+            "returnParameters": {
+              "id": 1885,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1884,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1895,
+                  "src": "1320:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1883,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1320:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1319:9:4"
+            },
+            "scope": 1967,
+            "src": "1213:188:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1907,
+              "nodeType": "Block",
+              "src": "1485:54:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1904,
+                        "name": "tokens",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1897,
+                        "src": "1527:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1902,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "1498:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$11_storage",
+                          "typeString": "struct ExchangeRateTracker.State storage ref"
+                        }
+                      },
+                      "id": 1903,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "tokenToCollateralValue",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 127,
+                      "src": "1498:28:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_State_$11_storage_ptr_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_State_$11_storage_ptr_$",
+                        "typeString": "function (struct ExchangeRateTracker.State storage pointer,uint256) view returns (uint256)"
+                      }
+                    },
+                    "id": 1905,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1498:36:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1901,
+                  "id": 1906,
+                  "nodeType": "Return",
+                  "src": "1491:43:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1908,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "tokenToCollateralValue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1898,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1897,
+                  "name": "tokens",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1908,
+                  "src": "1437:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1896,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1437:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1436:16:4"
+            },
+            "returnParameters": {
+              "id": 1901,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1900,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1908,
+                  "src": "1476:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1899,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1476:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1475:9:4"
+            },
+            "scope": 1967,
+            "src": "1405:134:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1920,
+              "nodeType": "Block",
+              "src": "1627:58:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1917,
+                        "name": "collateral",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1910,
+                        "src": "1669:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1915,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "1640:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$11_storage",
+                          "typeString": "struct ExchangeRateTracker.State storage ref"
+                        }
+                      },
+                      "id": 1916,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "collateralToTokenValue",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 145,
+                      "src": "1640:28:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_State_$11_storage_ptr_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_State_$11_storage_ptr_$",
+                        "typeString": "function (struct ExchangeRateTracker.State storage pointer,uint256) view returns (uint256)"
+                      }
+                    },
+                    "id": 1918,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1640:40:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1914,
+                  "id": 1919,
+                  "nodeType": "Return",
+                  "src": "1633:47:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1921,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collateralToTokenValue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1911,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1910,
+                  "name": "collateral",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1921,
+                  "src": "1575:18:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1909,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1575:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1574:20:4"
+            },
+            "returnParameters": {
+              "id": 1914,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1913,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1921,
+                  "src": "1618:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1912,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1618:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1617:9:4"
+            },
+            "scope": 1967,
+            "src": "1543:142:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1936,
+              "nodeType": "Block",
+              "src": "1790:67:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1932,
+                        "name": "tokens",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1923,
+                        "src": "1834:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1933,
+                        "name": "timestamp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1925,
+                        "src": "1842:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1930,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "1803:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$11_storage",
+                          "typeString": "struct ExchangeRateTracker.State storage ref"
+                        }
+                      },
+                      "id": 1931,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "tokenToCollateralValueAt",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 174,
+                      "src": "1803:30:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_State_$11_storage_ptr_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_State_$11_storage_ptr_$",
+                        "typeString": "function (struct ExchangeRateTracker.State storage pointer,uint256,uint256) view returns (uint256)"
+                      }
+                    },
+                    "id": 1934,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1803:49:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1929,
+                  "id": 1935,
+                  "nodeType": "Return",
+                  "src": "1796:56:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1937,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "tokenToCollateralValueAt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1926,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1923,
+                  "name": "tokens",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1937,
+                  "src": "1723:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1922,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1723:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1925,
+                  "name": "timestamp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1937,
+                  "src": "1739:17:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1924,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1739:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1722:35:4"
+            },
+            "returnParameters": {
+              "id": 1929,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1928,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1937,
+                  "src": "1781:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1927,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1781:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1780:9:4"
+            },
+            "scope": 1967,
+            "src": "1689:168:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1952,
+              "nodeType": "Block",
+              "src": "1966:71:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1948,
+                        "name": "collateral",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1939,
+                        "src": "2010:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1949,
+                        "name": "timestamp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1941,
+                        "src": "2022:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1946,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "1979:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$11_storage",
+                          "typeString": "struct ExchangeRateTracker.State storage ref"
+                        }
+                      },
+                      "id": 1947,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "collateralToTokenValueAt",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 203,
+                      "src": "1979:30:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_State_$11_storage_ptr_$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_State_$11_storage_ptr_$",
+                        "typeString": "function (struct ExchangeRateTracker.State storage pointer,uint256,uint256) view returns (uint256)"
+                      }
+                    },
+                    "id": 1950,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1979:53:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1945,
+                  "id": 1951,
+                  "nodeType": "Return",
+                  "src": "1972:60:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1953,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collateralToTokenValueAt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1942,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1939,
+                  "name": "collateral",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1953,
+                  "src": "1895:18:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1938,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1895:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1941,
+                  "name": "timestamp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1953,
+                  "src": "1915:17:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1940,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1915:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1894:39:4"
+            },
+            "returnParameters": {
+              "id": 1945,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1944,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1953,
+                  "src": "1957:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1943,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1957:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1956:9:4"
+            },
+            "scope": 1967,
+            "src": "1861:176:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1965,
+              "nodeType": "Block",
+              "src": "2105:38:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1962,
+                        "name": "drawId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1955,
+                        "src": "2131:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1960,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "2118:5:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$11_storage",
+                          "typeString": "struct ExchangeRateTracker.State storage ref"
+                        }
+                      },
+                      "id": 1961,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "search",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 289,
+                      "src": "2118:12:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_State_$11_storage_ptr_$_t_uint256_$returns$_t_uint256_$bound_to$_t_struct$_State_$11_storage_ptr_$",
+                        "typeString": "function (struct ExchangeRateTracker.State storage pointer,uint256) view returns (uint256)"
+                      }
+                    },
+                    "id": 1963,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2118:20:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1959,
+                  "id": 1964,
+                  "nodeType": "Return",
+                  "src": "2111:27:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1966,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "search",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1956,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1955,
+                  "name": "drawId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1966,
+                  "src": "2057:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1954,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2057:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2056:16:4"
+            },
+            "returnParameters": {
+              "id": 1959,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1958,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1966,
+                  "src": "2096:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1957,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2096:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2095:9:4"
+            },
+            "scope": 1967,
+            "src": "2041:102:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1968,
+        "src": "741:1404:4"
+      }
+    ],
+    "src": "650:1495:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-05-19T21:28:44.951Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
