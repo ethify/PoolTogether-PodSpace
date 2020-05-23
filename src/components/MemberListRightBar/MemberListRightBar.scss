@@ -6,6 +6,7 @@
   height: 100%;
   box-shadow: -2px 0px 4px -1px rgba(0, 0, 0, 0.2),
     -4px 0px 5px 0px rgba(0, 0, 0, 0.14), -1px 0px 10px 0px rgba(0, 0, 0, 0.12);
+  background: var(--themeColorDark);
   .member-list-header {
     padding: 1em;
     text-align: left;
@@ -45,7 +46,7 @@
   }
   .member-invite-link {
     padding: 12px 2em;
-    background-color: var(--themeColorDark);
+    background-color: var(--themeLabelColorDark);
     display: flex;
     justify-content: space-between;
     align-items: center;

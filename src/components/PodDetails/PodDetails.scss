@@ -4,8 +4,8 @@
   overflow-y: auto;
 
   .pool-together-details-container {
-    margin: 2em 6em 2em 6em;
-    padding: 2em 4em;
+    margin: 1.5em 6em 1.5em 6em;
+    padding: 1.5em 4em;
     color: var(--white);
     background-color: var(--themeColorHover);
     border-radius: 3em;
@@ -55,27 +55,10 @@
         }
       }
     }
-    .pool-together-details-stats-container {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 1.2em;
-
-      .pool-together-details-stats-item {
-        text-align: center;
-        .pool-together-details-stats-title {
-          color: var(--themeColorBlue);
-        }
-        .pool-together-details-stats-value {
-          font-size: 32px;
-          font-weight: 600;
-          margin-top: -6px;
-        }
-      }
-    }
   }
 
   .pod-details-container {
-    margin: 1.5em 6em 2em 6em;
+    margin: 1.5em 6em 1.5em 6em;
     padding: 1.5em 4em;
     color: var(--white);
     background-color: var(--themeColorHover);
@@ -207,6 +190,34 @@
             background-color: darken(#50a6ff, 20);
             border: 1px solid darken(#50a6ff, 20);
           }
+        }
+      }
+    }
+  }
+
+  .pools-stats-container {
+    .pool-together-details-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: var(--themeLabelColor);
+    }
+    .pool-together-details-stats-container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1.2em;
+
+      .pool-together-details-stats-item {
+        text-align: center;
+        .pool-together-details-stats-title {
+          color: var(--themeColorBlue);
+        }
+        .pool-together-details-stats-value {
+          font-size: 32px;
+          font-weight: 600;
+          margin-top: -6px;
+          color: var(--white);
         }
       }
     }
