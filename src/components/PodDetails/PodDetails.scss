@@ -34,8 +34,18 @@
       }
       .pool-together-details-subtitle-value {
         cursor: pointer;
+        a {
+          text-decoration: none;
+          color: var(--themeLabelColor);
+          margin-right: 6px;
+        }
         &:hover {
           color: #d0b7fc;
+          a {
+            text-decoration: none;
+            color: #d0b7fc;
+            margin-right: 6px;
+          }
         }
       }
     }
@@ -89,8 +99,18 @@
       }
       .pool-together-details-subtitle-value {
         cursor: pointer;
+        a {
+          text-decoration: none;
+          color: var(--themeLabelColor);
+          margin-right: 6px;
+        }
         &:hover {
           color: #d0b7fc;
+          a {
+            text-decoration: none;
+            color: #d0b7fc;
+            margin-right: 6px;
+          }
         }
       }
     }
@@ -196,6 +216,8 @@
   }
 
   .pools-stats-container {
+    margin-bottom: 2em;
+
     .pool-together-details-header {
       display: flex;
       align-items: center;

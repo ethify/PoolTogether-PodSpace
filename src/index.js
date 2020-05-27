@@ -4,6 +4,8 @@ import "./index.scss";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { AppProvider } from "./hooks";
+import { BrowserRouter } from "react-router-dom";
+
 // import { request } from "graphql-request";
 // import * as pt from "pooltogetherjs";
 
@@ -75,9 +77,11 @@ import { AppProvider } from "./hooks";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppProvider>
-      <App />
-    </AppProvider>
+    <BrowserRouter>
+      <AppProvider>
+        <App />
+      </AppProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );

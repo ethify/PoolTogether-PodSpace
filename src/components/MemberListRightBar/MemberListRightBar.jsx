@@ -4,51 +4,65 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
 import makeBlockie from "ethereum-blockies-base64";
 import { shortenAddress } from "../../utils";
-import { ActionContext } from "../../hooks";
+import { ActionContext, StateContext } from "../../hooks";
 
 function MemberListRightBar(props) {
-  console.log("props", props.membersList);
   const { toggleModal } = React.useContext(ActionContext);
+  const { currentPod } = React.useContext(StateContext);
   const openModal = () => {
     toggleModal({
       openModal: true,
-      modalConfig: { inviteLink: `http://localhost:3001/${props.currentPod.address}/join` },
+      modalConfig: {
+        inviteLink: `http://localhost:3001/${currentPod.address}/join`,
+      },
     });
   };
   return (
-    <div className="member-list-right-bar">
-      <div className="member-list-header">Pod Member List</div>
-      <div className="member-list-container">
-        {props.membersList.length > 0 ? (
-          props.membersList.map((member) => (
-            <div>
-              <div className="member-list-item">
-                <img
-                  src={makeBlockie(member)}
-                  alt="address blockie"
-                  className="member-address-blockie"
-                />
-                <span className="member-address">{shortenAddress(member)}</span>
+    <>
+      {currentPod.address && (
+        <div className="member-list-right-bar">
+          <div className="member-list-header">Pod Member List</div>
+          <div className="member-list-container">
+            {currentPod.members.length > 0 ? (
+              currentPod.members.map((member, i) => {
+                if (member) {
+                  return (
+                    <div key={i}>
+                      <div className="member-list-item">
+                        <img
+                          src={makeBlockie(member)}
+                          alt="address blockie"
+                          className="member-address-blockie"
+                        />
+                        <span className="member-address">
+                          {shortenAddress(member)}
+                        </span>
+                      </div>
+                    </div>
+                  );
+                }
+              })
+            ) : (
+              <div>
+                <h4>No Members Selected</h4>
               </div>
-            </div>
-          ))
-        ) : (
-          <div>
-            <h4>No Members Selected</h4>
+            )}
           </div>
-        )}
-      </div>
-      {
-        props.currentPod.address ? (<div className="member-invite-link">
-        <span className="member-invite-title">Invite Members</span>
-        <button className="member-invite-button" onClick={(e) => openModal()}>
-          <span>
-            <FontAwesomeIcon icon={faShareAlt} />
-          </span>
-          <span className="member-invite-button-title">Share</span>
-        </button>
-      </div>): null}
-    </div>
+          <div className="member-invite-link">
+            <span className="member-invite-title">Invite Members</span>
+            <button
+              className="member-invite-button"
+              onClick={(e) => openModal()}
+            >
+              <span>
+                <FontAwesomeIcon icon={faShareAlt} />
+              </span>
+              <span className="member-invite-button-title">Share</span>
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 

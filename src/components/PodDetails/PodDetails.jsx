@@ -17,21 +17,23 @@ function PodDetails(props) {
   const [withdrawAmount, setWithdrawAmount] = React.useState("");
 
   let address = "0xa7B5B93BF8B322023BDa57e2C86B57f4DDb4F4a1";
-  const { walletAddress } = React.useContext(StateContext);
+  const { walletAddress, currentPod, estimatedPrize } = React.useContext(
+    StateContext
+  );
 
   const actionDepositPod = async () => {
-    console.log("address", props.currentPod.address);
-    await depositToPod(props.currentPod.address, depositAmount);
+    console.log("address", currentPod.address);
+    await depositToPod(currentPod.address, depositAmount);
   };
 
   const actionWithdrawPod = async () => {
-    console.log("address", props.currentPod.address);
+    console.log("address", currentPod.address);
     await redeemFromPod(withdrawAmount);
   };
 
   return (
     <div className="pod-details">
-      {props.currentPod.address !== "" ? (
+      {currentPod.address !== "" ? (
         <div>
           <div className="pool-together-details-container">
             <div className="pool-together-details-header">
@@ -47,8 +49,13 @@ function PodDetails(props) {
               </span>
               <span className="pool-together-details-subtitle-value">
                 <span>
-                  <a href={"https://etherscan.io/address/" + props.currentPod.podDetails.pod.poolContract.id}>
-                    {shortenAddress(props.currentPod.podDetails.pod.poolContract.id)}
+                  <a
+                    href={
+                      "https://etherscan.io/address/" +
+                      currentPod.podDetails.pod.poolContract.id
+                    }
+                  >
+                    {shortenAddress(currentPod.podDetails.pod.poolContract.id)}
                   </a>
                 </span>
                 <span>
@@ -61,7 +68,7 @@ function PodDetails(props) {
                 Estimated prize:
               </div>
               <div className="pool-together-estimate-prize-value">
-                {props.estimatedPrize}
+                {estimatedPrize}
                 <span className="pool-together-estimate-prize-icon">
                   <FontAwesomeIcon icon={faLongArrowAltUp} />
                 </span>
@@ -70,7 +77,7 @@ function PodDetails(props) {
           </div>
           <div className="pod-details-container">
             <div className="pod-details-header">
-              <span>{props.currentPod.name}</span>
+              <span>{currentPod.name}</span>
               <span className="pod-details-header-divider">
                 <FontAwesomeIcon icon={faCircle} />
               </span>
@@ -83,11 +90,9 @@ function PodDetails(props) {
               <span className="pool-together-details-subtitle-value">
                 <span>
                   <a
-                    href={
-                      "https://etherscan.io/address/" + props.currentPod.address
-                    }
+                    href={"https://etherscan.io/address/" + currentPod.address}
                   >
-                    {shortenAddress(props.currentPod.address)}
+                    {shortenAddress(currentPod.address)}
                   </a>
                 </span>
                 <span>
@@ -100,19 +105,19 @@ function PodDetails(props) {
                 <div className="pod-details-stats-title">Pod Balance</div>
                 <div className="pod-details-stats-value">
                   ${" "}
-                  {Math.round((parseInt(
-                    props.currentPod.podDetails.pod.balanceUnderlying
-                  ) -
-                    parseInt(
-                      props.currentPod.podDetails.pod.totalPendingDeposits
-                    )) /
-                    10 ** 18)}
+                  {Math.round(
+                    (parseInt(currentPod.podDetails.pod.balanceUnderlying) -
+                      parseInt(
+                        currentPod.podDetails.pod.totalPendingDeposits
+                      )) /
+                      10 ** 18
+                  )}
                 </div>
               </div>
               <div className="pod-details-stats-item">
                 <div className="pod-details-stats-title">Pod Players</div>
                 <div className="pod-details-stats-value">
-                  {props.currentPod.podDetails.pod.podPlayersCount}
+                  {currentPod.podDetails.pod.podPlayersCount}
                 </div>
               </div>
             </div>
@@ -167,19 +172,36 @@ function PodDetails(props) {
                   Total contract balance (Dai)
                 </div>
                 <div className="pool-together-details-stats-value">
-                  ${Math.round((parseInt(props.currentPod.podDetails.pod.poolContract.committedBalance)/ (10 ** 18)) + (parseInt(props.currentPod.podDetails.pod.poolContract.openBalance)/ (10 ** 18)) + (parseInt(props.currentPod.podDetails.pod.poolContract.sponsorshipAndFeeBalance)) / (10 ** 18))}
+                  $
+                  {Math.round(
+                    parseInt(
+                      currentPod.podDetails.pod.poolContract.committedBalance
+                    ) /
+                      10 ** 18 +
+                      parseInt(
+                        currentPod.podDetails.pod.poolContract.openBalance
+                      ) /
+                        10 ** 18 +
+                      parseInt(
+                        currentPod.podDetails.pod.poolContract
+                          .sponsorshipAndFeeBalance
+                      ) /
+                        10 ** 18
+                  )}
                 </div>
               </div>
               <div className="pool-together-details-stats-item">
                 <div className="pool-together-details-stats-title">
                   # of current players
                 </div>
-                <div className="pool-together-details-stats-value">{props.currentPod.podDetails.pod.poolContract.playersCount}</div>
+                <div className="pool-together-details-stats-value">
+                  {currentPod.podDetails.pod.poolContract.playersCount}
+                </div>
               </div>
             </div>
           </div>
           <ChatButton
-            threadName={props.currentPod.address}
+            threadName={currentPod.address}
             walletAddress={walletAddress}
           />
         </div>

@@ -2,11 +2,12 @@ import React from "react";
 import "./PodListLeftBar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { ActionContext } from "../../hooks";
+import { ActionContext, StateContext } from "../../hooks";
 
 function PodListLeftBar(props) {
+  const { toggleModal, setCurrentPod } = React.useContext(ActionContext);
+  const { userPods } = React.useContext(StateContext);
 
-  const { toggleModal } = React.useContext(ActionContext);
   const openModal = () => {
     toggleModal({
       openModal: true,
@@ -19,10 +20,7 @@ function PodListLeftBar(props) {
       <div className="pod-list-header-container">
         <div className="pod-list-header-title">Pod List</div>
 
-        <button
-          className="add-pod-button"
-           onClick={(e) => openModal()}
-        >
+        <button className="add-pod-button" onClick={(e) => openModal()}>
           <span>
             <FontAwesomeIcon icon={faPlus} />
           </span>
@@ -30,10 +28,10 @@ function PodListLeftBar(props) {
         </button>
       </div>
       <div className="pod-list-container">
-        {props.userPods.map((pod, key) => (
+        {userPods.map((pod, key) => (
           <div
             key={key}
-            onClick={(e) => props.setCurrentPod(pod)}
+            onClick={(e) => setCurrentPod(pod)}
             className="pod-list-item"
           >
             {pod.name}

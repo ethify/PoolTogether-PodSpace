@@ -6,7 +6,7 @@
   height: 100%;
   box-shadow: -2px 0px 4px -1px rgba(0, 0, 0, 0.2),
     -4px 0px 5px 0px rgba(0, 0, 0, 0.14), -1px 0px 10px 0px rgba(0, 0, 0, 0.12);
-  background: var(--themeColorDark);
+  // background: var(--themeColorDark);
   .member-list-header {
     padding: 1em;
     text-align: left;
@@ -15,12 +15,13 @@
     font-weight: 500;
     line-height: 1.75;
     font-size: 1.2rem;
-    margin-left: 12px;
     text-align: center;
+    border-bottom: 2px solid var(--themeLabelColorDark);
   }
   .member-list-container {
     flex: 1;
     padding: 0em 1em;
+    margin-top: 1em;
     .member-list-item {
       padding: 8px 12px;
       border-radius: 6px;

@@ -3,15 +3,13 @@ import PodDetails from "../PodDetails/PodDetails";
 import MemberListRightBar from "../MemberListRightBar/MemberListRightBar";
 import PodListLeftBar from "../PodListLeftBar";
 import "./Home.scss";
-import { getUserPods, getPodQuery, getEstimatedPrize } from "../../services";
+import { useLocation } from "react-router-dom";
+import { StateContext, ActionContext } from "../../hooks";
 
 function Home() {
-  const [userPods, setUserPods] = React.useState([]);
-  const [currentPod, setCurrentPod] = React.useState({
-    address: "",
-    members: [],
-  });
-  const [estimatedPrize, setEstimatedPrize] = React.useState("");
+  const { fetchUserPodsList, toggleModal } = React.useContext(ActionContext);
+  const { walletAddress } = React.useContext(StateContext);
+  let location = useLocation();
 
   React.useEffect(() => {
     // let userPods = [{
@@ -24,42 +22,25 @@ function Home() {
     //   members: ['0x2A01812d4e8306cF61B29324082205a3D7BDa2A0', '0x72016020d7F79882c0Fe06BDA0e61A3CE308c4eE'],
     // }]
     // setUserPods(userPods);
-
-    setUserPodsList();
+    console.log(location.pathname);
+    const referralLink = location.pathname.split("/")[1];
+    const join = location.pathname.split("/")[2];
+    console.log(referralLink, join);
+    if (join && join.toLowerCase() === "join") {
+      toggleModal({
+        openModal: true,
+        modalConfig: { addPodAddress: true, referralLink },
+      });
+    } else {
+      fetchUserPodsList(walletAddress);
+    }
   }, []);
-
-  async function setUserPodsList() {
-    const userPodsList = await getUserPods();
-    //await getEstimatedPrize()
-    console.log("userPodsList", userPodsList);
-    setUserPods(userPodsList);
-  }
-  async function setCurrentPodwithDetails(selectedPod) {
-    const currentPodDetails = await getPodQuery(selectedPod.address);
-    console.log("currentPodDetails", currentPodDetails);
-    selectedPod["podDetails"] = currentPodDetails;
-    const estimatedPrize = await getEstimatedPrize(
-      selectedPod.podDetails.pod.poolContract.id
-    );
-    setEstimatedPrize(estimatedPrize);
-    console.log("selectedPod", selectedPod);
-    setCurrentPod(selectedPod);
-  }
 
   return (
     <div className="Home">
-      <PodListLeftBar
-        userPods={userPods}
-        setCurrentPod={setCurrentPodwithDetails}
-      ></PodListLeftBar>
-      <PodDetails
-        estimatedPrize={estimatedPrize}
-        currentPod={currentPod}
-      ></PodDetails>
-      <MemberListRightBar
-        membersList={currentPod.members}
-        currentPod={currentPod}
-      ></MemberListRightBar>
+      <PodListLeftBar></PodListLeftBar>
+      <PodDetails></PodDetails>
+      <MemberListRightBar></MemberListRightBar>
     </div>
   );
 }
