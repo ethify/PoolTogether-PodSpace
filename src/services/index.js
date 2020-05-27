@@ -120,7 +120,7 @@ export const getEstimatedPrize = async (contractAddress) => {
     console.log("prizeEstimate", prizeEstimate);
     console.log("prizeEstimate", newPrizeEstimate.toString());
 
-    return Math.round(newPrizeEstimate.toString())
+    return Math.round(newPrizeEstimate.toString());
   }
 };
 
@@ -216,8 +216,8 @@ export const getUserPodsList = async () => {
     return [];
   }
 
-  return pods
-}
+  return pods;
+};
 
 export const updateUserList = async (newList) => {
   await userPodListName.public.set(userPodListName, newList);
@@ -268,6 +268,33 @@ export const addPodtoUser = async (podAddress) => {
     return await getUserPods();
   }
 };
+
+export const getUserPodBalance = async (podAddress) => {
+  if(!web3){
+    await getAccount()
+  }
+  const userAddress = await defaultAddress();
+  const query = `
+  {
+    podPlayer(id: "player-${userAddress.toLowerCase()}_pod-${podAddress.toLowerCase()}"){
+      balance
+    }
+  }
+  `;
+  console.log('query',query)
+
+  request(
+    "https://api.thegraph.com/subgraphs/name/pooltogether/pooltogether-kovan",
+    query
+  ).then((resp) => {
+    console.log(resp, "resp");
+    const balance = new BigNumber(resp.podPlayer.balance) / new BigNumber(10 ** 24);
+    
+    return balance.toString();
+  });
+};
+
+
 
 export const createPod = async (podName) => {
   const userAddress = await defaultAddress();
@@ -387,7 +414,7 @@ export const getPodQuery = async (podAddress) => {
   `;
 
   return request(
-    "https://api.thegraph.com/subgraphs/name/pooltogether/pooltogether",
+    "https://api.thegraph.com/subgraphs/name/pooltogether/pooltogether-kovan",
     query
   );
 };

@@ -115,6 +115,12 @@ function PodDetails(props) {
                 </div>
               </div>
               <div className="pod-details-stats-item">
+                <div className="pod-details-stats-title">Your Balance</div>
+                <div className="pod-details-stats-value">
+                  50 Tickets
+                </div>
+              </div>
+              <div className="pod-details-stats-item">
                 <div className="pod-details-stats-title">Pod Players</div>
                 <div className="pod-details-stats-value">
                   {currentPod.podDetails.pod.podPlayersCount}
