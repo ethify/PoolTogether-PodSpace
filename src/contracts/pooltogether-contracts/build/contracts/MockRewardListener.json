@@ -1,0 +1,1517 @@
+{
+  "contractName": "MockRewardListener",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "lastDrawId",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "lastWinner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "lastWinnings",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "winner",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "winnings",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "drawId",
+          "type": "uint256"
+        }
+      ],
+      "name": "rewarded",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "canImplementInterfaceForAddress",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"canImplementInterfaceForAddress\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"lastDrawId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"lastWinner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"lastWinnings\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"winner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"winnings\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"drawId\",\"type\":\"uint256\"}],\"name\":\"rewarded\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/MockRewardListener.sol\":\"MockRewardListener\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/IRewardListener.sol\":{\"keccak256\":\"0x6ed57b01e398f71f6c04e2c2066c71b10ce30f60a8e7fa504960e7a64bbf1c0d\",\"urls\":[\"bzz-raw://f9f0aa6b4f9c364938fe18911728f42adfa4da2a61fd653fe5cab1c74b832e90\",\"dweb:/ipfs/Qma9T9GM5ZzCnpLUZV9XscvuvyGE2JFm7aiii1Soxu1DBg\"]},\"/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/MockRewardListener.sol\":{\"keccak256\":\"0xd28006e0b8bf0cf6a157ebb049724bdb51068250d585f1f188f494bcb48b968f\",\"urls\":[\"bzz-raw://cc475618a2afef379631b18425c5e4d63465747d5968be3aa0552ea092620bc6\",\"dweb:/ipfs/QmNcg19SxUXHiFHiX2w3AL7eLZhHFHLMuXFiYud7pUXo4n\"]},\"@openzeppelin/contracts-ethereum-package/contracts/introspection/IERC1820Implementer.sol\":{\"keccak256\":\"0x30f42c596e8f00bdde81284f76f7bd00df6df5d32f5c60b890dd3831acb2e540\",\"urls\":[\"bzz-raw://f465d5e016ffdfdab0e30cbf7186d7dd46dfe10c0bc9a9987b19a244b076809c\",\"dweb:/ipfs/QmSaSG7CVBAiKVaP8rDUV7vPMxgjBevvL4yz33nXtSDK3J\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101bc806100206000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c80631aa049681461005c578063249cb3fa146100905780634e81e2f0146100ce578063e552fe4a146100d6578063fe188184146100de575b600080fd5b61008e6004803603606081101561007257600080fd5b506001600160a01b038135169060208101359060400135610102565b005b6100bc600480360360408110156100a657600080fd5b50803590602001356001600160a01b031661012b565b60408051918252519081900360200190f35b6100bc61016c565b6100bc610172565b6100e6610178565b604080516001600160a01b039092168252519081900360200190f35b600080546001600160a01b0319166001600160a01b039490941693909317909255600155600255565b50506040805173455243313832305f4143434550545f4d4147494360601b602080830191909152825160148184030181526034909201909252805191012090565b60025481565b60015481565b6000546001600160a01b03168156fea265627a7a72315820a004d2728638a42b919739cf89820321756bcdb0ea176f7debddb9979912c8fa64736f6c634300050c0032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c80631aa049681461005c578063249cb3fa146100905780634e81e2f0146100ce578063e552fe4a146100d6578063fe188184146100de575b600080fd5b61008e6004803603606081101561007257600080fd5b506001600160a01b038135169060208101359060400135610102565b005b6100bc600480360360408110156100a657600080fd5b50803590602001356001600160a01b031661012b565b60408051918252519081900360200190f35b6100bc61016c565b6100bc610172565b6100e6610178565b604080516001600160a01b039092168252519081900360200190f35b600080546001600160a01b0319166001600160a01b039490941693909317909255600155600255565b50506040805173455243313832305f4143434550545f4d4147494360601b602080830191909152825160148184030181526034909201909252805191012090565b60025481565b60015481565b6000546001600160a01b03168156fea265627a7a72315820a004d2728638a42b919739cf89820321756bcdb0ea176f7debddb9979912c8fa64736f6c634300050c0032",
+  "sourceMap": "158:563:20:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;158:563:20;;;;;;;",
+  "deployedSourceMap": "158:563:20:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;158:563:20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;425:161;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;;;;;425:161:20;;;;;;;;;;;;;:::i;:::-;;590:129;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;590:129:20;;;;;;-1:-1:-1;;;;;590:129:20;;:::i;:::-;;;;;;;;;;;;;;;;395:25;;;:::i;364:27::-;;;:::i;335:25::-;;;:::i;:::-;;;;-1:-1:-1;;;;;335:25:20;;;;;;;;;;;;;;425:161;508:10;:19;;-1:-1:-1;;;;;;508:19:20;-1:-1:-1;;;;;508:19:20;;;;;;;;;;;-1:-1:-1;533:23:20;562:10;:19;425:161::o;590:129::-;-1:-1:-1;;289:40:20;;;-1:-1:-1;;;289:40:20;;;;;;;;;;;26:21:-1;;;22:32;6:49;;289:40:20;;;;;;;279:51;;;;;;590:129::o;395:25::-;;;;:::o;364:27::-;;;;:::o;335:25::-;;;-1:-1:-1;;;;;335:25:20;;:::o",
+  "source": "pragma solidity 0.5.12;\n\nimport \"@openzeppelin/contracts-ethereum-package/contracts/introspection/IERC1820Implementer.sol\";\nimport \"../IRewardListener.sol\";\n\ncontract MockRewardListener is IRewardListener, IERC1820Implementer {\n  bytes32 constant internal ERC1820_ACCEPT_MAGIC = keccak256(abi.encodePacked(\"ERC1820_ACCEPT_MAGIC\"));\n\n  address public lastWinner;\n  uint256 public lastWinnings;\n  uint256 public lastDrawId;\n\n  function rewarded(address winner, uint256 winnings, uint256 drawId) external {\n    lastWinner = winner;\n    lastWinnings = winnings;\n    lastDrawId = drawId;\n  }\n\n  function canImplementInterfaceForAddress(bytes32, address) external view returns (bytes32) {\n    return ERC1820_ACCEPT_MAGIC;\n  }\n}",
+  "sourcePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/MockRewardListener.sol",
+  "ast": {
+    "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/MockRewardListener.sol",
+    "exportedSymbols": {
+      "MockRewardListener": [
+        6223
+      ]
+    },
+    "id": 6224,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6168,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:20"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-ethereum-package/contracts/introspection/IERC1820Implementer.sol",
+        "file": "@openzeppelin/contracts-ethereum-package/contracts/introspection/IERC1820Implementer.sol",
+        "id": 6169,
+        "nodeType": "ImportDirective",
+        "scope": 6224,
+        "sourceUnit": 7421,
+        "src": "25:98:20",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/IRewardListener.sol",
+        "file": "../IRewardListener.sol",
+        "id": 6170,
+        "nodeType": "ImportDirective",
+        "scope": 6224,
+        "sourceUnit": 3428,
+        "src": "124:32:20",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6171,
+              "name": "IRewardListener",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3427,
+              "src": "189:15:20",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IRewardListener_$3427",
+                "typeString": "contract IRewardListener"
+              }
+            },
+            "id": 6172,
+            "nodeType": "InheritanceSpecifier",
+            "src": "189:15:20"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6173,
+              "name": "IERC1820Implementer",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 7420,
+              "src": "206:19:20",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC1820Implementer_$7420",
+                "typeString": "contract IERC1820Implementer"
+              }
+            },
+            "id": 6174,
+            "nodeType": "InheritanceSpecifier",
+            "src": "206:19:20"
+          }
+        ],
+        "contractDependencies": [
+          3427,
+          7420
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6223,
+        "linearizedBaseContracts": [
+          6223,
+          7420,
+          3427
+        ],
+        "name": "MockRewardListener",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 6182,
+            "name": "ERC1820_ACCEPT_MAGIC",
+            "nodeType": "VariableDeclaration",
+            "scope": 6223,
+            "src": "230:100:20",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 6175,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "230:7:20",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "arguments": [
+                    {
+                      "argumentTypes": null,
+                      "hexValue": "455243313832305f4143434550545f4d41474943",
+                      "id": 6179,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "306:22:20",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_a2ef4600d742022d532d4747cb3547474667d6f13804902513b2ec01c848f4b4",
+                        "typeString": "literal_string \"ERC1820_ACCEPT_MAGIC\""
+                      },
+                      "value": "ERC1820_ACCEPT_MAGIC"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_a2ef4600d742022d532d4747cb3547474667d6f13804902513b2ec01c848f4b4",
+                        "typeString": "literal_string \"ERC1820_ACCEPT_MAGIC\""
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 6177,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11093,
+                      "src": "289:3:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 6178,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encodePacked",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "289:16:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 6180,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "289:40:20",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 6176,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 11100,
+                "src": "279:9:20",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 6181,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "279:51:20",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6184,
+            "name": "lastWinner",
+            "nodeType": "VariableDeclaration",
+            "scope": 6223,
+            "src": "335:25:20",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 6183,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "335:7:20",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6186,
+            "name": "lastWinnings",
+            "nodeType": "VariableDeclaration",
+            "scope": 6223,
+            "src": "364:27:20",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 6185,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "364:7:20",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6188,
+            "name": "lastDrawId",
+            "nodeType": "VariableDeclaration",
+            "scope": 6223,
+            "src": "395:25:20",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 6187,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "395:7:20",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6209,
+              "nodeType": "Block",
+              "src": "502:84:20",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6199,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6197,
+                      "name": "lastWinner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6184,
+                      "src": "508:10:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6198,
+                      "name": "winner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6190,
+                      "src": "521:6:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "508:19:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 6200,
+                  "nodeType": "ExpressionStatement",
+                  "src": "508:19:20"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6203,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6201,
+                      "name": "lastWinnings",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6186,
+                      "src": "533:12:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6202,
+                      "name": "winnings",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6192,
+                      "src": "548:8:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "533:23:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 6204,
+                  "nodeType": "ExpressionStatement",
+                  "src": "533:23:20"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6207,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6205,
+                      "name": "lastDrawId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6188,
+                      "src": "562:10:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6206,
+                      "name": "drawId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6194,
+                      "src": "575:6:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "562:19:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 6208,
+                  "nodeType": "ExpressionStatement",
+                  "src": "562:19:20"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6210,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rewarded",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6195,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6190,
+                  "name": "winner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6210,
+                  "src": "443:14:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6189,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "443:7:20",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6192,
+                  "name": "winnings",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6210,
+                  "src": "459:16:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6191,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "459:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6194,
+                  "name": "drawId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6210,
+                  "src": "477:14:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6193,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "477:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "442:50:20"
+            },
+            "returnParameters": {
+              "id": 6196,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "502:0:20"
+            },
+            "scope": 6223,
+            "src": "425:161:20",
+            "stateMutability": "nonpayable",
+            "superFunction": 3426,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 6221,
+              "nodeType": "Block",
+              "src": "681:38:20",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6219,
+                    "name": "ERC1820_ACCEPT_MAGIC",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6182,
+                    "src": "694:20:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 6218,
+                  "id": 6220,
+                  "nodeType": "Return",
+                  "src": "687:27:20"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6222,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "canImplementInterfaceForAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6215,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6212,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6222,
+                  "src": "631:7:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 6211,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "631:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6214,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6222,
+                  "src": "640:7:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6213,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "640:7:20",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "630:18:20"
+            },
+            "returnParameters": {
+              "id": 6218,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6217,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6222,
+                  "src": "672:7:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 6216,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "672:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "671:9:20"
+            },
+            "scope": 6223,
+            "src": "590:129:20",
+            "stateMutability": "view",
+            "superFunction": 7419,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6224,
+        "src": "158:563:20"
+      }
+    ],
+    "src": "0:721:20"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/MockRewardListener.sol",
+    "exportedSymbols": {
+      "MockRewardListener": [
+        6223
+      ]
+    },
+    "id": 6224,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6168,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:20"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-ethereum-package/contracts/introspection/IERC1820Implementer.sol",
+        "file": "@openzeppelin/contracts-ethereum-package/contracts/introspection/IERC1820Implementer.sol",
+        "id": 6169,
+        "nodeType": "ImportDirective",
+        "scope": 6224,
+        "sourceUnit": 7421,
+        "src": "25:98:20",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/IRewardListener.sol",
+        "file": "../IRewardListener.sol",
+        "id": 6170,
+        "nodeType": "ImportDirective",
+        "scope": 6224,
+        "sourceUnit": 3428,
+        "src": "124:32:20",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6171,
+              "name": "IRewardListener",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3427,
+              "src": "189:15:20",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IRewardListener_$3427",
+                "typeString": "contract IRewardListener"
+              }
+            },
+            "id": 6172,
+            "nodeType": "InheritanceSpecifier",
+            "src": "189:15:20"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6173,
+              "name": "IERC1820Implementer",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 7420,
+              "src": "206:19:20",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC1820Implementer_$7420",
+                "typeString": "contract IERC1820Implementer"
+              }
+            },
+            "id": 6174,
+            "nodeType": "InheritanceSpecifier",
+            "src": "206:19:20"
+          }
+        ],
+        "contractDependencies": [
+          3427,
+          7420
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6223,
+        "linearizedBaseContracts": [
+          6223,
+          7420,
+          3427
+        ],
+        "name": "MockRewardListener",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 6182,
+            "name": "ERC1820_ACCEPT_MAGIC",
+            "nodeType": "VariableDeclaration",
+            "scope": 6223,
+            "src": "230:100:20",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 6175,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "230:7:20",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "arguments": [
+                    {
+                      "argumentTypes": null,
+                      "hexValue": "455243313832305f4143434550545f4d41474943",
+                      "id": 6179,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "306:22:20",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_a2ef4600d742022d532d4747cb3547474667d6f13804902513b2ec01c848f4b4",
+                        "typeString": "literal_string \"ERC1820_ACCEPT_MAGIC\""
+                      },
+                      "value": "ERC1820_ACCEPT_MAGIC"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_a2ef4600d742022d532d4747cb3547474667d6f13804902513b2ec01c848f4b4",
+                        "typeString": "literal_string \"ERC1820_ACCEPT_MAGIC\""
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 6177,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11093,
+                      "src": "289:3:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 6178,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encodePacked",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "289:16:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 6180,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "289:40:20",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 6176,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 11100,
+                "src": "279:9:20",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 6181,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "279:51:20",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6184,
+            "name": "lastWinner",
+            "nodeType": "VariableDeclaration",
+            "scope": 6223,
+            "src": "335:25:20",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 6183,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "335:7:20",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6186,
+            "name": "lastWinnings",
+            "nodeType": "VariableDeclaration",
+            "scope": 6223,
+            "src": "364:27:20",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 6185,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "364:7:20",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6188,
+            "name": "lastDrawId",
+            "nodeType": "VariableDeclaration",
+            "scope": 6223,
+            "src": "395:25:20",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 6187,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "395:7:20",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6209,
+              "nodeType": "Block",
+              "src": "502:84:20",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6199,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6197,
+                      "name": "lastWinner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6184,
+                      "src": "508:10:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6198,
+                      "name": "winner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6190,
+                      "src": "521:6:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "508:19:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 6200,
+                  "nodeType": "ExpressionStatement",
+                  "src": "508:19:20"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6203,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6201,
+                      "name": "lastWinnings",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6186,
+                      "src": "533:12:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6202,
+                      "name": "winnings",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6192,
+                      "src": "548:8:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "533:23:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 6204,
+                  "nodeType": "ExpressionStatement",
+                  "src": "533:23:20"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6207,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6205,
+                      "name": "lastDrawId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6188,
+                      "src": "562:10:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6206,
+                      "name": "drawId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6194,
+                      "src": "575:6:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "562:19:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 6208,
+                  "nodeType": "ExpressionStatement",
+                  "src": "562:19:20"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6210,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rewarded",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6195,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6190,
+                  "name": "winner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6210,
+                  "src": "443:14:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6189,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "443:7:20",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6192,
+                  "name": "winnings",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6210,
+                  "src": "459:16:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6191,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "459:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6194,
+                  "name": "drawId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6210,
+                  "src": "477:14:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6193,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "477:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "442:50:20"
+            },
+            "returnParameters": {
+              "id": 6196,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "502:0:20"
+            },
+            "scope": 6223,
+            "src": "425:161:20",
+            "stateMutability": "nonpayable",
+            "superFunction": 3426,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 6221,
+              "nodeType": "Block",
+              "src": "681:38:20",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6219,
+                    "name": "ERC1820_ACCEPT_MAGIC",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 6182,
+                    "src": "694:20:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "functionReturnParameters": 6218,
+                  "id": 6220,
+                  "nodeType": "Return",
+                  "src": "687:27:20"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6222,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "canImplementInterfaceForAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6215,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6212,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6222,
+                  "src": "631:7:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 6211,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "631:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6214,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6222,
+                  "src": "640:7:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6213,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "640:7:20",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "630:18:20"
+            },
+            "returnParameters": {
+              "id": 6218,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6217,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6222,
+                  "src": "672:7:20",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 6216,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "672:7:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "671:9:20"
+            },
+            "scope": 6223,
+            "src": "590:129:20",
+            "stateMutability": "view",
+            "superFunction": 7419,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6224,
+        "src": "158:563:20"
+      }
+    ],
+    "src": "0:721:20"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-05-21T20:34:55.093Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

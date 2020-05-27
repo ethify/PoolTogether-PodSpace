@@ -1,0 +1,620 @@
+{
+  "contractName": "MockJoinLike",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_gem",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_dai",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "dai",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "gem",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_gem\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_dai\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"dai\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"gem\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/maker/MockJoinLike.sol\":\"MockJoinLike\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/maker/MockJoinLike.sol\":{\"keccak256\":\"0x55b0a684b4ce7e2e4f968c44abfdb31c44f064850bc87c2ffd48a2cb26daf181\",\"urls\":[\"bzz-raw://15aab77d23c29f005e369d416de4b2e47aaabfa01cb47f070557cc15d400302f\",\"dweb:/ipfs/QmUhGtDFaNN9ABdW221SGgihWFzPTSiYpcdvgCZE3H8wYZ\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161012b38038061012b8339818101604052604081101561003357600080fd5b508051602090910151600080546001600160a01b039384166001600160a01b0319918216179091556001805493909216921691909117905560b2806100796000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80637bd2bea7146037578063f4b9fa75146059575b600080fd5b603d605f565b604080516001600160a01b039092168252519081900360200190f35b603d606e565b6000546001600160a01b031681565b6001546001600160a01b03168156fea265627a7a723158205c4f8add61dd960917a75e6842757c02c11f023f437b7a6ae0d0ea5f82e13a4664736f6c634300050c0032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80637bd2bea7146037578063f4b9fa75146059575b600080fd5b603d605f565b604080516001600160a01b039092168252519081900360200190f35b603d606e565b6000546001600160a01b031681565b6001546001600160a01b03168156fea265627a7a723158205c4f8add61dd960917a75e6842757c02c11f023f437b7a6ae0d0ea5f82e13a4664736f6c634300050c0032",
+  "sourceMap": "103:169:22:-;;;174:96;8:9:-1;5:2;;;30:1;27;20:12;5:2;174:96:22;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;174:96:22;;;;;;;239:3;:10;;-1:-1:-1;;;;;239:10:22;;;-1:-1:-1;;;;;;239:10:22;;;;;;-1:-1:-1;255:10:22;;;;;;;;;;;;;;-1:-1:-1;;;;103:169:22;;;;",
+  "deployedSourceMap": "103:169:22:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;103:169:22;;;;;;;;;;;;;;;;;;;;;;;;129:18;;;:::i;:::-;;;;-1:-1:-1;;;;;129:18:22;;;;;;;;;;;;;;151;;;:::i;129:::-;;;-1:-1:-1;;;;;129:18:22;;:::o;151:::-;;;-1:-1:-1;;;;;151:18:22;;:::o",
+  "source": "pragma solidity 0.5.12;\n\n// import { GemLike, JoinLike } from \"scd-mcd-migration/src/Interfaces.sol\";\n\ncontract MockJoinLike {\n  address public gem;\n  address public dai;\n\n  constructor(\n    address _gem,\n    address _dai\n  ) public {\n    gem = _gem;\n    dai = _dai;\n  }\n}",
+  "sourcePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/maker/MockJoinLike.sol",
+  "ast": {
+    "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/maker/MockJoinLike.sol",
+    "exportedSymbols": {
+      "MockJoinLike": [
+        6328
+      ]
+    },
+    "id": 6329,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6307,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:22"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6328,
+        "linearizedBaseContracts": [
+          6328
+        ],
+        "name": "MockJoinLike",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 6309,
+            "name": "gem",
+            "nodeType": "VariableDeclaration",
+            "scope": 6328,
+            "src": "129:18:22",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 6308,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "129:7:22",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6311,
+            "name": "dai",
+            "nodeType": "VariableDeclaration",
+            "scope": 6328,
+            "src": "151:18:22",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 6310,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "151:7:22",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6326,
+              "nodeType": "Block",
+              "src": "233:37:22",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6320,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6318,
+                      "name": "gem",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6309,
+                      "src": "239:3:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6319,
+                      "name": "_gem",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6313,
+                      "src": "245:4:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "239:10:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 6321,
+                  "nodeType": "ExpressionStatement",
+                  "src": "239:10:22"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6324,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6322,
+                      "name": "dai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6311,
+                      "src": "255:3:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6323,
+                      "name": "_dai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6315,
+                      "src": "261:4:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "255:10:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 6325,
+                  "nodeType": "ExpressionStatement",
+                  "src": "255:10:22"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6327,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6316,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6313,
+                  "name": "_gem",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6327,
+                  "src": "191:12:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6312,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "191:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6315,
+                  "name": "_dai",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6327,
+                  "src": "209:12:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6314,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "209:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "185:40:22"
+            },
+            "returnParameters": {
+              "id": 6317,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "233:0:22"
+            },
+            "scope": 6328,
+            "src": "174:96:22",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 6329,
+        "src": "103:169:22"
+      }
+    ],
+    "src": "0:272:22"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/maker/MockJoinLike.sol",
+    "exportedSymbols": {
+      "MockJoinLike": [
+        6328
+      ]
+    },
+    "id": 6329,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6307,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:22"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6328,
+        "linearizedBaseContracts": [
+          6328
+        ],
+        "name": "MockJoinLike",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 6309,
+            "name": "gem",
+            "nodeType": "VariableDeclaration",
+            "scope": 6328,
+            "src": "129:18:22",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 6308,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "129:7:22",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6311,
+            "name": "dai",
+            "nodeType": "VariableDeclaration",
+            "scope": 6328,
+            "src": "151:18:22",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 6310,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "151:7:22",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6326,
+              "nodeType": "Block",
+              "src": "233:37:22",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6320,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6318,
+                      "name": "gem",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6309,
+                      "src": "239:3:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6319,
+                      "name": "_gem",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6313,
+                      "src": "245:4:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "239:10:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 6321,
+                  "nodeType": "ExpressionStatement",
+                  "src": "239:10:22"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6324,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6322,
+                      "name": "dai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6311,
+                      "src": "255:3:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6323,
+                      "name": "_dai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6315,
+                      "src": "261:4:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "255:10:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 6325,
+                  "nodeType": "ExpressionStatement",
+                  "src": "255:10:22"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6327,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6316,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6313,
+                  "name": "_gem",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6327,
+                  "src": "191:12:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6312,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "191:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6315,
+                  "name": "_dai",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6327,
+                  "src": "209:12:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6314,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "209:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "185:40:22"
+            },
+            "returnParameters": {
+              "id": 6317,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "233:0:22"
+            },
+            "scope": 6328,
+            "src": "174:96:22",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 6329,
+        "src": "103:169:22"
+      }
+    ],
+    "src": "0:272:22"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-05-21T20:34:55.095Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

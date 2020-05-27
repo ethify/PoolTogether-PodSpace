@@ -20,12 +20,12 @@ function PodDetails(props) {
   const { walletAddress } = React.useContext(StateContext);
 
   const actionDepositPod = async () => {
-    console.log("addressunderlying", props.currentPod.underlyingAddress);
-    await depositToPod(props.currentPod.underlyingAddress, depositAmount);
+    console.log("address", props.currentPod.address);
+    await depositToPod(props.currentPod.address, depositAmount);
   };
 
   const actionWithdrawPod = async () => {
-    console.log("addressunderlying", props.currentPod.underlyingAddress);
+    console.log("address", props.currentPod.address);
     await redeemFromPod(withdrawAmount);
   };
 
@@ -46,7 +46,11 @@ function PodDetails(props) {
                 Address:
               </span>
               <span className="pool-together-details-subtitle-value">
-                <span>{shortenAddress(address)}</span>
+                <span>
+                  <a href={"https://etherscan.io/address/" + props.currentPod.podDetails.pod.poolContract.id}>
+                    {shortenAddress(props.currentPod.podDetails.pod.poolContract.id)}
+                  </a>
+                </span>
                 <span>
                   <FontAwesomeIcon icon={faExternalLinkSquareAlt} />
                 </span>
@@ -77,7 +81,15 @@ function PodDetails(props) {
                 Address:
               </span>
               <span className="pool-together-details-subtitle-value">
-                {<span>{shortenAddress(props.currentPod.address)}</span>}
+                <span>
+                  <a
+                    href={
+                      "https://etherscan.io/address/" + props.currentPod.address
+                    }
+                  >
+                    {shortenAddress(props.currentPod.address)}
+                  </a>
+                </span>
                 <span>
                   <FontAwesomeIcon icon={faExternalLinkSquareAlt} />
                 </span>

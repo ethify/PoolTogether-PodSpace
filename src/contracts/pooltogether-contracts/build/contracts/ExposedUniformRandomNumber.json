@@ -1,0 +1,555 @@
+{
+  "contractName": "ExposedUniformRandomNumber",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_entropy",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_upperBound",
+          "type": "uint256"
+        }
+      ],
+      "name": "uniform",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_entropy\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_upperBound\",\"type\":\"uint256\"}],\"name\":\"uniform\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/ExposedUniformRandomNumber.sol\":\"ExposedUniformRandomNumber\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/UniformRandomNumber.sol\":{\"keccak256\":\"0x3da93664cd691eeab755215900bf807b9eda48675f6a3352c48f00c76d64c0fe\",\"urls\":[\"bzz-raw://395e8565cbd4bcf2b52f2ca54f57bd698b0aafa9a3cb2c2529fd365aa5377001\",\"dweb:/ipfs/QmeYh6NZTNjwvmCWx2HhPpK7aKruckjffcqdXkYRbb1uBX\"]},\"/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/ExposedUniformRandomNumber.sol\":{\"keccak256\":\"0x9cb87a805640862f99da1f8defe461f65ea9ca26f2ad5165bce84fb846ccf9e7\",\"urls\":[\"bzz-raw://66a3d455eb178e7053b9ce45c6f8cd98b5662b362835691b6c72135d6209cdb1\",\"dweb:/ipfs/QmSSvcsbTWBzhmRwaJq38u2NVrnygXhyyrqiKoPLkzfqRa\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610153806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063eb2ab6b114610030575b600080fd5b6100536004803603604081101561004657600080fd5b5080359060200135610065565b60408051918252519081900360200190f35b60006100718383610078565b9392505050565b60008082116100c6576040805162461bcd60e51b8152602060048201526015602482015274155b9a599bdc9b54985b990bdb5a5b8b589bdd5b99605a1b604482015290519081900360640190fd5b60008283600003816100d457fe5b069050835b8181106100e55761010b565b6040805160208082019390935281518082038401815290820190915280519101206100d9565b83818161011457fe5b069594505050505056fea265627a7a7231582010383757eba6cbbcf5b3285547cd07e42b58c1085fe0870e9f7f26a110d6cab864736f6c634300050c0032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063eb2ab6b114610030575b600080fd5b6100536004803603604081101561004657600080fd5b5080359060200135610065565b60408051918252519081900360200190f35b60006100718383610078565b9392505050565b60008082116100c6576040805162461bcd60e51b8152602060048201526015602482015274155b9a599bdc9b54985b990bdb5a5b8b589bdd5b99605a1b604482015290519081900360640190fd5b60008283600003816100d457fe5b069050835b8181106100e55761010b565b6040805160208082019390935281518082038401815290820190915280519101206100d9565b83818161011457fe5b069594505050505056fea265627a7a7231582010383757eba6cbbcf5b3285547cd07e42b58c1085fe0870e9f7f26a110d6cab864736f6c634300050c0032",
+  "sourceMap": "713:196:17:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;713:196:17;;;;;;;",
+  "deployedSourceMap": "713:196:17:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;713:196:17;;;;;;;;;;;;;;;;;;;753:154;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;753:154:17;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;830:7;852:50;880:8;890:11;852:27;:50::i;:::-;845:57;753:154;-1:-1:-1;;;753:154:17:o;1211:394:10:-;1290:7;1327:1;1313:11;:15;1305:49;;;;;-1:-1:-1;;;1305:49:10;;;;;;;;;;;;-1:-1:-1;;;1305:49:10;;;;;;;;;;;;;;;1360:11;1389;1375;1374:12;;:26;;;;;;;-1:-1:-1;1423:8:10;1437:131;1472:3;1462:6;:13;1458:43;;1487:5;;1458:43;1535:24;;;;;;;;;;;;;26:21:-1;;;22:32;;6:49;;1535:24:10;;;;;;1525:35;;;;;1437:131;;;1589:11;1580:6;:20;;;;;;;1211:394;-1:-1:-1;;;;;1211:394:10:o",
+  "source": "/**\nCopyright 2020 PoolTogether Inc.\n\nThis file is part of PoolTogether.\n\nPoolTogether is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation under version 3 of the License.\n\nPoolTogether is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with PoolTogether.  If not, see <https://www.gnu.org/licenses/>.\n*/\n\npragma solidity 0.5.12;\n\nimport \"../UniformRandomNumber.sol\";\n\ncontract ExposedUniformRandomNumber {\n  function uniform(uint256 _entropy, uint256 _upperBound) public pure returns (uint256) {\n    return UniformRandomNumber.uniform(_entropy, _upperBound);\n  }\n}",
+  "sourcePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/ExposedUniformRandomNumber.sol",
+  "ast": {
+    "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/ExposedUniformRandomNumber.sol",
+    "exportedSymbols": {
+      "ExposedUniformRandomNumber": [
+        5962
+      ]
+    },
+    "id": 5963,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5944,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "650:23:17"
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/UniformRandomNumber.sol",
+        "file": "../UniformRandomNumber.sol",
+        "id": 5945,
+        "nodeType": "ImportDirective",
+        "scope": 5963,
+        "sourceUnit": 5300,
+        "src": "675:36:17",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5962,
+        "linearizedBaseContracts": [
+          5962
+        ],
+        "name": "ExposedUniformRandomNumber",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 5960,
+              "nodeType": "Block",
+              "src": "839:68:17",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5956,
+                        "name": "_entropy",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5947,
+                        "src": "880:8:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 5957,
+                        "name": "_upperBound",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5949,
+                        "src": "890:11:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5954,
+                        "name": "UniformRandomNumber",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5299,
+                        "src": "852:19:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_UniformRandomNumber_$5299_$",
+                          "typeString": "type(library UniformRandomNumber)"
+                        }
+                      },
+                      "id": 5955,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "uniform",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5298,
+                      "src": "852:27:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
+                        "typeString": "function (uint256,uint256) pure returns (uint256)"
+                      }
+                    },
+                    "id": 5958,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "852:50:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 5953,
+                  "id": 5959,
+                  "nodeType": "Return",
+                  "src": "845:57:17"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5961,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "uniform",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5950,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5947,
+                  "name": "_entropy",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5961,
+                  "src": "770:16:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5946,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "770:7:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5949,
+                  "name": "_upperBound",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5961,
+                  "src": "788:19:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5948,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "788:7:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "769:39:17"
+            },
+            "returnParameters": {
+              "id": 5953,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5952,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5961,
+                  "src": "830:7:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5951,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "830:7:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "829:9:17"
+            },
+            "scope": 5962,
+            "src": "753:154:17",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 5963,
+        "src": "713:196:17"
+      }
+    ],
+    "src": "650:259:17"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/ExposedUniformRandomNumber.sol",
+    "exportedSymbols": {
+      "ExposedUniformRandomNumber": [
+        5962
+      ]
+    },
+    "id": 5963,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5944,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "650:23:17"
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/UniformRandomNumber.sol",
+        "file": "../UniformRandomNumber.sol",
+        "id": 5945,
+        "nodeType": "ImportDirective",
+        "scope": 5963,
+        "sourceUnit": 5300,
+        "src": "675:36:17",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5962,
+        "linearizedBaseContracts": [
+          5962
+        ],
+        "name": "ExposedUniformRandomNumber",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 5960,
+              "nodeType": "Block",
+              "src": "839:68:17",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5956,
+                        "name": "_entropy",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5947,
+                        "src": "880:8:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 5957,
+                        "name": "_upperBound",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5949,
+                        "src": "890:11:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5954,
+                        "name": "UniformRandomNumber",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5299,
+                        "src": "852:19:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_UniformRandomNumber_$5299_$",
+                          "typeString": "type(library UniformRandomNumber)"
+                        }
+                      },
+                      "id": 5955,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "uniform",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5298,
+                      "src": "852:27:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
+                        "typeString": "function (uint256,uint256) pure returns (uint256)"
+                      }
+                    },
+                    "id": 5958,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "852:50:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 5953,
+                  "id": 5959,
+                  "nodeType": "Return",
+                  "src": "845:57:17"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5961,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "uniform",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5950,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5947,
+                  "name": "_entropy",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5961,
+                  "src": "770:16:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5946,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "770:7:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5949,
+                  "name": "_upperBound",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5961,
+                  "src": "788:19:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5948,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "788:7:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "769:39:17"
+            },
+            "returnParameters": {
+              "id": 5953,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5952,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5961,
+                  "src": "830:7:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5951,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "830:7:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "829:9:17"
+            },
+            "scope": 5962,
+            "src": "753:154:17",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 5963,
+        "src": "713:196:17"
+      }
+    ],
+    "src": "650:259:17"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-05-21T20:34:55.091Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

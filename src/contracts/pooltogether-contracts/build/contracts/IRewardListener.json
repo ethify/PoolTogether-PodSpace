@@ -1,0 +1,358 @@
+{
+  "contractName": "IRewardListener",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "winner",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "winnings",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "drawId",
+          "type": "uint256"
+        }
+      ],
+      "name": "rewarded",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"winner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"winnings\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"drawId\",\"type\":\"uint256\"}],\"name\":\"rewarded\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Brendan Asselstine\",\"methods\":{\"rewarded(address,uint256,uint256)\":{\"params\":{\"drawId\":\"The draw id that they won\",\"winner\":\"The user that won\",\"winnings\":\"The amount they won\"}}}},\"userdoc\":{\"methods\":{\"rewarded(address,uint256,uint256)\":{\"notice\":\"Triggered when the winner is awarded.  This function must not use more than 200,000 gas.\"}},\"notice\":\"Users can listen for rewards by registering RewardListeners using ERC1820.  The reward listeners must implement this interface.\"}},\"settings\":{\"compilationTarget\":{\"/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/IRewardListener.sol\":\"IRewardListener\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/IRewardListener.sol\":{\"keccak256\":\"0x6ed57b01e398f71f6c04e2c2066c71b10ce30f60a8e7fa504960e7a64bbf1c0d\",\"urls\":[\"bzz-raw://f9f0aa6b4f9c364938fe18911728f42adfa4da2a61fd653fe5cab1c74b832e90\",\"dweb:/ipfs/Qma9T9GM5ZzCnpLUZV9XscvuvyGE2JFm7aiii1Soxu1DBg\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.12;\n\n/**\n * @author Brendan Asselstine\n * @notice Users can listen for rewards by registering RewardListeners using ERC1820.  The reward listeners must\n * implement this interface.\n */\ninterface IRewardListener {\n  /**\n   * @notice Triggered when the winner is awarded.  This function must not use more than 200,000 gas.\n   * @param winner The user that won\n   * @param winnings The amount they won\n   * @param drawId The draw id that they won\n   */\n  function rewarded(address winner, uint256 winnings, uint256 drawId) external;\n}",
+  "sourcePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/IRewardListener.sol",
+  "ast": {
+    "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/IRewardListener.sol",
+    "exportedSymbols": {
+      "IRewardListener": [
+        3427
+      ]
+    },
+    "id": 3428,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3417,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@author Brendan Asselstine\n@notice Users can listen for rewards by registering RewardListeners using ERC1820.  The reward listeners must\nimplement this interface.",
+        "fullyImplemented": false,
+        "id": 3427,
+        "linearizedBaseContracts": [
+          3427
+        ],
+        "name": "IRewardListener",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Triggered when the winner is awarded.  This function must not use more than 200,000 gas.\n@param winner The user that won\n@param winnings The amount they won\n@param drawId The draw id that they won",
+            "id": 3426,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rewarded",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3424,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3419,
+                  "name": "winner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3426,
+                  "src": "490:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3418,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "490:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3421,
+                  "name": "winnings",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3426,
+                  "src": "506:16:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3420,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "506:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3423,
+                  "name": "drawId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3426,
+                  "src": "524:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3422,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "524:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "489:50:4"
+            },
+            "returnParameters": {
+              "id": 3425,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "548:0:4"
+            },
+            "scope": 3427,
+            "src": "472:77:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3428,
+        "src": "205:346:4"
+      }
+    ],
+    "src": "0:551:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/IRewardListener.sol",
+    "exportedSymbols": {
+      "IRewardListener": [
+        3427
+      ]
+    },
+    "id": 3428,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3417,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@author Brendan Asselstine\n@notice Users can listen for rewards by registering RewardListeners using ERC1820.  The reward listeners must\nimplement this interface.",
+        "fullyImplemented": false,
+        "id": 3427,
+        "linearizedBaseContracts": [
+          3427
+        ],
+        "name": "IRewardListener",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Triggered when the winner is awarded.  This function must not use more than 200,000 gas.\n@param winner The user that won\n@param winnings The amount they won\n@param drawId The draw id that they won",
+            "id": 3426,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rewarded",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3424,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3419,
+                  "name": "winner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3426,
+                  "src": "490:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3418,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "490:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3421,
+                  "name": "winnings",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3426,
+                  "src": "506:16:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3420,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "506:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3423,
+                  "name": "drawId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3426,
+                  "src": "524:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3422,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "524:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "489:50:4"
+            },
+            "returnParameters": {
+              "id": 3425,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "548:0:4"
+            },
+            "scope": 3427,
+            "src": "472:77:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3428,
+        "src": "205:346:4"
+      }
+    ],
+    "src": "0:551:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-05-21T20:34:55.064Z",
+  "devdoc": {
+    "author": "Brendan Asselstine",
+    "methods": {
+      "rewarded(address,uint256,uint256)": {
+        "params": {
+          "drawId": "The draw id that they won",
+          "winner": "The user that won",
+          "winnings": "The amount they won"
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "rewarded(address,uint256,uint256)": {
+        "notice": "Triggered when the winner is awarded.  This function must not use more than 200,000 gas."
+      }
+    },
+    "notice": "Users can listen for rewards by registering RewardListeners using ERC1820.  The reward listeners must implement this interface."
+  }
+}

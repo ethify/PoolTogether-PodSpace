@@ -2,20 +2,38 @@ import Onboard from "bnc-onboard";
 import * as Web3 from "web3";
 import * as Box from "3box";
 import * as contract from "@truffle/contract";
+import { request } from "graphql-request";
+import * as IdentityWallet from "identity-wallet";
+import * as BigNumber from "bignumber.js";
+
 import Pod from "../pods/build/contracts/Pod.json";
 import ERC20 from "../pods/build/contracts/ERC20.json";
-import { request } from "graphql-request";
-import { IdentityWallet } from "identity-wallet";
-import * as BigNumber from "bignumber.js"
+import FixedPoint from "../pods/build/contracts/FixedPoint.json";
+import ExchangeRateTracker from "../pods/build/contracts/ExchangeRateTracker.json";
+import ScheduledBalance from "../pods/build/contracts/ScheduledBalance.json";
 
+import BasePool from "../contracts/pooltogether-contracts/build/contracts/BasePool.json";
+import cDAI from "../contracts/pooltogether-contracts/build/contracts/CErc20Mock.json";
+
+import * as pt from "pooltogetherjs";
+
+import { ethers } from "ethers";
+
+import { poolTogetherDrawDates } from "../utils";
+const { utils } = ethers;
 
 let web3;
 let boxInstance;
-let space;
+let userBoxInstance;
+let globalSpace;
+let userSpace;
 
 const seed =
   "0x7acca0ba544b6bb4f6ad3cfccd375b76a2c1587250f0036f00d1d476bbb679b3";
 const daiAddress = "0x4F96Fe3b7A6Cf9725f59d353F723c1bDb64CA6Aa";
+
+const userPodListName = "userPodList";
+const globalPodsListName = "globalPodList";
 
 const onboard = Onboard({
   dappId: "052b3fe9-87d5-4614-b2e9-6dd81115979a",
@@ -27,6 +45,92 @@ const onboard = Onboard({
   },
   darkMode: true,
 });
+
+const getPoolTogetherDaiDrawDate = () => {
+  const now = Date.now();
+  for (let i = 0; i < poolTogetherDrawDates.length; i += 1) {
+    const drawDate = new Date(poolTogetherDrawDates[i]);
+    // const diff = getDateDiff(drawDate, now);
+    var diff = parseInt((drawDate - now) / (1000 * 60 * 60 * 24), 10);
+    if (diff > 0) {
+      return poolTogetherDrawDates[i];
+    }
+  }
+  return undefined;
+};
+
+export const getEstimatedPrize = async () => {
+  // const basepool = contract(BasePool)
+  // basepool.setProvider(web3.currentProvider)
+  // const basepoolInstance = await basepool.at('0x29fe7D60DdF151E5b52e5FAB4f1325da6b2bD958')
+
+  // const accountedBalance = await basepoolInstance.accountedBalance()
+  // console.log('accountedBalance', accountedBalance.toString())
+
+  const contractAddress = "0x29fe7D60DdF151E5b52e5FAB4f1325da6b2bD958";
+  let provider = ethers.getDefaultProvider();
+
+  const abi = BasePool;
+
+  const contract = new ethers.Contract(contractAddress, abi["abi"], provider);
+
+  console.log("contract", contract);
+
+  const accountedBalance = await contract.accountedBalance();
+
+  const balanceCallData = contract.interface.functions.balance.encode([]);
+  const result = await provider.call({
+    to: contract.address,
+    data: balanceCallData,
+  });
+  const balance = contract.interface.functions.balance.decode(result);
+
+  const currentOpenDrawId = await contract.currentOpenDrawId();
+  const currentDraw = await contract.getDraw(currentOpenDrawId);
+
+  let prize = ethers.utils.bigNumberify(0);
+  if (balance) {
+    prize = pt.utils.calculatePrize(
+      balance,
+      accountedBalance,
+      currentDraw.feeFraction
+    );
+
+    console.log("prize", prize.toString());
+
+    const cDAIContract = new ethers.Contract(
+      "0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643",
+      cDAI["abi"],
+      provider
+    );
+
+    const supplyRatePerBlock = await cDAIContract.supplyRatePerBlock();
+    console.log("suppluRateperBlock", supplyRatePerBlock);
+
+    const prizeSupplyRate = pt.utils.calculatePrizeSupplyRate(
+      supplyRatePerBlock,
+      currentDraw.feeFraction
+    );
+
+    const awardAtMs = Date.parse(getPoolTogetherDaiDrawDate());
+    const remainingTimeS = (awardAtMs - new Date().getTime()) / 1000;
+    const remainingBlocks = remainingTimeS / 15; // about 15 second block periods
+    const blocksFixedPoint18 = utils.parseEther(String(remainingBlocks));
+    const prizeEstimate = pt.utils.calculatePrizeEstimate(
+      balance,
+      prize,
+      blocksFixedPoint18,
+      prizeSupplyRate
+    );
+
+    const newPrizeEstimate = prizeEstimate / new BigNumber(10 ** 18);
+
+    console.log("prizeEstimate", prizeEstimate);
+    console.log("prizeEstimate", newPrizeEstimate.toString());
+
+    return newPrizeEstimate.toString()
+  }
+};
 
 export const getAccount = async () => {
   await onboard.walletSelect();
@@ -49,41 +153,156 @@ export const getGlobal3BoxInstance = async () => {
   boxInstance = await Box.openBox(null, threeIdProvider);
   await boxInstance.syncDone;
 
-  space = await boxInstance.openSpace("PodChatSpace");
+  globalSpace = await boxInstance.openSpace("PodChatSpace");
 };
 
 export const getUser3BoxInstance = async () => {
+  if (!web3) {
+    await getAccount();
+  }
   const currentUser = await defaultAddress();
-  const spaceData = await Box.getSpace(currentUser, "PodChatSpace");
+  const provider = await Box.get3idConnectProvider(); // recomended provider
+  console.log("currentUser", currentUser);
 
-  return spaceData;
+  userBoxInstance = await Box.openBox(currentUser, web3.currentProvider);
+  console.log("userBoxInstance", userBoxInstance);
+
+  userSpace = await userBoxInstance.openSpace("PodChatSpace");
+  await userSpace.syncDone;
+  console.log("userspace", userSpace);
 };
 
 export const getAllPods = async () => {
-  const globalSpace = await getGlobal3BoxInstance()
-  
-  const allPodsList = await globalSpace.public.get('podsList')
-  return allPodsList
-}
+  if (!boxInstance) {
+    await getGlobal3BoxInstance();
+  }
+
+  const allPodsList = await globalSpace.public.get(globalPodsListName);
+  if (!allPodsList) {
+    return [];
+  }
+  return allPodsList;
+};
+
+export const addPodtoGlobal = async (podDetail) => {
+  console.log("podDetail", podDetail);
+  let allPods = await getAllPods();
+  console.log("allPods", allPods);
+  allPods.push(podDetail);
+
+  await globalSpace.public.set(globalPodsListName, allPods);
+
+  console.log("allpods", await getAllPods());
+  return await getAllPods();
+};
 
 export const getUserPods = async () => {
-  const userSpace = await getUser3BoxInstance();
-  let pods = userSpace.public.get("userPodList");
+  if (!userBoxInstance) {
+    await getUser3BoxInstance();
+  }
+  let pods = await userSpace.public.get(userPodListName);
+  console.log("userPODS", pods);
+  if (!pods) {
+    return [];
+  }
+  const allPodsList = await getAllPods();
+  console.log("allpods", allPodsList);
+  const userPods = allPodsList.filter((pod) => pods.includes(pod.address));
+  console.log("userPods", userPods);
 
-  const allPodsList = await getAllPods()
-  const userPods = allPodsList.filter((pod) => { pods.includes(pod.address) })
+  return userPods;
+};
 
-  return userPods
+export const updateUserList = async (newList) => {
+  await userPodListName.public.set(userPodListName, newList);
+};
+
+export const updateGlobalList = async (newList) => {
+  console.log("newList", newList);
+  await globalSpace.public.set(globalPodsListName, newList);
 };
 
 export const addPodtoUser = async (podAddress) => {
-  const userSpace = await getUser3BoxInstance();
+  console.log("podAddress", podAddress);
 
-  let pods = space.public.get("userPodList");
+  const userAddress = await defaultAddress();
+  // Add Pod to his space
+  let globalPods = await getAllPods();
+  let userPods = await getUserPods();
+  console.log("userPods", userPods, "globalPods", globalPods);
+  const isPodExist = globalPods.find((pod) => pod.address === podAddress);
+  console.log(isPodExist, "isExist");
+  if (isPodExist) {
+    userPods.push(podAddress);
+    userSpace.public.set(userPodListName, userPods);
 
-  pods.push(podAddress);
+    // Add user to pod members list
+    const selectedPodIndex = globalPods.findIndex(
+      (pod) => pod.address === podAddress
+    );
+    globalPods[selectedPodIndex].members.push(userAddress);
 
-  space.public.set("userPodList", pods);
+    await updateGlobalList(globalPods);
+    console.log("getUserPods", await getUserPods());
+    return await getUserPods();
+  } else {
+    const newPod = {
+      address: podAddress,
+      name: "podName",
+      members: [userAddress],
+    };
+
+    console.log("NewPod", newPod);
+
+    await addPodtoGlobal(newPod);
+    userPods.push(podAddress);
+    userSpace.public.set(userPodListName, userPods);
+
+    console.log("getUserPods", await getUserPods());
+    return await getUserPods();
+  }
+};
+
+export const createPod = async (podName) => {
+  const userAddress = await defaultAddress();
+  const poolAddress = "0xc3a62c8af55c59642071bc171ebd05eb2479b663";
+
+  // let fixedPoint, exchangeRateTracker, scheduledBalance
+
+  // const fixedPointC = contract(FixedPoint);
+  // fixedPointC.setProvider(web3.currentProvider);
+
+  // const exchangeRateTrackerC = contract(ExchangeRateTracker);
+  // exchangeRateTrackerC.setProvider(web3.currentProvider);
+
+  // const scheduledBalanceC = contract(ScheduledBalance);
+  // scheduledBalanceC.setProvider(web3.currentProvider);
+
+  // fixedPoint = await fixedPointC.new({from: userAddress})
+  // exchangeRateTracker = await exchangeRateTrackerC.new({from: userAddress})
+  // scheduledBalance = await scheduledBalanceC.new({from: userAddress})
+
+  // console.log(fixedPoint.address, exchangeRateTracker.address, scheduledBalance.address)
+
+  // Pod.link('FixedPoint', fixedPoint.address)
+  // Pod.link('ExchangeRateTracker', exchangeRateTracker.address)
+  // Pod.link('ScheduledBalance', scheduledBalance.address)
+
+  // Transaction 1
+  const pod = contract(Pod);
+  pod.setProvider(web3.currentProvider);
+  let podInstance = await pod.new({ from: userAddress });
+
+  // Transaction 2
+  await podInstance.initialize(poolAddress, { from: userAddress });
+
+  const newPod = {
+    address: podInstance.address,
+    name: podName,
+    members: [userAddress],
+  };
+
+  await addPodtoUser(newPod);
 };
 
 export const defaultAddress = async () => {
@@ -108,7 +327,7 @@ export const getDAIBalance = async () => {
 };
 
 export const depositToPod = async (podAddress, amount) => {
-  const currentUser = await defaultAddress()
+  const currentUser = await defaultAddress();
   const pod = contract(Pod);
   pod.setProvider(web3.currentProvider);
   let podInstance = await pod.at(podAddress);
@@ -117,12 +336,12 @@ export const depositToPod = async (podAddress, amount) => {
   daiContract.setProvider(web3.currentProvider);
   const daiInstance = await daiContract.at(daiAddress);
 
-  const depositAmount = new BigNumber(amount * new BigNumber(10 ** 18))
+  const depositAmount = new BigNumber(amount * new BigNumber(10 ** 18));
 
   //Transaction 1
-  await daiInstance.approve(podAddress, depositAmount,{from: currentUser});
+  await daiInstance.approve(podAddress, depositAmount, { from: currentUser });
   //Transaction 2
-  await podInstance.deposit(depositAmount, [],{from: currentUser});
+  await podInstance.deposit(depositAmount, [], { from: currentUser });
 };
 
 export const redeemFromPod = async (podAddress, amount) => {
@@ -130,24 +349,6 @@ export const redeemFromPod = async (podAddress, amount) => {
   pod.setProvider(web3.currentProvider);
   let podInstance = await pod.at(podAddress);
   await podInstance.withdrawPendingDeposit(amount, []);
-};
-
-export const createPod = async (podName) => {
-  // Transaction 1
-  let pod = await Pod.new();
-  // Transaction 2
-  // await pod.initialize(poolContext.pool.address);
-
-  let pods = space.public.get("podList");
-
-  const newPod = {
-    address: pod.address,
-    name: podName,
-  };
-
-  pods.push(newPod);
-
-  space.public.set("podList", pods);
 };
 
 export const getPodQuery = async (podAddress) => {

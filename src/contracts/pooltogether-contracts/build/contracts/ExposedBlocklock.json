@@ -1,0 +1,2903 @@
+{
+  "contractName": "ExposedBlocklock",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "lockDuration",
+          "type": "uint256"
+        }
+      ],
+      "name": "setLockDuration",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "cooldownDuration",
+          "type": "uint256"
+        }
+      ],
+      "name": "setCooldownDuration",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "blockNumber",
+          "type": "uint256"
+        }
+      ],
+      "name": "isLocked",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "blockNumber",
+          "type": "uint256"
+        }
+      ],
+      "name": "lock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "blockNumber",
+          "type": "uint256"
+        }
+      ],
+      "name": "unlock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "blockNumber",
+          "type": "uint256"
+        }
+      ],
+      "name": "canLock",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "lockDuration",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "cooldownDuration",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "cooldownEndAt",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "lockEndAt",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"blockNumber\",\"type\":\"uint256\"}],\"name\":\"canLock\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"cooldownDuration\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"cooldownEndAt\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"blockNumber\",\"type\":\"uint256\"}],\"name\":\"isLocked\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"blockNumber\",\"type\":\"uint256\"}],\"name\":\"lock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"lockDuration\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"lockEndAt\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"cooldownDuration\",\"type\":\"uint256\"}],\"name\":\"setCooldownDuration\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"lockDuration\",\"type\":\"uint256\"}],\"name\":\"setLockDuration\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"blockNumber\",\"type\":\"uint256\"}],\"name\":\"unlock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/ExposedBlocklock.sol\":\"ExposedBlocklock\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/Blocklock.sol\":{\"keccak256\":\"0x158e97130210f3580c43fce4ce288ea17e6d5f9d58a325b40402d889db00942e\",\"urls\":[\"bzz-raw://c1eddcab7465c39306d2ab91b2cc087bc7853dc7f667f0962934424ca0005196\",\"dweb:/ipfs/QmZFFnDcssFD1Xds1RmRvbWSbNjoioGZiP6sHKUV8SqCk9\"]},\"/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/ExposedBlocklock.sol\":{\"keccak256\":\"0xefda93deb67f70fe259dea4b21e413929c1f861b147a178dcbeda6a79c88cc6d\",\"urls\":[\"bzz-raw://a2296bce45e77e2a6a0c2bf9397cf853c2132b5e51cef7b22d06f191799f6bd3\",\"dweb:/ipfs/QmaKm4k8iKFZ6Uepy8gfHZBgY62jNT1SnjypoBuiVqkWjQ\"]},\"@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x640b6dee7a4b830bdfd52b5031a07fc2b12209f5b2e29e5d364a7d37f69d8076\",\"urls\":[\"bzz-raw://31113152e1ddb78fe7a4197f247591ca894e93f916867beb708d8e747b6cc74f\",\"dweb:/ipfs/QmbZaJyXdpsYGykVhHH9qpVGQg9DGCxE2QufbCUy3daTgq\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061051f806100206000396000f3fe608060405234801561001057600080fd5b506004361061009e5760003560e01c80639512cb22116100665780639512cb2214610109578063966be07514610111578063c2d9830c1461012e578063dd4670641461015f578063f6aacfb11461017c5761009e565b806304554443146100a357806335269315146100bd5780633c10e560146100c55780634eb665af146100cd5780636198e339146100ec575b600080fd5b6100ab610199565b60408051918252519081900360200190f35b6100ab61019f565b6100ab6101a5565b6100ea600480360360208110156100e357600080fd5b50356101b6565b005b6100ea6004803603602081101561010257600080fd5b5035610228565b6100ab61027f565b6100ea6004803603602081101561012757600080fd5b503561028b565b61014b6004803603602081101561014457600080fd5b50356102e2565b604080519115158252519081900360200190f35b6100ea6004803603602081101561017557600080fd5b503561036f565b61014b6004803603602081101561019257600080fd5b50356103c6565b60025490565b60035490565b60006101b16000610420565b905090565b604080516343be6ded60e01b815260006004820181905260248201849052915173__Blocklock_____________________________926343be6ded9260448082019391829003018186803b15801561020d57600080fd5b505af4158015610221573d6000803e3d6000fd5b5050505050565b6040805163cc89d03b60e01b815260006004820181905260248201849052915173__Blocklock_____________________________9263cc89d03b9260448082019391829003018186803b15801561020d57600080fd5b60006101b1600061046a565b60408051636611206360e01b815260006004820181905260248201849052915173__Blocklock_____________________________9263661120639260448082019391829003018186803b15801561020d57600080fd5b60408051631307db5360e11b815260006004820181905260248201849052915173__Blocklock_____________________________9163260fb6a6916044808301926020929190829003018186803b15801561033d57600080fd5b505af4158015610351573d6000803e3d6000fd5b505050506040513d602081101561036757600080fd5b505192915050565b60408051633e825e6d60e01b815260006004820181905260248201849052915173__Blocklock_____________________________92633e825e6d9260448082019391829003018186803b15801561020d57600080fd5b6040805162dec4c960e41b815260006004820181905260248201849052915173__Blocklock_____________________________91630dec4c90916044808301926020929190829003018186803b15801561033d57600080fd5b60028101548154600091829161043b9163ffffffff61048916565b905082600001548360010154101580156104585750808360010154105b15610464575060018201545b92915050565b6000610464826003015461047d84610420565b9063ffffffff61048916565b6000828201838110156104e3576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b939250505056fea265627a7a72315820cb9265981604ff687c33136bdd06e27da6617e47572a20147d3ef06e9bfd54a164736f6c634300050c0032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061009e5760003560e01c80639512cb22116100665780639512cb2214610109578063966be07514610111578063c2d9830c1461012e578063dd4670641461015f578063f6aacfb11461017c5761009e565b806304554443146100a357806335269315146100bd5780633c10e560146100c55780634eb665af146100cd5780636198e339146100ec575b600080fd5b6100ab610199565b60408051918252519081900360200190f35b6100ab61019f565b6100ab6101a5565b6100ea600480360360208110156100e357600080fd5b50356101b6565b005b6100ea6004803603602081101561010257600080fd5b5035610228565b6100ab61027f565b6100ea6004803603602081101561012757600080fd5b503561028b565b61014b6004803603602081101561014457600080fd5b50356102e2565b604080519115158252519081900360200190f35b6100ea6004803603602081101561017557600080fd5b503561036f565b61014b6004803603602081101561019257600080fd5b50356103c6565b60025490565b60035490565b60006101b16000610420565b905090565b604080516343be6ded60e01b815260006004820181905260248201849052915173__Blocklock_____________________________926343be6ded9260448082019391829003018186803b15801561020d57600080fd5b505af4158015610221573d6000803e3d6000fd5b5050505050565b6040805163cc89d03b60e01b815260006004820181905260248201849052915173__Blocklock_____________________________9263cc89d03b9260448082019391829003018186803b15801561020d57600080fd5b60006101b1600061046a565b60408051636611206360e01b815260006004820181905260248201849052915173__Blocklock_____________________________9263661120639260448082019391829003018186803b15801561020d57600080fd5b60408051631307db5360e11b815260006004820181905260248201849052915173__Blocklock_____________________________9163260fb6a6916044808301926020929190829003018186803b15801561033d57600080fd5b505af4158015610351573d6000803e3d6000fd5b505050506040513d602081101561036757600080fd5b505192915050565b60408051633e825e6d60e01b815260006004820181905260248201849052915173__Blocklock_____________________________92633e825e6d9260448082019391829003018186803b15801561020d57600080fd5b6040805162dec4c960e41b815260006004820181905260248201849052915173__Blocklock_____________________________91630dec4c90916044808301926020929190829003018186803b15801561033d57600080fd5b60028101548154600091829161043b9163ffffffff61048916565b905082600001548360010154101580156104585750808360010154105b15610464575060018201545b92915050565b6000610464826003015461047d84610420565b9063ffffffff61048916565b6000828201838110156104e3576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b939250505056fea265627a7a72315820cb9265981604ff687c33136bdd06e27da6617e47572a20147d3ef06e9bfd54a164736f6c634300050c0032",
+  "sourceMap": "53:1094:15:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;53:1094:15;;;;;;;",
+  "deployedSourceMap": "53:1094:15:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;53:1094:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;765:90;;;:::i;:::-;;;;;;;;;;;;;;;;859:98;;;:::i;1059:86::-;;;:::i;149:100::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;149:100:15;;:::i;:::-;;568:80;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;568:80:15;;:::i;961:94::-;;;:::i;253:116::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;253:116:15;;:::i;652:109::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;652:109:15;;:::i;:::-;;;;;;;;;;;;;;;;;;488:76;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;488:76:15;;:::i;373:111::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;373:111:15;;:::i;765:90::-;832:18;;765:90;:::o;859:98::-;930:22;;859:98;:::o;1059:86::-;1101:7;1123:17;:5;:15;:17::i;:::-;1116:24;;1059:86;:::o;149:100::-;209:35;;;-1:-1:-1;;;209:35:15;;:5;:35;;;;;;;;;;;;;;:21;;;;:35;;;;;;;;;;;:21;:35;;;5:2:-1;;;;30:1;27;20:12;5:2;209:35:15;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;209:35:15;;;;149:100;:::o;568:80::-;618:25;;;-1:-1:-1;;;618:25:15;;:5;:25;;;;;;;;;;;;;;:12;;;;:25;;;;;;;;;;;:12;:25;;;5:2:-1;;;;30:1;27;20:12;961:94:15;1007:7;1029:21;:5;:19;:21::i;253:116::-;321:43;;;-1:-1:-1;;;321:43:15;;:5;:43;;;;;;;;;;;;;;:25;;;;:43;;;;;;;;;;;:25;:43;;;5:2:-1;;;;30:1;27;20:12;652:109:15;730:26;;;-1:-1:-1;;;730:26:15;;711:4;730:26;;;;;;;;;;;;;;:13;;;;:26;;;;;;;;;;;;;;:13;:26;;;5:2:-1;;;;30:1;27;20:12;5:2;730:26:15;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;730:26:15;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;730:26:15;;652:109;-1:-1:-1;;652:109:15:o;488:76::-;536:23;;;-1:-1:-1;;;536:23:15;;:5;:23;;;;;;;;;;;;;;:10;;;;:23;;;;;;;;;;;:10;:23;;;5:2:-1;;;;30:1;27;20:12;373:111:15;452:27;;;-1:-1:-1;;;452:27:15;;433:4;452:27;;;;;;;;;;;;;;:14;;;;:27;;;;;;;;;;;;;;:14;:27;;;5:2:-1;;;;30:1;27;20:12;3222:288:1;3333:17;;;;3315:13;;3284:7;;;;3315:36;;;:17;:36;:::i;:::-;3299:52;;3408:4;:13;;;3389:4;:15;;;:32;;:59;;;;;3443:5;3425:4;:15;;;:23;3389:59;3385:103;;;-1:-1:-1;3466:15:1;;;;3385:103;3500:5;3222:288;-1:-1:-1;;3222:288:1:o;3083:135::-;3149:7;3171:42;3191:4;:21;;;3171:15;3181:4;3171:9;:15::i;:::-;:19;:42;:19;:42;:::i;834:176:30:-;892:7;923:5;;;946:6;;;;938:46;;;;;-1:-1:-1;;;938:46:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;1002:1;834:176;-1:-1:-1;;;834:176:30:o",
+  "source": "pragma solidity 0.5.12;\n\nimport \"../Blocklock.sol\";\n\ncontract ExposedBlocklock {\n  using Blocklock for Blocklock.State;\n\n  Blocklock.State state;\n\n  function setLockDuration(uint256 lockDuration) public {\n    state.setLockDuration(lockDuration);\n  }\n\n  function setCooldownDuration(uint256 cooldownDuration) public {\n    state.setCooldownDuration(cooldownDuration);\n  }\n\n  function isLocked(uint256 blockNumber) public view returns (bool) {\n    return state.isLocked(blockNumber);\n  }\n\n  function lock(uint256 blockNumber) public {\n    state.lock(blockNumber);\n  }\n\n  function unlock(uint256 blockNumber) public {\n    state.unlock(blockNumber);\n  }\n\n  function canLock(uint256 blockNumber) public view returns (bool) {\n    return state.canLock(blockNumber);\n  }\n\n  function lockDuration() public view returns (uint256) {\n    return state.lockDuration;\n  }\n\n  function cooldownDuration() public view returns (uint256) {\n    return state.cooldownDuration;\n  }\n\n  function cooldownEndAt() public view returns (uint256) {\n    return state.cooldownEndAt();\n  }\n\n  function lockEndAt() public view returns (uint256) {\n    return state.lockEndAt();\n  }\n}\n",
+  "sourcePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/ExposedBlocklock.sol",
+  "ast": {
+    "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/ExposedBlocklock.sol",
+    "exportedSymbols": {
+      "ExposedBlocklock": [
+        5732
+      ]
+    },
+    "id": 5733,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5613,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:15"
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/Blocklock.sol",
+        "file": "../Blocklock.sol",
+        "id": 5614,
+        "nodeType": "ImportDirective",
+        "scope": 5733,
+        "sourceUnit": 2308,
+        "src": "25:26:15",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5732,
+        "linearizedBaseContracts": [
+          5732
+        ],
+        "name": "ExposedBlocklock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 5617,
+            "libraryName": {
+              "contractScope": null,
+              "id": 5615,
+              "name": "Blocklock",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2307,
+              "src": "89:9:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Blocklock_$2307",
+                "typeString": "library Blocklock"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "83:36:15",
+            "typeName": {
+              "contractScope": null,
+              "id": 5616,
+              "name": "Blocklock.State",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2115,
+              "src": "103:15:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_State_$2115_storage_ptr",
+                "typeString": "struct Blocklock.State"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 5619,
+            "name": "state",
+            "nodeType": "VariableDeclaration",
+            "scope": 5732,
+            "src": "123:21:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_State_$2115_storage",
+              "typeString": "struct Blocklock.State"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 5618,
+              "name": "Blocklock.State",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2115,
+              "src": "123:15:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_State_$2115_storage_ptr",
+                "typeString": "struct Blocklock.State"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 5630,
+              "nodeType": "Block",
+              "src": "203:46:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5627,
+                        "name": "lockDuration",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5621,
+                        "src": "231:12:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5624,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5619,
+                        "src": "209:5:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$2115_storage",
+                          "typeString": "struct Blocklock.State storage ref"
+                        }
+                      },
+                      "id": 5626,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setLockDuration",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2136,
+                      "src": "209:21:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_nonpayable$_t_struct$_State_$2115_storage_ptr_$_t_uint256_$returns$__$bound_to$_t_struct$_State_$2115_storage_ptr_$",
+                        "typeString": "function (struct Blocklock.State storage pointer,uint256)"
+                      }
+                    },
+                    "id": 5628,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "209:35:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5629,
+                  "nodeType": "ExpressionStatement",
+                  "src": "209:35:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5631,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setLockDuration",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5622,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5621,
+                  "name": "lockDuration",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5631,
+                  "src": "174:20:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5620,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "174:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "173:22:15"
+            },
+            "returnParameters": {
+              "id": 5623,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "203:0:15"
+            },
+            "scope": 5732,
+            "src": "149:100:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5642,
+              "nodeType": "Block",
+              "src": "315:54:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5639,
+                        "name": "cooldownDuration",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5633,
+                        "src": "347:16:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5636,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5619,
+                        "src": "321:5:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$2115_storage",
+                          "typeString": "struct Blocklock.State storage ref"
+                        }
+                      },
+                      "id": 5638,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setCooldownDuration",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2157,
+                      "src": "321:25:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_nonpayable$_t_struct$_State_$2115_storage_ptr_$_t_uint256_$returns$__$bound_to$_t_struct$_State_$2115_storage_ptr_$",
+                        "typeString": "function (struct Blocklock.State storage pointer,uint256)"
+                      }
+                    },
+                    "id": 5640,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "321:43:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5641,
+                  "nodeType": "ExpressionStatement",
+                  "src": "321:43:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5643,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setCooldownDuration",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5634,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5633,
+                  "name": "cooldownDuration",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5643,
+                  "src": "282:24:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5632,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "282:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "281:26:15"
+            },
+            "returnParameters": {
+              "id": 5635,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "315:0:15"
+            },
+            "scope": 5732,
+            "src": "253:116:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5655,
+              "nodeType": "Block",
+              "src": "439:45:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5652,
+                        "name": "blockNumber",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5645,
+                        "src": "467:11:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5650,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5619,
+                        "src": "452:5:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$2115_storage",
+                          "typeString": "struct Blocklock.State storage ref"
+                        }
+                      },
+                      "id": 5651,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "isLocked",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2188,
+                      "src": "452:14:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_view$_t_struct$_State_$2115_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_State_$2115_storage_ptr_$",
+                        "typeString": "function (struct Blocklock.State storage pointer,uint256) view returns (bool)"
+                      }
+                    },
+                    "id": 5653,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "452:27:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 5649,
+                  "id": 5654,
+                  "nodeType": "Return",
+                  "src": "445:34:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5656,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isLocked",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5646,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5645,
+                  "name": "blockNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5656,
+                  "src": "391:19:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5644,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "391:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "390:21:15"
+            },
+            "returnParameters": {
+              "id": 5649,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5648,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5656,
+                  "src": "433:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5647,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "433:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "432:6:15"
+            },
+            "scope": 5732,
+            "src": "373:111:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5667,
+              "nodeType": "Block",
+              "src": "530:34:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5664,
+                        "name": "blockNumber",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5658,
+                        "src": "547:11:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5661,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5619,
+                        "src": "536:5:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$2115_storage",
+                          "typeString": "struct Blocklock.State storage ref"
+                        }
+                      },
+                      "id": 5663,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "lock",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2210,
+                      "src": "536:10:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_nonpayable$_t_struct$_State_$2115_storage_ptr_$_t_uint256_$returns$__$bound_to$_t_struct$_State_$2115_storage_ptr_$",
+                        "typeString": "function (struct Blocklock.State storage pointer,uint256)"
+                      }
+                    },
+                    "id": 5665,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "536:23:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5666,
+                  "nodeType": "ExpressionStatement",
+                  "src": "536:23:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5668,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "lock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5659,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5658,
+                  "name": "blockNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5668,
+                  "src": "502:19:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5657,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "502:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "501:21:15"
+            },
+            "returnParameters": {
+              "id": 5660,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "530:0:15"
+            },
+            "scope": 5732,
+            "src": "488:76:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5679,
+              "nodeType": "Block",
+              "src": "612:36:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5676,
+                        "name": "blockNumber",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5670,
+                        "src": "631:11:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5673,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5619,
+                        "src": "618:5:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$2115_storage",
+                          "typeString": "struct Blocklock.State storage ref"
+                        }
+                      },
+                      "id": 5675,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "unlock",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2224,
+                      "src": "618:12:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_nonpayable$_t_struct$_State_$2115_storage_ptr_$_t_uint256_$returns$__$bound_to$_t_struct$_State_$2115_storage_ptr_$",
+                        "typeString": "function (struct Blocklock.State storage pointer,uint256)"
+                      }
+                    },
+                    "id": 5677,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "618:25:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5678,
+                  "nodeType": "ExpressionStatement",
+                  "src": "618:25:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5680,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "unlock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5671,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5670,
+                  "name": "blockNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5680,
+                  "src": "584:19:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5669,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "584:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "583:21:15"
+            },
+            "returnParameters": {
+              "id": 5672,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "612:0:15"
+            },
+            "scope": 5732,
+            "src": "568:80:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5692,
+              "nodeType": "Block",
+              "src": "717:44:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5689,
+                        "name": "blockNumber",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5682,
+                        "src": "744:11:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5687,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5619,
+                        "src": "730:5:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$2115_storage",
+                          "typeString": "struct Blocklock.State storage ref"
+                        }
+                      },
+                      "id": 5688,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "canLock",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2254,
+                      "src": "730:13:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_view$_t_struct$_State_$2115_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_State_$2115_storage_ptr_$",
+                        "typeString": "function (struct Blocklock.State storage pointer,uint256) view returns (bool)"
+                      }
+                    },
+                    "id": 5690,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "730:26:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 5686,
+                  "id": 5691,
+                  "nodeType": "Return",
+                  "src": "723:33:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5693,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "canLock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5683,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5682,
+                  "name": "blockNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5693,
+                  "src": "669:19:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5681,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "669:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "668:21:15"
+            },
+            "returnParameters": {
+              "id": 5686,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5685,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5693,
+                  "src": "711:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5684,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "711:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "710:6:15"
+            },
+            "scope": 5732,
+            "src": "652:109:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5701,
+              "nodeType": "Block",
+              "src": "819:36:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 5698,
+                      "name": "state",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5619,
+                      "src": "832:5:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_State_$2115_storage",
+                        "typeString": "struct Blocklock.State storage ref"
+                      }
+                    },
+                    "id": 5699,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "lockDuration",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 2112,
+                    "src": "832:18:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 5697,
+                  "id": 5700,
+                  "nodeType": "Return",
+                  "src": "825:25:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5702,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "lockDuration",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5694,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "786:2:15"
+            },
+            "returnParameters": {
+              "id": 5697,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5696,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5702,
+                  "src": "810:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5695,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "810:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "809:9:15"
+            },
+            "scope": 5732,
+            "src": "765:90:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5710,
+              "nodeType": "Block",
+              "src": "917:40:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 5707,
+                      "name": "state",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5619,
+                      "src": "930:5:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_State_$2115_storage",
+                        "typeString": "struct Blocklock.State storage ref"
+                      }
+                    },
+                    "id": 5708,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "cooldownDuration",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 2114,
+                    "src": "930:22:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 5706,
+                  "id": 5709,
+                  "nodeType": "Return",
+                  "src": "923:29:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5711,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cooldownDuration",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5703,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "884:2:15"
+            },
+            "returnParameters": {
+              "id": 5706,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5705,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5711,
+                  "src": "908:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5704,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "908:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "907:9:15"
+            },
+            "scope": 5732,
+            "src": "859:98:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5720,
+              "nodeType": "Block",
+              "src": "1016:39:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5716,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5619,
+                        "src": "1029:5:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$2115_storage",
+                          "typeString": "struct Blocklock.State storage ref"
+                        }
+                      },
+                      "id": 5717,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "cooldownEndAt",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2270,
+                      "src": "1029:19:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_State_$2115_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_State_$2115_storage_ptr_$",
+                        "typeString": "function (struct Blocklock.State storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 5718,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1029:21:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 5715,
+                  "id": 5719,
+                  "nodeType": "Return",
+                  "src": "1022:28:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5721,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cooldownEndAt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5712,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "983:2:15"
+            },
+            "returnParameters": {
+              "id": 5715,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5714,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5721,
+                  "src": "1007:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5713,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1007:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1006:9:15"
+            },
+            "scope": 5732,
+            "src": "961:94:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5730,
+              "nodeType": "Block",
+              "src": "1110:35:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5726,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5619,
+                        "src": "1123:5:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$2115_storage",
+                          "typeString": "struct Blocklock.State storage ref"
+                        }
+                      },
+                      "id": 5727,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "lockEndAt",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2306,
+                      "src": "1123:15:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_State_$2115_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_State_$2115_storage_ptr_$",
+                        "typeString": "function (struct Blocklock.State storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 5728,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1123:17:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 5725,
+                  "id": 5729,
+                  "nodeType": "Return",
+                  "src": "1116:24:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5731,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "lockEndAt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5722,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1077:2:15"
+            },
+            "returnParameters": {
+              "id": 5725,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5724,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5731,
+                  "src": "1101:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5723,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1101:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1100:9:15"
+            },
+            "scope": 5732,
+            "src": "1059:86:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 5733,
+        "src": "53:1094:15"
+      }
+    ],
+    "src": "0:1148:15"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/ExposedBlocklock.sol",
+    "exportedSymbols": {
+      "ExposedBlocklock": [
+        5732
+      ]
+    },
+    "id": 5733,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5613,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:15"
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/Blocklock.sol",
+        "file": "../Blocklock.sol",
+        "id": 5614,
+        "nodeType": "ImportDirective",
+        "scope": 5733,
+        "sourceUnit": 2308,
+        "src": "25:26:15",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5732,
+        "linearizedBaseContracts": [
+          5732
+        ],
+        "name": "ExposedBlocklock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 5617,
+            "libraryName": {
+              "contractScope": null,
+              "id": 5615,
+              "name": "Blocklock",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2307,
+              "src": "89:9:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Blocklock_$2307",
+                "typeString": "library Blocklock"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "83:36:15",
+            "typeName": {
+              "contractScope": null,
+              "id": 5616,
+              "name": "Blocklock.State",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2115,
+              "src": "103:15:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_State_$2115_storage_ptr",
+                "typeString": "struct Blocklock.State"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 5619,
+            "name": "state",
+            "nodeType": "VariableDeclaration",
+            "scope": 5732,
+            "src": "123:21:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_State_$2115_storage",
+              "typeString": "struct Blocklock.State"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 5618,
+              "name": "Blocklock.State",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2115,
+              "src": "123:15:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_State_$2115_storage_ptr",
+                "typeString": "struct Blocklock.State"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 5630,
+              "nodeType": "Block",
+              "src": "203:46:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5627,
+                        "name": "lockDuration",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5621,
+                        "src": "231:12:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5624,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5619,
+                        "src": "209:5:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$2115_storage",
+                          "typeString": "struct Blocklock.State storage ref"
+                        }
+                      },
+                      "id": 5626,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setLockDuration",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2136,
+                      "src": "209:21:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_nonpayable$_t_struct$_State_$2115_storage_ptr_$_t_uint256_$returns$__$bound_to$_t_struct$_State_$2115_storage_ptr_$",
+                        "typeString": "function (struct Blocklock.State storage pointer,uint256)"
+                      }
+                    },
+                    "id": 5628,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "209:35:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5629,
+                  "nodeType": "ExpressionStatement",
+                  "src": "209:35:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5631,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setLockDuration",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5622,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5621,
+                  "name": "lockDuration",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5631,
+                  "src": "174:20:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5620,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "174:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "173:22:15"
+            },
+            "returnParameters": {
+              "id": 5623,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "203:0:15"
+            },
+            "scope": 5732,
+            "src": "149:100:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5642,
+              "nodeType": "Block",
+              "src": "315:54:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5639,
+                        "name": "cooldownDuration",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5633,
+                        "src": "347:16:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5636,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5619,
+                        "src": "321:5:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$2115_storage",
+                          "typeString": "struct Blocklock.State storage ref"
+                        }
+                      },
+                      "id": 5638,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setCooldownDuration",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2157,
+                      "src": "321:25:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_nonpayable$_t_struct$_State_$2115_storage_ptr_$_t_uint256_$returns$__$bound_to$_t_struct$_State_$2115_storage_ptr_$",
+                        "typeString": "function (struct Blocklock.State storage pointer,uint256)"
+                      }
+                    },
+                    "id": 5640,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "321:43:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5641,
+                  "nodeType": "ExpressionStatement",
+                  "src": "321:43:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5643,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setCooldownDuration",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5634,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5633,
+                  "name": "cooldownDuration",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5643,
+                  "src": "282:24:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5632,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "282:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "281:26:15"
+            },
+            "returnParameters": {
+              "id": 5635,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "315:0:15"
+            },
+            "scope": 5732,
+            "src": "253:116:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5655,
+              "nodeType": "Block",
+              "src": "439:45:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5652,
+                        "name": "blockNumber",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5645,
+                        "src": "467:11:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5650,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5619,
+                        "src": "452:5:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$2115_storage",
+                          "typeString": "struct Blocklock.State storage ref"
+                        }
+                      },
+                      "id": 5651,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "isLocked",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2188,
+                      "src": "452:14:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_view$_t_struct$_State_$2115_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_State_$2115_storage_ptr_$",
+                        "typeString": "function (struct Blocklock.State storage pointer,uint256) view returns (bool)"
+                      }
+                    },
+                    "id": 5653,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "452:27:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 5649,
+                  "id": 5654,
+                  "nodeType": "Return",
+                  "src": "445:34:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5656,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isLocked",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5646,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5645,
+                  "name": "blockNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5656,
+                  "src": "391:19:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5644,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "391:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "390:21:15"
+            },
+            "returnParameters": {
+              "id": 5649,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5648,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5656,
+                  "src": "433:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5647,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "433:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "432:6:15"
+            },
+            "scope": 5732,
+            "src": "373:111:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5667,
+              "nodeType": "Block",
+              "src": "530:34:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5664,
+                        "name": "blockNumber",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5658,
+                        "src": "547:11:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5661,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5619,
+                        "src": "536:5:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$2115_storage",
+                          "typeString": "struct Blocklock.State storage ref"
+                        }
+                      },
+                      "id": 5663,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "lock",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2210,
+                      "src": "536:10:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_nonpayable$_t_struct$_State_$2115_storage_ptr_$_t_uint256_$returns$__$bound_to$_t_struct$_State_$2115_storage_ptr_$",
+                        "typeString": "function (struct Blocklock.State storage pointer,uint256)"
+                      }
+                    },
+                    "id": 5665,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "536:23:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5666,
+                  "nodeType": "ExpressionStatement",
+                  "src": "536:23:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5668,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "lock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5659,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5658,
+                  "name": "blockNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5668,
+                  "src": "502:19:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5657,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "502:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "501:21:15"
+            },
+            "returnParameters": {
+              "id": 5660,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "530:0:15"
+            },
+            "scope": 5732,
+            "src": "488:76:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5679,
+              "nodeType": "Block",
+              "src": "612:36:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5676,
+                        "name": "blockNumber",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5670,
+                        "src": "631:11:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5673,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5619,
+                        "src": "618:5:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$2115_storage",
+                          "typeString": "struct Blocklock.State storage ref"
+                        }
+                      },
+                      "id": 5675,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "unlock",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2224,
+                      "src": "618:12:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_nonpayable$_t_struct$_State_$2115_storage_ptr_$_t_uint256_$returns$__$bound_to$_t_struct$_State_$2115_storage_ptr_$",
+                        "typeString": "function (struct Blocklock.State storage pointer,uint256)"
+                      }
+                    },
+                    "id": 5677,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "618:25:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5678,
+                  "nodeType": "ExpressionStatement",
+                  "src": "618:25:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5680,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "unlock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5671,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5670,
+                  "name": "blockNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5680,
+                  "src": "584:19:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5669,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "584:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "583:21:15"
+            },
+            "returnParameters": {
+              "id": 5672,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "612:0:15"
+            },
+            "scope": 5732,
+            "src": "568:80:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5692,
+              "nodeType": "Block",
+              "src": "717:44:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 5689,
+                        "name": "blockNumber",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5682,
+                        "src": "744:11:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5687,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5619,
+                        "src": "730:5:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$2115_storage",
+                          "typeString": "struct Blocklock.State storage ref"
+                        }
+                      },
+                      "id": 5688,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "canLock",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2254,
+                      "src": "730:13:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_view$_t_struct$_State_$2115_storage_ptr_$_t_uint256_$returns$_t_bool_$bound_to$_t_struct$_State_$2115_storage_ptr_$",
+                        "typeString": "function (struct Blocklock.State storage pointer,uint256) view returns (bool)"
+                      }
+                    },
+                    "id": 5690,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "730:26:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 5686,
+                  "id": 5691,
+                  "nodeType": "Return",
+                  "src": "723:33:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5693,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "canLock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5683,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5682,
+                  "name": "blockNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5693,
+                  "src": "669:19:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5681,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "669:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "668:21:15"
+            },
+            "returnParameters": {
+              "id": 5686,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5685,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5693,
+                  "src": "711:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5684,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "711:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "710:6:15"
+            },
+            "scope": 5732,
+            "src": "652:109:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5701,
+              "nodeType": "Block",
+              "src": "819:36:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 5698,
+                      "name": "state",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5619,
+                      "src": "832:5:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_State_$2115_storage",
+                        "typeString": "struct Blocklock.State storage ref"
+                      }
+                    },
+                    "id": 5699,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "lockDuration",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 2112,
+                    "src": "832:18:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 5697,
+                  "id": 5700,
+                  "nodeType": "Return",
+                  "src": "825:25:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5702,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "lockDuration",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5694,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "786:2:15"
+            },
+            "returnParameters": {
+              "id": 5697,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5696,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5702,
+                  "src": "810:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5695,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "810:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "809:9:15"
+            },
+            "scope": 5732,
+            "src": "765:90:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5710,
+              "nodeType": "Block",
+              "src": "917:40:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 5707,
+                      "name": "state",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5619,
+                      "src": "930:5:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_State_$2115_storage",
+                        "typeString": "struct Blocklock.State storage ref"
+                      }
+                    },
+                    "id": 5708,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "cooldownDuration",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 2114,
+                    "src": "930:22:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 5706,
+                  "id": 5709,
+                  "nodeType": "Return",
+                  "src": "923:29:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5711,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cooldownDuration",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5703,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "884:2:15"
+            },
+            "returnParameters": {
+              "id": 5706,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5705,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5711,
+                  "src": "908:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5704,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "908:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "907:9:15"
+            },
+            "scope": 5732,
+            "src": "859:98:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5720,
+              "nodeType": "Block",
+              "src": "1016:39:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5716,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5619,
+                        "src": "1029:5:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$2115_storage",
+                          "typeString": "struct Blocklock.State storage ref"
+                        }
+                      },
+                      "id": 5717,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "cooldownEndAt",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2270,
+                      "src": "1029:19:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_State_$2115_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_State_$2115_storage_ptr_$",
+                        "typeString": "function (struct Blocklock.State storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 5718,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1029:21:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 5715,
+                  "id": 5719,
+                  "nodeType": "Return",
+                  "src": "1022:28:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5721,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cooldownEndAt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5712,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "983:2:15"
+            },
+            "returnParameters": {
+              "id": 5715,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5714,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5721,
+                  "src": "1007:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5713,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1007:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1006:9:15"
+            },
+            "scope": 5732,
+            "src": "961:94:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 5730,
+              "nodeType": "Block",
+              "src": "1110:35:15",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 5726,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5619,
+                        "src": "1123:5:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$2115_storage",
+                          "typeString": "struct Blocklock.State storage ref"
+                        }
+                      },
+                      "id": 5727,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "lockEndAt",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2306,
+                      "src": "1123:15:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_State_$2115_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_State_$2115_storage_ptr_$",
+                        "typeString": "function (struct Blocklock.State storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 5728,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1123:17:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 5725,
+                  "id": 5729,
+                  "nodeType": "Return",
+                  "src": "1116:24:15"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 5731,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "lockEndAt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5722,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1077:2:15"
+            },
+            "returnParameters": {
+              "id": 5725,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5724,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5731,
+                  "src": "1101:7:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5723,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1101:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1100:9:15"
+            },
+            "scope": 5732,
+            "src": "1059:86:15",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 5733,
+        "src": "53:1094:15"
+      }
+    ],
+    "src": "0:1148:15"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-05-21T20:34:55.088Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

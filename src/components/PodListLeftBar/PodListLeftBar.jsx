@@ -2,8 +2,18 @@ import React from "react";
 import "./PodListLeftBar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { ActionContext } from "../../hooks";
 
 function PodListLeftBar(props) {
+
+  const { toggleModal } = React.useContext(ActionContext);
+  const openModal = () => {
+    toggleModal({
+      openModal: true,
+      modalConfig: { addPodAddress: true },
+    });
+  };
+
   return (
     <div className="pod-list-left-bar">
       <div className="pod-list-header-container">
@@ -11,7 +21,7 @@ function PodListLeftBar(props) {
 
         <button
           className="add-pod-button"
-          // onClick={(e) => this.setNodeProperties(true)}
+           onClick={(e) => openModal()}
         >
           <span>
             <FontAwesomeIcon icon={faPlus} />

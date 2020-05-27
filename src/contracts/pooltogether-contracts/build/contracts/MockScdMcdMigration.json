@@ -1,0 +1,3620 @@
+{
+  "contractName": "MockScdMcdMigration",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "dai",
+      "outputs": [
+        {
+          "internalType": "contract Token",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "daiJoin",
+      "outputs": [
+        {
+          "internalType": "contract MockJoinLike",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "sai",
+      "outputs": [
+        {
+          "internalType": "contract Token",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "saiJoin",
+      "outputs": [
+        {
+          "internalType": "contract MockJoinLike",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "contract Token",
+          "name": "_sai",
+          "type": "address"
+        },
+        {
+          "internalType": "contract Token",
+          "name": "_dai",
+          "type": "address"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "contract Token",
+          "name": "_sai",
+          "type": "address"
+        }
+      ],
+      "name": "setSai",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "contract Token",
+          "name": "_dai",
+          "type": "address"
+        }
+      ],
+      "name": "setDai",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "wad",
+          "type": "uint256"
+        }
+      ],
+      "name": "swapSaiToDai",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"dai\",\"outputs\":[{\"internalType\":\"contract Token\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"daiJoin\",\"outputs\":[{\"internalType\":\"contract MockJoinLike\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"contract Token\",\"name\":\"_sai\",\"type\":\"address\"},{\"internalType\":\"contract Token\",\"name\":\"_dai\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"sai\",\"outputs\":[{\"internalType\":\"contract Token\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"saiJoin\",\"outputs\":[{\"internalType\":\"contract MockJoinLike\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"contract Token\",\"name\":\"_dai\",\"type\":\"address\"}],\"name\":\"setDai\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"contract Token\",\"name\":\"_sai\",\"type\":\"address\"}],\"name\":\"setSai\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"wad\",\"type\":\"uint256\"}],\"name\":\"swapSaiToDai\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/maker/MockScdMcdMigration.sol\":\"MockScdMcdMigration\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/Token.sol\":{\"keccak256\":\"0xb6a673cf6c202b06817a80e25c2442821314bec1a452168b45607836ec11f511\",\"urls\":[\"bzz-raw://67ce6ed3d944cd1751eba6dfb098d51432ac69601cae456d09f52e9959230f42\",\"dweb:/ipfs/QmfRmhub9E1g1Wfh1sAFmscEn1kZvrabRq3fJokA5A2cMC\"]},\"/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/maker/MockJoinLike.sol\":{\"keccak256\":\"0x55b0a684b4ce7e2e4f968c44abfdb31c44f064850bc87c2ffd48a2cb26daf181\",\"urls\":[\"bzz-raw://15aab77d23c29f005e369d416de4b2e47aaabfa01cb47f070557cc15d400302f\",\"dweb:/ipfs/QmUhGtDFaNN9ABdW221SGgihWFzPTSiYpcdvgCZE3H8wYZ\"]},\"/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/maker/MockScdMcdMigration.sol\":{\"keccak256\":\"0x7944bafe4e9124f0591caca6b91fc26dd049a9d9f4d8706d96a6beba0319e510\",\"urls\":[\"bzz-raw://d4ea2e37df4957d2f2f61dcc488b771fe8e137afd7bdd62c8ce2990e81db081d\",\"dweb:/ipfs/QmQJJFytczntT3dsbnDMo1LBLFdDhLGPmmwFabiTUgHspJ\"]},\"@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol\":{\"keccak256\":\"0x3491510fa4862af1a43f6c860d9cf7392240196540cd3c0eea79d374d419c5a1\",\"urls\":[\"bzz-raw://3e51386d74eb723d3acaaddafce1dd0b4082ad4c10ddba6b9fc154aad2930d02\",\"dweb:/ipfs/QmcA8Huap1c7YjdVjx5TGasxKNMLgsa3XyLvQUaMa1nMt8\"]},\"@openzeppelin/contracts-ethereum-package/contracts/access/Roles.sol\":{\"keccak256\":\"0xb002c378d7b82a101bd659c341518953ca0919d342c0a400196982c0e7e7bcdb\",\"urls\":[\"bzz-raw://00a788c4631466c220b385bdd100c571d24b2deccd657615cfbcef6cadf669a4\",\"dweb:/ipfs/QmTEwDbjJNxmMNCDMqtuou3dyM8Wtp8Q9NFvn7SAVM7Jf3\"]},\"@openzeppelin/contracts-ethereum-package/contracts/access/roles/MinterRole.sol\":{\"keccak256\":\"0xdf50b7ae128ae6234bf297a03a7622b3d146734479b26b749052e61ee9dae650\",\"urls\":[\"bzz-raw://93218d23526253d8e8634e5f5be8c21e3c46f12992eae378b202ca22d48564a0\",\"dweb:/ipfs/QmfG4XhTbsxnzCGXgsvxWmuJtU8snNaMEpW9drGde2yY6S\"]},\"@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x640b6dee7a4b830bdfd52b5031a07fc2b12209f5b2e29e5d364a7d37f69d8076\",\"urls\":[\"bzz-raw://31113152e1ddb78fe7a4197f247591ca894e93f916867beb708d8e747b6cc74f\",\"dweb:/ipfs/QmbZaJyXdpsYGykVhHH9qpVGQg9DGCxE2QufbCUy3daTgq\"]},\"@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x1eee490bb6b1751e8d39e2670fa0d04dd2e8b7af6da33e1fb4c1593e771b56fb\",\"urls\":[\"bzz-raw://cf10c73acede242d453658d9b6edadab89de71b0818c7a3d35d732db62dfffb3\",\"dweb:/ipfs/QmcXcS2ZJpwwoJ5WQtPUn3Gg7zJadqvfCPUcGW14mmXfsC\"]},\"@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0xe5bb0f57cff3e299f360052ba50f1ea0fff046df2be070b6943e0e3c3fdad8a9\",\"urls\":[\"bzz-raw://59fd025151435da35faa8093a5c7a17de02de9d08ad27275c5cdf05050820d91\",\"dweb:/ipfs/QmQMvwEcPhoRXzbXyrdoeRtvLoifUW9Qh7Luho7bmUPRkc\"]},\"@openzeppelin/upgrades/contracts/Initializable.sol\":{\"keccak256\":\"0xf79d9851c085aa8412e87d7a26d3485488fe12538ecb4e317ce41fc1f2c3a16a\",\"urls\":[\"bzz-raw://6af1a35ad6aed2169ce9f44095438b3192cd6066903908f769d5c49a06a0caf8\",\"dweb:/ipfs/QmaH41CwJ7WrMQwSnbfCKuL2pd8bxF7sbGSLPZb6JaHBFF\"]},\"scd-mcd-migration/src/Interfaces.sol\":{\"keccak256\":\"0x774df5e08d8f467972c5a516a2d24cdd49d70efa2a193060129f1f61691d9007\",\"urls\":[\"bzz-raw://22549646279bb79adb11999e77859d043bfb9d948ddde50fae238369e2da24eb\",\"dweb:/ipfs/QmQZaGXHib8SddA9NMT12ap1VVAJsgyEsSkLVxJeZi2Epp\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506106b6806100206000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c8063b4c6c0c01161005b578063b4c6c0c01461010f578063c11645bc14610135578063f4b9fa751461013d578063fbabdebd1461014557610088565b80630b14408f1461008d578063485cc955146100b157806377dda533146100e15780639166cba414610107575b600080fd5b610095610162565b604080516001600160a01b039092168252519081900360200190f35b6100df600480360360408110156100c757600080fd5b506001600160a01b0381358116916020013516610171565b005b6100df600480360360208110156100f757600080fd5b50356001600160a01b03166102fc565b610095610370565b6100df6004803603602081101561012557600080fd5b50356001600160a01b031661037f565b6100956103f3565b610095610402565b6100df6004803603602081101561015b57600080fd5b5035610411565b6033546001600160a01b031681565b600054610100900460ff168061018a575061018a610515565b80610198575060005460ff16155b6101d35760405162461bcd60e51b815260040180806020018281038252602e815260200180610654602e913960400191505060405180910390fd5b600054610100900460ff161580156101fe576000805460ff1961ff0019909116610100171660011790555b82600060405161020d9061051b565b6001600160a01b03928316815291166020820152604080519182900301906000f080158015610240573d6000803e3d6000fd5b50603360006101000a8154816001600160a01b0302191690836001600160a01b031602179055506000826040516102769061051b565b6001600160a01b03928316815291166020820152604080519182900301906000f0801580156102a9573d6000803e3d6000fd5b50603480546001600160a01b03199081166001600160a01b03938416179091556035805482168684161790556036805490911691841691909117905580156102f7576000805461ff00191690555b505050565b60008160405161030b9061051b565b6001600160a01b03928316815291166020820152604080519182900301906000f08015801561033e573d6000803e3d6000fd5b50603480546001600160a01b039283166001600160a01b03199182161790915560368054939092169216919091179055565b6035546001600160a01b031681565b80600060405161038e9061051b565b6001600160a01b03928316815291166020820152604080519182900301906000f0801580156103c1573d6000803e3d6000fd5b50603380546001600160a01b039283166001600160a01b03199182161790915560358054939092169216919091179055565b6034546001600160a01b031681565b6036546001600160a01b031681565b603554604080516323b872dd60e01b81523360048201523060248201526044810184905290516001600160a01b03909216916323b872dd916064808201926020929091908290030181600087803b15801561046b57600080fd5b505af115801561047f573d6000803e3d6000fd5b505050506040513d602081101561049557600080fd5b50506036546040805163a9059cbb60e01b81523360048201526024810184905290516001600160a01b039092169163a9059cbb916044808201926020929091908290030181600087803b1580156104eb57600080fd5b505af11580156104ff573d6000803e3d6000fd5b505050506040513d60208110156102f757600080fd5b303b1590565b61012b806105298339019056fe608060405234801561001057600080fd5b5060405161012b38038061012b8339818101604052604081101561003357600080fd5b508051602090910151600080546001600160a01b039384166001600160a01b0319918216179091556001805493909216921691909117905560b2806100796000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80637bd2bea7146037578063f4b9fa75146059575b600080fd5b603d605f565b604080516001600160a01b039092168252519081900360200190f35b603d606e565b6000546001600160a01b031681565b6001546001600160a01b03168156fea265627a7a723158205c4f8add61dd960917a75e6842757c02c11f023f437b7a6ae0d0ea5f82e13a4664736f6c634300050c0032436f6e747261637420696e7374616e63652068617320616c7265616479206265656e20696e697469616c697a6564a265627a7a72315820235f7cc0b465bd86d197bbc4bc3b5a9d3ec0b28776c7f52233129b3027f73b8b64736f6c634300050c0032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c8063b4c6c0c01161005b578063b4c6c0c01461010f578063c11645bc14610135578063f4b9fa751461013d578063fbabdebd1461014557610088565b80630b14408f1461008d578063485cc955146100b157806377dda533146100e15780639166cba414610107575b600080fd5b610095610162565b604080516001600160a01b039092168252519081900360200190f35b6100df600480360360408110156100c757600080fd5b506001600160a01b0381358116916020013516610171565b005b6100df600480360360208110156100f757600080fd5b50356001600160a01b03166102fc565b610095610370565b6100df6004803603602081101561012557600080fd5b50356001600160a01b031661037f565b6100956103f3565b610095610402565b6100df6004803603602081101561015b57600080fd5b5035610411565b6033546001600160a01b031681565b600054610100900460ff168061018a575061018a610515565b80610198575060005460ff16155b6101d35760405162461bcd60e51b815260040180806020018281038252602e815260200180610654602e913960400191505060405180910390fd5b600054610100900460ff161580156101fe576000805460ff1961ff0019909116610100171660011790555b82600060405161020d9061051b565b6001600160a01b03928316815291166020820152604080519182900301906000f080158015610240573d6000803e3d6000fd5b50603360006101000a8154816001600160a01b0302191690836001600160a01b031602179055506000826040516102769061051b565b6001600160a01b03928316815291166020820152604080519182900301906000f0801580156102a9573d6000803e3d6000fd5b50603480546001600160a01b03199081166001600160a01b03938416179091556035805482168684161790556036805490911691841691909117905580156102f7576000805461ff00191690555b505050565b60008160405161030b9061051b565b6001600160a01b03928316815291166020820152604080519182900301906000f08015801561033e573d6000803e3d6000fd5b50603480546001600160a01b039283166001600160a01b03199182161790915560368054939092169216919091179055565b6035546001600160a01b031681565b80600060405161038e9061051b565b6001600160a01b03928316815291166020820152604080519182900301906000f0801580156103c1573d6000803e3d6000fd5b50603380546001600160a01b039283166001600160a01b03199182161790915560358054939092169216919091179055565b6034546001600160a01b031681565b6036546001600160a01b031681565b603554604080516323b872dd60e01b81523360048201523060248201526044810184905290516001600160a01b03909216916323b872dd916064808201926020929091908290030181600087803b15801561046b57600080fd5b505af115801561047f573d6000803e3d6000fd5b505050506040513d602081101561049557600080fd5b50506036546040805163a9059cbb60e01b81523360048201526024810184905290516001600160a01b039092169163a9059cbb916044808201926020929091908290030181600087803b1580156104eb57600080fd5b505af11580156104ff573d6000803e3d6000fd5b505050506040513d60208110156102f757600080fd5b303b1590565b61012b806105298339019056fe608060405234801561001057600080fd5b5060405161012b38038061012b8339818101604052604081101561003357600080fd5b508051602090910151600080546001600160a01b039384166001600160a01b0319918216179091556001805493909216921691909117905560b2806100796000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80637bd2bea7146037578063f4b9fa75146059575b600080fd5b603d605f565b604080516001600160a01b039092168252519081900360200190f35b603d606e565b6000546001600160a01b031681565b6001546001600160a01b03168156fea265627a7a723158205c4f8add61dd960917a75e6842757c02c11f023f437b7a6ae0d0ea5f82e13a4664736f6c634300050c0032436f6e747261637420696e7374616e63652068617320616c7265616479206265656e20696e697469616c697a6564a265627a7a72315820235f7cc0b465bd86d197bbc4bc3b5a9d3ec0b28776c7f52233129b3027f73b8b64736f6c634300050c0032",
+  "sourceMap": "203:824:23:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;203:824:23;;;;;;;",
+  "deployedSourceMap": "203:824:23:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;203:824:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;254:27;;;:::i;:::-;;;;-1:-1:-1;;;;;254:27:23;;;;;;;;;;;;;;357:231;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;;;;;357:231:23;;;;;;;;;;:::i;:::-;;711:115;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;711:115:23;-1:-1:-1;;;;;711:115:23;;:::i;316:16::-;;;:::i;592:115::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;592:115:23;-1:-1:-1;;;;;592:115:23;;:::i;285:27::-;;;:::i;336:16::-;;;:::i;830:195::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;830:195:23;;:::i;254:27::-;;;-1:-1:-1;;;;;254:27:23;;:::o;357:231::-;1024:12:39;;;;;;;;:31;;;1040:15;:13;:15::i;:::-;1024:47;;;-1:-1:-1;1060:11:39;;;;1059:12;1024:47;1016:106;;;;-1:-1:-1;;;1016:106:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1129:19;1152:12;;;;;;1151:13;1170:80;;;;1198:12;:19;;-1:-1:-1;;;;1198:19:39;;;;;1225:18;1213:4;1225:18;;;1170:80;474:4:23;489:1;449:43;;;;;:::i;:::-;-1:-1:-1;;;;;449:43:23;;;;;;;;;;;;;;;;;;;;-1:-1:-1;449:43:23;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;449:43:23;439:7;;:53;;;;;-1:-1:-1;;;;;439:53:23;;;;;-1:-1:-1;;;;;439:53:23;;;;;;533:1;545:4;508:43;;;;;:::i;:::-;-1:-1:-1;;;;;508:43:23;;;;;;;;;;;;;;;;;;;;-1:-1:-1;508:43:23;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;498:7:23;:53;;-1:-1:-1;;;;;;498:53:23;;;-1:-1:-1;;;;;498:53:23;;;;;;;557:3;:10;;;;;;;;;;573:3;:10;;;;;;;;;;;;;;1264:55:39;;;;1307:5;1292:20;;-1:-1:-1;;1292:20:39;;;1264:55;357:231:23;;;:::o;711:115::-;787:1;799:4;762:43;;;;;:::i;:::-;-1:-1:-1;;;;;762:43:23;;;;;;;;;;;;;;;;;;;;-1:-1:-1;762:43:23;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;752:7:23;:53;;-1:-1:-1;;;;;752:53:23;;;-1:-1:-1;;;;;;752:53:23;;;;;;;811:3;:10;;;;;;;;;;;;;;711:115::o;316:16::-;;;-1:-1:-1;;;;;316:16:23;;:::o;592:115::-;668:4;683:1;643:43;;;;;:::i;:::-;-1:-1:-1;;;;;643:43:23;;;;;;;;;;;;;;;;;;;;-1:-1:-1;643:43:23;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;633:7:23;:53;;-1:-1:-1;;;;;633:53:23;;;-1:-1:-1;;;;;;633:53:23;;;;;;;692:3;:10;;;;;;;;;;;;;;592:115::o;285:27::-;;;-1:-1:-1;;;;;285:27:23;;:::o;336:16::-;;;-1:-1:-1;;;;;336:16:23;;:::o;830:195::-;937:3;;:48;;;-1:-1:-1;;;937:48:23;;954:10;937:48;;;;974:4;937:48;;;;;;;;;;;;-1:-1:-1;;;;;937:3:23;;;;:16;;:48;;;;;;;;;;;;;;;:3;;:48;;;5:2:-1;;;;30:1;27;20:12;5:2;937:48:23;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;937:48:23;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;991:3:23;;:29;;;-1:-1:-1;;;991:29:23;;1004:10;991:29;;;;;;;;;;;;-1:-1:-1;;;;;991:3:23;;;;:12;;:29;;;;;937:48;;991:29;;;;;;;;:3;;:29;;;5:2:-1;;;;30:1;27;20:12;5:2;991:29:23;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;991:29:23;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;1409:467:39;1842:7;1830:20;1864:7;1409:467;:::o;203:824:23:-;;;;;;;;:::o",
+  "source": "pragma solidity 0.5.12;\n\nimport \"@openzeppelin/upgrades/contracts/Initializable.sol\";\nimport { GemLike } from \"scd-mcd-migration/src/Interfaces.sol\";\nimport \"./MockJoinLike.sol\";\nimport \"../Token.sol\";\n\ncontract MockScdMcdMigration is Initializable {\n\n  MockJoinLike public saiJoin;\n  MockJoinLike public daiJoin;\n  Token public sai;\n  Token public dai;\n\n  function initialize (\n    Token _sai,\n    Token _dai\n  ) public initializer {\n    saiJoin = new MockJoinLike(address(_sai), address(0));\n    daiJoin = new MockJoinLike(address(0), address(_dai));\n    sai = _sai;\n    dai = _dai;\n  }\n\n  function setSai(Token _sai) public {\n    saiJoin = new MockJoinLike(address(_sai), address(0));\n    sai = _sai;\n  }\n\n  function setDai(Token _dai) public {\n    daiJoin = new MockJoinLike(address(0), address(_dai));\n    dai = _dai;\n  }\n\n  function swapSaiToDai(\n    uint256 wad\n  ) external {\n    // Get wad amount of SAI from user's wallet:\n    sai.transferFrom(msg.sender, address(this), wad);\n    dai.transfer(msg.sender, wad);\n  }\n}",
+  "sourcePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/maker/MockScdMcdMigration.sol",
+  "ast": {
+    "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/maker/MockScdMcdMigration.sol",
+    "exportedSymbols": {
+      "MockScdMcdMigration": [
+        6457
+      ]
+    },
+    "id": 6458,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6330,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:23"
+      },
+      {
+        "absolutePath": "@openzeppelin/upgrades/contracts/Initializable.sol",
+        "file": "@openzeppelin/upgrades/contracts/Initializable.sol",
+        "id": 6331,
+        "nodeType": "ImportDirective",
+        "scope": 6458,
+        "sourceUnit": 9523,
+        "src": "25:60:23",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "scd-mcd-migration/src/Interfaces.sol",
+        "file": "scd-mcd-migration/src/Interfaces.sol",
+        "id": 6333,
+        "nodeType": "ImportDirective",
+        "scope": 6458,
+        "sourceUnit": 10520,
+        "src": "86:63:23",
+        "symbolAliases": [
+          {
+            "foreign": 6332,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/maker/MockJoinLike.sol",
+        "file": "./MockJoinLike.sol",
+        "id": 6334,
+        "nodeType": "ImportDirective",
+        "scope": 6458,
+        "sourceUnit": 6329,
+        "src": "150:28:23",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/Token.sol",
+        "file": "../Token.sol",
+        "id": 6335,
+        "nodeType": "ImportDirective",
+        "scope": 6458,
+        "sourceUnit": 6306,
+        "src": "179:22:23",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6336,
+              "name": "Initializable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 9522,
+              "src": "235:13:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Initializable_$9522",
+                "typeString": "contract Initializable"
+              }
+            },
+            "id": 6337,
+            "nodeType": "InheritanceSpecifier",
+            "src": "235:13:23"
+          }
+        ],
+        "contractDependencies": [
+          6328,
+          9522
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6457,
+        "linearizedBaseContracts": [
+          6457,
+          9522
+        ],
+        "name": "MockScdMcdMigration",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 6339,
+            "name": "saiJoin",
+            "nodeType": "VariableDeclaration",
+            "scope": 6457,
+            "src": "254:27:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+              "typeString": "contract MockJoinLike"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 6338,
+              "name": "MockJoinLike",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6328,
+              "src": "254:12:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                "typeString": "contract MockJoinLike"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6341,
+            "name": "daiJoin",
+            "nodeType": "VariableDeclaration",
+            "scope": 6457,
+            "src": "285:27:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+              "typeString": "contract MockJoinLike"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 6340,
+              "name": "MockJoinLike",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6328,
+              "src": "285:12:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                "typeString": "contract MockJoinLike"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6343,
+            "name": "sai",
+            "nodeType": "VariableDeclaration",
+            "scope": 6457,
+            "src": "316:16:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Token_$6305",
+              "typeString": "contract Token"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 6342,
+              "name": "Token",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6305,
+              "src": "316:5:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Token_$6305",
+                "typeString": "contract Token"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6345,
+            "name": "dai",
+            "nodeType": "VariableDeclaration",
+            "scope": 6457,
+            "src": "336:16:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Token_$6305",
+              "typeString": "contract Token"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 6344,
+              "name": "Token",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6305,
+              "src": "336:5:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Token_$6305",
+                "typeString": "contract Token"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6386,
+              "nodeType": "Block",
+              "src": "433:155:23",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6364,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6354,
+                      "name": "saiJoin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6339,
+                      "src": "439:7:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                        "typeString": "contract MockJoinLike"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 6358,
+                              "name": "_sai",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6347,
+                              "src": "474:4:23",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_Token_$6305",
+                                "typeString": "contract Token"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_Token_$6305",
+                                "typeString": "contract Token"
+                              }
+                            ],
+                            "id": 6357,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "466:7:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 6359,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "466:13:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 6361,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "489:1:23",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 6360,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "481:7:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 6362,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "481:10:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        ],
+                        "id": 6356,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "449:16:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$returns$_t_contract$_MockJoinLike_$6328_$",
+                          "typeString": "function (address,address) returns (contract MockJoinLike)"
+                        },
+                        "typeName": {
+                          "contractScope": null,
+                          "id": 6355,
+                          "name": "MockJoinLike",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 6328,
+                          "src": "453:12:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                            "typeString": "contract MockJoinLike"
+                          }
+                        }
+                      },
+                      "id": 6363,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "449:43:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                        "typeString": "contract MockJoinLike"
+                      }
+                    },
+                    "src": "439:53:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                      "typeString": "contract MockJoinLike"
+                    }
+                  },
+                  "id": 6365,
+                  "nodeType": "ExpressionStatement",
+                  "src": "439:53:23"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6376,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6366,
+                      "name": "daiJoin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6341,
+                      "src": "498:7:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                        "typeString": "contract MockJoinLike"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 6370,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "533:1:23",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 6369,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "525:7:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 6371,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "525:10:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 6373,
+                              "name": "_dai",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6349,
+                              "src": "545:4:23",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_Token_$6305",
+                                "typeString": "contract Token"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_Token_$6305",
+                                "typeString": "contract Token"
+                              }
+                            ],
+                            "id": 6372,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "537:7:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 6374,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "537:13:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          },
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 6368,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "508:16:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$returns$_t_contract$_MockJoinLike_$6328_$",
+                          "typeString": "function (address,address) returns (contract MockJoinLike)"
+                        },
+                        "typeName": {
+                          "contractScope": null,
+                          "id": 6367,
+                          "name": "MockJoinLike",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 6328,
+                          "src": "512:12:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                            "typeString": "contract MockJoinLike"
+                          }
+                        }
+                      },
+                      "id": 6375,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "508:43:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                        "typeString": "contract MockJoinLike"
+                      }
+                    },
+                    "src": "498:53:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                      "typeString": "contract MockJoinLike"
+                    }
+                  },
+                  "id": 6377,
+                  "nodeType": "ExpressionStatement",
+                  "src": "498:53:23"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6380,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6378,
+                      "name": "sai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6343,
+                      "src": "557:3:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$6305",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6379,
+                      "name": "_sai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6347,
+                      "src": "563:4:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$6305",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "src": "557:10:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$6305",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "id": 6381,
+                  "nodeType": "ExpressionStatement",
+                  "src": "557:10:23"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6384,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6382,
+                      "name": "dai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6345,
+                      "src": "573:3:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$6305",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6383,
+                      "name": "_dai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6349,
+                      "src": "579:4:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$6305",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "src": "573:10:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$6305",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "id": 6385,
+                  "nodeType": "ExpressionStatement",
+                  "src": "573:10:23"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6387,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 6352,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 6351,
+                  "name": "initializer",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 9503,
+                  "src": "421:11:23",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "421:11:23"
+              }
+            ],
+            "name": "initialize",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6350,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6347,
+                  "name": "_sai",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6387,
+                  "src": "383:10:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Token_$6305",
+                    "typeString": "contract Token"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 6346,
+                    "name": "Token",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 6305,
+                    "src": "383:5:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$6305",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6349,
+                  "name": "_dai",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6387,
+                  "src": "399:10:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Token_$6305",
+                    "typeString": "contract Token"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 6348,
+                    "name": "Token",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 6305,
+                    "src": "399:5:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$6305",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "377:36:23"
+            },
+            "returnParameters": {
+              "id": 6353,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "433:0:23"
+            },
+            "scope": 6457,
+            "src": "357:231:23",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6408,
+              "nodeType": "Block",
+              "src": "627:80:23",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6402,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6392,
+                      "name": "saiJoin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6339,
+                      "src": "633:7:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                        "typeString": "contract MockJoinLike"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 6396,
+                              "name": "_sai",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6389,
+                              "src": "668:4:23",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_Token_$6305",
+                                "typeString": "contract Token"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_Token_$6305",
+                                "typeString": "contract Token"
+                              }
+                            ],
+                            "id": 6395,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "660:7:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 6397,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "660:13:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 6399,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "683:1:23",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 6398,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "675:7:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 6400,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "675:10:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        ],
+                        "id": 6394,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "643:16:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$returns$_t_contract$_MockJoinLike_$6328_$",
+                          "typeString": "function (address,address) returns (contract MockJoinLike)"
+                        },
+                        "typeName": {
+                          "contractScope": null,
+                          "id": 6393,
+                          "name": "MockJoinLike",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 6328,
+                          "src": "647:12:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                            "typeString": "contract MockJoinLike"
+                          }
+                        }
+                      },
+                      "id": 6401,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "643:43:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                        "typeString": "contract MockJoinLike"
+                      }
+                    },
+                    "src": "633:53:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                      "typeString": "contract MockJoinLike"
+                    }
+                  },
+                  "id": 6403,
+                  "nodeType": "ExpressionStatement",
+                  "src": "633:53:23"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6406,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6404,
+                      "name": "sai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6343,
+                      "src": "692:3:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$6305",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6405,
+                      "name": "_sai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6389,
+                      "src": "698:4:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$6305",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "src": "692:10:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$6305",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "id": 6407,
+                  "nodeType": "ExpressionStatement",
+                  "src": "692:10:23"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6409,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setSai",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6390,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6389,
+                  "name": "_sai",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6409,
+                  "src": "608:10:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Token_$6305",
+                    "typeString": "contract Token"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 6388,
+                    "name": "Token",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 6305,
+                    "src": "608:5:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$6305",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "607:12:23"
+            },
+            "returnParameters": {
+              "id": 6391,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "627:0:23"
+            },
+            "scope": 6457,
+            "src": "592:115:23",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6430,
+              "nodeType": "Block",
+              "src": "746:80:23",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6424,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6414,
+                      "name": "daiJoin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6341,
+                      "src": "752:7:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                        "typeString": "contract MockJoinLike"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 6418,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "787:1:23",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 6417,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "779:7:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 6419,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "779:10:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 6421,
+                              "name": "_dai",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6411,
+                              "src": "799:4:23",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_Token_$6305",
+                                "typeString": "contract Token"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_Token_$6305",
+                                "typeString": "contract Token"
+                              }
+                            ],
+                            "id": 6420,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "791:7:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 6422,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "791:13:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          },
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 6416,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "762:16:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$returns$_t_contract$_MockJoinLike_$6328_$",
+                          "typeString": "function (address,address) returns (contract MockJoinLike)"
+                        },
+                        "typeName": {
+                          "contractScope": null,
+                          "id": 6415,
+                          "name": "MockJoinLike",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 6328,
+                          "src": "766:12:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                            "typeString": "contract MockJoinLike"
+                          }
+                        }
+                      },
+                      "id": 6423,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "762:43:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                        "typeString": "contract MockJoinLike"
+                      }
+                    },
+                    "src": "752:53:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                      "typeString": "contract MockJoinLike"
+                    }
+                  },
+                  "id": 6425,
+                  "nodeType": "ExpressionStatement",
+                  "src": "752:53:23"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6428,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6426,
+                      "name": "dai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6345,
+                      "src": "811:3:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$6305",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6427,
+                      "name": "_dai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6411,
+                      "src": "817:4:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$6305",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "src": "811:10:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$6305",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "id": 6429,
+                  "nodeType": "ExpressionStatement",
+                  "src": "811:10:23"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6431,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setDai",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6412,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6411,
+                  "name": "_dai",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6431,
+                  "src": "727:10:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Token_$6305",
+                    "typeString": "contract Token"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 6410,
+                    "name": "Token",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 6305,
+                    "src": "727:5:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$6305",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "726:12:23"
+            },
+            "returnParameters": {
+              "id": 6413,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "746:0:23"
+            },
+            "scope": 6457,
+            "src": "711:115:23",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6455,
+              "nodeType": "Block",
+              "src": "882:143:23",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 6439,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 11106,
+                          "src": "954:3:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 6440,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "954:10:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 6442,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 11218,
+                            "src": "974:4:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_MockScdMcdMigration_$6457",
+                              "typeString": "contract MockScdMcdMigration"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_MockScdMcdMigration_$6457",
+                              "typeString": "contract MockScdMcdMigration"
+                            }
+                          ],
+                          "id": 6441,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "966:7:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": "address"
+                        },
+                        "id": 6443,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "966:13:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 6444,
+                        "name": "wad",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6433,
+                        "src": "981:3:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 6436,
+                        "name": "sai",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6343,
+                        "src": "937:3:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Token_$6305",
+                          "typeString": "contract Token"
+                        }
+                      },
+                      "id": 6438,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transferFrom",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 7825,
+                      "src": "937:16:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (address,address,uint256) external returns (bool)"
+                      }
+                    },
+                    "id": 6445,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "937:48:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 6446,
+                  "nodeType": "ExpressionStatement",
+                  "src": "937:48:23"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 6450,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 11106,
+                          "src": "1004:3:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 6451,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1004:10:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 6452,
+                        "name": "wad",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6433,
+                        "src": "1016:3:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 6447,
+                        "name": "dai",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6345,
+                        "src": "991:3:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Token_$6305",
+                          "typeString": "contract Token"
+                        }
+                      },
+                      "id": 6449,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 7754,
+                      "src": "991:12:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (address,uint256) external returns (bool)"
+                      }
+                    },
+                    "id": 6453,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "991:29:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 6454,
+                  "nodeType": "ExpressionStatement",
+                  "src": "991:29:23"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6456,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "swapSaiToDai",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6434,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6433,
+                  "name": "wad",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6456,
+                  "src": "857:11:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6432,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "857:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "851:21:23"
+            },
+            "returnParameters": {
+              "id": 6435,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "882:0:23"
+            },
+            "scope": 6457,
+            "src": "830:195:23",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6458,
+        "src": "203:824:23"
+      }
+    ],
+    "src": "0:1027:23"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/maker/MockScdMcdMigration.sol",
+    "exportedSymbols": {
+      "MockScdMcdMigration": [
+        6457
+      ]
+    },
+    "id": 6458,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6330,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:23"
+      },
+      {
+        "absolutePath": "@openzeppelin/upgrades/contracts/Initializable.sol",
+        "file": "@openzeppelin/upgrades/contracts/Initializable.sol",
+        "id": 6331,
+        "nodeType": "ImportDirective",
+        "scope": 6458,
+        "sourceUnit": 9523,
+        "src": "25:60:23",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "scd-mcd-migration/src/Interfaces.sol",
+        "file": "scd-mcd-migration/src/Interfaces.sol",
+        "id": 6333,
+        "nodeType": "ImportDirective",
+        "scope": 6458,
+        "sourceUnit": 10520,
+        "src": "86:63:23",
+        "symbolAliases": [
+          {
+            "foreign": 6332,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/maker/MockJoinLike.sol",
+        "file": "./MockJoinLike.sol",
+        "id": 6334,
+        "nodeType": "ImportDirective",
+        "scope": 6458,
+        "sourceUnit": 6329,
+        "src": "150:28:23",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/manjain/Documents/LetsPool/src/pooltogether-contracts/contracts/test/Token.sol",
+        "file": "../Token.sol",
+        "id": 6335,
+        "nodeType": "ImportDirective",
+        "scope": 6458,
+        "sourceUnit": 6306,
+        "src": "179:22:23",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6336,
+              "name": "Initializable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 9522,
+              "src": "235:13:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Initializable_$9522",
+                "typeString": "contract Initializable"
+              }
+            },
+            "id": 6337,
+            "nodeType": "InheritanceSpecifier",
+            "src": "235:13:23"
+          }
+        ],
+        "contractDependencies": [
+          6328,
+          9522
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6457,
+        "linearizedBaseContracts": [
+          6457,
+          9522
+        ],
+        "name": "MockScdMcdMigration",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 6339,
+            "name": "saiJoin",
+            "nodeType": "VariableDeclaration",
+            "scope": 6457,
+            "src": "254:27:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+              "typeString": "contract MockJoinLike"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 6338,
+              "name": "MockJoinLike",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6328,
+              "src": "254:12:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                "typeString": "contract MockJoinLike"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6341,
+            "name": "daiJoin",
+            "nodeType": "VariableDeclaration",
+            "scope": 6457,
+            "src": "285:27:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+              "typeString": "contract MockJoinLike"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 6340,
+              "name": "MockJoinLike",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6328,
+              "src": "285:12:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                "typeString": "contract MockJoinLike"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6343,
+            "name": "sai",
+            "nodeType": "VariableDeclaration",
+            "scope": 6457,
+            "src": "316:16:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Token_$6305",
+              "typeString": "contract Token"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 6342,
+              "name": "Token",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6305,
+              "src": "316:5:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Token_$6305",
+                "typeString": "contract Token"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6345,
+            "name": "dai",
+            "nodeType": "VariableDeclaration",
+            "scope": 6457,
+            "src": "336:16:23",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Token_$6305",
+              "typeString": "contract Token"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 6344,
+              "name": "Token",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6305,
+              "src": "336:5:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Token_$6305",
+                "typeString": "contract Token"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6386,
+              "nodeType": "Block",
+              "src": "433:155:23",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6364,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6354,
+                      "name": "saiJoin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6339,
+                      "src": "439:7:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                        "typeString": "contract MockJoinLike"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 6358,
+                              "name": "_sai",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6347,
+                              "src": "474:4:23",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_Token_$6305",
+                                "typeString": "contract Token"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_Token_$6305",
+                                "typeString": "contract Token"
+                              }
+                            ],
+                            "id": 6357,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "466:7:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 6359,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "466:13:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 6361,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "489:1:23",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 6360,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "481:7:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 6362,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "481:10:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        ],
+                        "id": 6356,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "449:16:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$returns$_t_contract$_MockJoinLike_$6328_$",
+                          "typeString": "function (address,address) returns (contract MockJoinLike)"
+                        },
+                        "typeName": {
+                          "contractScope": null,
+                          "id": 6355,
+                          "name": "MockJoinLike",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 6328,
+                          "src": "453:12:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                            "typeString": "contract MockJoinLike"
+                          }
+                        }
+                      },
+                      "id": 6363,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "449:43:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                        "typeString": "contract MockJoinLike"
+                      }
+                    },
+                    "src": "439:53:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                      "typeString": "contract MockJoinLike"
+                    }
+                  },
+                  "id": 6365,
+                  "nodeType": "ExpressionStatement",
+                  "src": "439:53:23"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6376,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6366,
+                      "name": "daiJoin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6341,
+                      "src": "498:7:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                        "typeString": "contract MockJoinLike"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 6370,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "533:1:23",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 6369,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "525:7:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 6371,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "525:10:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 6373,
+                              "name": "_dai",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6349,
+                              "src": "545:4:23",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_Token_$6305",
+                                "typeString": "contract Token"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_Token_$6305",
+                                "typeString": "contract Token"
+                              }
+                            ],
+                            "id": 6372,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "537:7:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 6374,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "537:13:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          },
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 6368,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "508:16:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$returns$_t_contract$_MockJoinLike_$6328_$",
+                          "typeString": "function (address,address) returns (contract MockJoinLike)"
+                        },
+                        "typeName": {
+                          "contractScope": null,
+                          "id": 6367,
+                          "name": "MockJoinLike",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 6328,
+                          "src": "512:12:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                            "typeString": "contract MockJoinLike"
+                          }
+                        }
+                      },
+                      "id": 6375,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "508:43:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                        "typeString": "contract MockJoinLike"
+                      }
+                    },
+                    "src": "498:53:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                      "typeString": "contract MockJoinLike"
+                    }
+                  },
+                  "id": 6377,
+                  "nodeType": "ExpressionStatement",
+                  "src": "498:53:23"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6380,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6378,
+                      "name": "sai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6343,
+                      "src": "557:3:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$6305",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6379,
+                      "name": "_sai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6347,
+                      "src": "563:4:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$6305",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "src": "557:10:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$6305",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "id": 6381,
+                  "nodeType": "ExpressionStatement",
+                  "src": "557:10:23"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6384,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6382,
+                      "name": "dai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6345,
+                      "src": "573:3:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$6305",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6383,
+                      "name": "_dai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6349,
+                      "src": "579:4:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$6305",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "src": "573:10:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$6305",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "id": 6385,
+                  "nodeType": "ExpressionStatement",
+                  "src": "573:10:23"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6387,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 6352,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 6351,
+                  "name": "initializer",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 9503,
+                  "src": "421:11:23",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "421:11:23"
+              }
+            ],
+            "name": "initialize",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6350,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6347,
+                  "name": "_sai",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6387,
+                  "src": "383:10:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Token_$6305",
+                    "typeString": "contract Token"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 6346,
+                    "name": "Token",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 6305,
+                    "src": "383:5:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$6305",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6349,
+                  "name": "_dai",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6387,
+                  "src": "399:10:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Token_$6305",
+                    "typeString": "contract Token"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 6348,
+                    "name": "Token",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 6305,
+                    "src": "399:5:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$6305",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "377:36:23"
+            },
+            "returnParameters": {
+              "id": 6353,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "433:0:23"
+            },
+            "scope": 6457,
+            "src": "357:231:23",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6408,
+              "nodeType": "Block",
+              "src": "627:80:23",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6402,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6392,
+                      "name": "saiJoin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6339,
+                      "src": "633:7:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                        "typeString": "contract MockJoinLike"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 6396,
+                              "name": "_sai",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6389,
+                              "src": "668:4:23",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_Token_$6305",
+                                "typeString": "contract Token"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_Token_$6305",
+                                "typeString": "contract Token"
+                              }
+                            ],
+                            "id": 6395,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "660:7:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 6397,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "660:13:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 6399,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "683:1:23",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 6398,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "675:7:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 6400,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "675:10:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        ],
+                        "id": 6394,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "643:16:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$returns$_t_contract$_MockJoinLike_$6328_$",
+                          "typeString": "function (address,address) returns (contract MockJoinLike)"
+                        },
+                        "typeName": {
+                          "contractScope": null,
+                          "id": 6393,
+                          "name": "MockJoinLike",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 6328,
+                          "src": "647:12:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                            "typeString": "contract MockJoinLike"
+                          }
+                        }
+                      },
+                      "id": 6401,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "643:43:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                        "typeString": "contract MockJoinLike"
+                      }
+                    },
+                    "src": "633:53:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                      "typeString": "contract MockJoinLike"
+                    }
+                  },
+                  "id": 6403,
+                  "nodeType": "ExpressionStatement",
+                  "src": "633:53:23"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6406,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6404,
+                      "name": "sai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6343,
+                      "src": "692:3:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$6305",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6405,
+                      "name": "_sai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6389,
+                      "src": "698:4:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$6305",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "src": "692:10:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$6305",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "id": 6407,
+                  "nodeType": "ExpressionStatement",
+                  "src": "692:10:23"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6409,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setSai",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6390,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6389,
+                  "name": "_sai",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6409,
+                  "src": "608:10:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Token_$6305",
+                    "typeString": "contract Token"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 6388,
+                    "name": "Token",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 6305,
+                    "src": "608:5:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$6305",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "607:12:23"
+            },
+            "returnParameters": {
+              "id": 6391,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "627:0:23"
+            },
+            "scope": 6457,
+            "src": "592:115:23",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6430,
+              "nodeType": "Block",
+              "src": "746:80:23",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6424,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6414,
+                      "name": "daiJoin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6341,
+                      "src": "752:7:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                        "typeString": "contract MockJoinLike"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 6418,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "787:1:23",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 6417,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "779:7:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 6419,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "779:10:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 6421,
+                              "name": "_dai",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6411,
+                              "src": "799:4:23",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_Token_$6305",
+                                "typeString": "contract Token"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_Token_$6305",
+                                "typeString": "contract Token"
+                              }
+                            ],
+                            "id": 6420,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "791:7:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 6422,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "791:13:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          },
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 6416,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "762:16:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$returns$_t_contract$_MockJoinLike_$6328_$",
+                          "typeString": "function (address,address) returns (contract MockJoinLike)"
+                        },
+                        "typeName": {
+                          "contractScope": null,
+                          "id": 6415,
+                          "name": "MockJoinLike",
+                          "nodeType": "UserDefinedTypeName",
+                          "referencedDeclaration": 6328,
+                          "src": "766:12:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                            "typeString": "contract MockJoinLike"
+                          }
+                        }
+                      },
+                      "id": 6423,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "762:43:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                        "typeString": "contract MockJoinLike"
+                      }
+                    },
+                    "src": "752:53:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_MockJoinLike_$6328",
+                      "typeString": "contract MockJoinLike"
+                    }
+                  },
+                  "id": 6425,
+                  "nodeType": "ExpressionStatement",
+                  "src": "752:53:23"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 6428,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6426,
+                      "name": "dai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6345,
+                      "src": "811:3:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$6305",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 6427,
+                      "name": "_dai",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6411,
+                      "src": "817:4:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$6305",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "src": "811:10:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$6305",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "id": 6429,
+                  "nodeType": "ExpressionStatement",
+                  "src": "811:10:23"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6431,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setDai",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6412,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6411,
+                  "name": "_dai",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6431,
+                  "src": "727:10:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Token_$6305",
+                    "typeString": "contract Token"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 6410,
+                    "name": "Token",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 6305,
+                    "src": "727:5:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$6305",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "726:12:23"
+            },
+            "returnParameters": {
+              "id": 6413,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "746:0:23"
+            },
+            "scope": 6457,
+            "src": "711:115:23",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6455,
+              "nodeType": "Block",
+              "src": "882:143:23",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 6439,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 11106,
+                          "src": "954:3:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 6440,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "954:10:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 6442,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 11218,
+                            "src": "974:4:23",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_MockScdMcdMigration_$6457",
+                              "typeString": "contract MockScdMcdMigration"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_MockScdMcdMigration_$6457",
+                              "typeString": "contract MockScdMcdMigration"
+                            }
+                          ],
+                          "id": 6441,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "966:7:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": "address"
+                        },
+                        "id": 6443,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "966:13:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 6444,
+                        "name": "wad",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6433,
+                        "src": "981:3:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 6436,
+                        "name": "sai",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6343,
+                        "src": "937:3:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Token_$6305",
+                          "typeString": "contract Token"
+                        }
+                      },
+                      "id": 6438,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transferFrom",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 7825,
+                      "src": "937:16:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (address,address,uint256) external returns (bool)"
+                      }
+                    },
+                    "id": 6445,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "937:48:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 6446,
+                  "nodeType": "ExpressionStatement",
+                  "src": "937:48:23"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 6450,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 11106,
+                          "src": "1004:3:23",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 6451,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1004:10:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 6452,
+                        "name": "wad",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6433,
+                        "src": "1016:3:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 6447,
+                        "name": "dai",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6345,
+                        "src": "991:3:23",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Token_$6305",
+                          "typeString": "contract Token"
+                        }
+                      },
+                      "id": 6449,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 7754,
+                      "src": "991:12:23",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (address,uint256) external returns (bool)"
+                      }
+                    },
+                    "id": 6453,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "991:29:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 6454,
+                  "nodeType": "ExpressionStatement",
+                  "src": "991:29:23"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6456,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "swapSaiToDai",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6434,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6433,
+                  "name": "wad",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6456,
+                  "src": "857:11:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6432,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "857:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "851:21:23"
+            },
+            "returnParameters": {
+              "id": 6435,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "882:0:23"
+            },
+            "scope": 6457,
+            "src": "830:195:23",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6458,
+        "src": "203:824:23"
+      }
+    ],
+    "src": "0:1027:23"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-05-21T20:34:55.096Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

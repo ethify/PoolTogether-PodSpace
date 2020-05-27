@@ -7,13 +7,12 @@ import { shortenAddress } from "../../utils";
 import { ActionContext } from "../../hooks";
 
 function MemberListRightBar(props) {
-  let address = "0xa7B5B93BF8B322023BDa57e2C86B57f4DDb4F4a1";
   console.log("props", props.membersList);
   const { toggleModal } = React.useContext(ActionContext);
   const openModal = () => {
     toggleModal({
       openModal: true,
-      modalConfig: { inviteLink: `http://localhost:3001/${address}/join` },
+      modalConfig: { inviteLink: `http://localhost:3001/${props.currentPod.address}/join` },
     });
   };
   return (
@@ -39,7 +38,8 @@ function MemberListRightBar(props) {
           </div>
         )}
       </div>
-      <div className="member-invite-link">
+      {
+        props.currentPod.address ? (<div className="member-invite-link">
         <span className="member-invite-title">Invite Members</span>
         <button className="member-invite-button" onClick={(e) => openModal()}>
           <span>
@@ -47,7 +47,7 @@ function MemberListRightBar(props) {
           </span>
           <span className="member-invite-button-title">Share</span>
         </button>
-      </div>
+      </div>): null}
     </div>
   );
 }
