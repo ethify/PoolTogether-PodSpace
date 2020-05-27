@@ -9,6 +9,7 @@ import { getUserPods, getPodQuery, getEstimatedPrize } from "../../services";
 function Home() {
   const [userPods, setUserPods] = React.useState([])
   const [currentPod, setCurrentPod] = React.useState({address: '',members:[]})
+  const [estimatedPrize, setEstimatedPrize] = React.useState('')
 
   React.useEffect(async () => {
     // let userPods = [{
@@ -23,7 +24,7 @@ function Home() {
     // setUserPods(userPods);
 
     const userPodsList = await getUserPods()
-    await getEstimatedPrize()
+    //await getEstimatedPrize()
     console.log('userPodsList', userPodsList)
     setUserPods(userPodsList)
   },[]);
@@ -32,7 +33,8 @@ function Home() {
     const currentPodDetails = await getPodQuery(selectedPod.address)
     console.log('currentPodDetails', currentPodDetails)
     selectedPod['podDetails'] = currentPodDetails
-
+    const estimatedPrize = await getEstimatedPrize(selectedPod.podDetails.pod.poolContract.id)
+    setEstimatedPrize(estimatedPrize)
     console.log('selectedPod', selectedPod)
     setCurrentPod(selectedPod)
   }
@@ -40,7 +42,7 @@ function Home() {
   return (
     <div className="Home">
       <PodListLeftBar userPods={userPods} setCurrentPod={setCurrentPodwithDetails}></PodListLeftBar>
-      <PodDetails currentPod={currentPod}></PodDetails>
+      <PodDetails estimatedPrize={estimatedPrize} currentPod={currentPod}></PodDetails>
       <MemberListRightBar membersList={currentPod.members} currentPod={currentPod}></MemberListRightBar>
     </div>
   );

@@ -29,7 +29,7 @@ let globalSpace;
 let userSpace;
 
 const seed =
-  "0x7acca0ba544b6bb4f6ad3cfccd375b76a2c1587250f0036f00d1d476bbb679b3";
+  "0x7accb0ba544b6bb4f6ad3cfddd375b76a2c1587250f0036f00d1d476bbb679b3";
 const daiAddress = "0x4F96Fe3b7A6Cf9725f59d353F723c1bDb64CA6Aa";
 
 const userPodListName = "userPodList";
@@ -59,15 +59,7 @@ const getPoolTogetherDaiDrawDate = () => {
   return undefined;
 };
 
-export const getEstimatedPrize = async () => {
-  // const basepool = contract(BasePool)
-  // basepool.setProvider(web3.currentProvider)
-  // const basepoolInstance = await basepool.at('0x29fe7D60DdF151E5b52e5FAB4f1325da6b2bD958')
-
-  // const accountedBalance = await basepoolInstance.accountedBalance()
-  // console.log('accountedBalance', accountedBalance.toString())
-
-  const contractAddress = "0x29fe7D60DdF151E5b52e5FAB4f1325da6b2bD958";
+export const getEstimatedPrize = async (contractAddress) => {
   let provider = ethers.getDefaultProvider();
 
   const abi = BasePool;
@@ -128,7 +120,7 @@ export const getEstimatedPrize = async () => {
     console.log("prizeEstimate", prizeEstimate);
     console.log("prizeEstimate", newPrizeEstimate.toString());
 
-    return newPrizeEstimate.toString()
+    return Math.round(newPrizeEstimate.toString())
   }
 };
 
@@ -213,6 +205,20 @@ export const getUserPods = async () => {
   return userPods;
 };
 
+export const getUserPodsList = async () => {
+  if (!userBoxInstance) {
+    await getUser3BoxInstance();
+  }
+
+  let pods = await userSpace.public.get(userPodListName);
+  console.log("userPODS", pods);
+  if (!pods) {
+    return [];
+  }
+
+  return pods
+}
+
 export const updateUserList = async (newList) => {
   await userPodListName.public.set(userPodListName, newList);
 };
@@ -228,7 +234,7 @@ export const addPodtoUser = async (podAddress) => {
   const userAddress = await defaultAddress();
   // Add Pod to his space
   let globalPods = await getAllPods();
-  let userPods = await getUserPods();
+  let userPods = await getUserPodsList();
   console.log("userPods", userPods, "globalPods", globalPods);
   const isPodExist = globalPods.find((pod) => pod.address === podAddress);
   console.log(isPodExist, "isExist");
@@ -354,7 +360,7 @@ export const redeemFromPod = async (podAddress, amount) => {
 export const getPodQuery = async (podAddress) => {
   const query = `
   {
-    pod(id: "${podAddress}"){
+    pod(id: "${podAddress.toLowerCase()}"){
       id
       address
       podPlayers{
@@ -373,6 +379,7 @@ export const getPodQuery = async (podAddress) => {
         playersCount
         openBalance
         committedBalance
+        sponsorshipAndFeeBalance
       }
       version
     }
@@ -380,7 +387,7 @@ export const getPodQuery = async (podAddress) => {
   `;
 
   return request(
-    "https://api.thegraph.com/subgraphs/name/pooltogether/pooltogether-kovan",
+    "https://api.thegraph.com/subgraphs/name/pooltogether/pooltogether",
     query
   );
 };

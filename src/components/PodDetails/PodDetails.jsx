@@ -61,7 +61,7 @@ function PodDetails(props) {
                 Estimated prize:
               </div>
               <div className="pool-together-estimate-prize-value">
-                $152{" "}
+                {props.estimatedPrize}
                 <span className="pool-together-estimate-prize-icon">
                   <FontAwesomeIcon icon={faLongArrowAltUp} />
                 </span>
@@ -100,13 +100,13 @@ function PodDetails(props) {
                 <div className="pod-details-stats-title">Pod Balance</div>
                 <div className="pod-details-stats-value">
                   ${" "}
-                  {(parseInt(
+                  {Math.round((parseInt(
                     props.currentPod.podDetails.pod.balanceUnderlying
                   ) -
                     parseInt(
                       props.currentPod.podDetails.pod.totalPendingDeposits
                     )) /
-                    10 ** 18}
+                    10 ** 18)}
                 </div>
               </div>
               <div className="pod-details-stats-item">
@@ -167,14 +167,14 @@ function PodDetails(props) {
                   Total contract balance (Dai)
                 </div>
                 <div className="pool-together-details-stats-value">
-                  $1,035,448
+                  ${Math.round((parseInt(props.currentPod.podDetails.pod.poolContract.committedBalance)/ (10 ** 18)) + (parseInt(props.currentPod.podDetails.pod.poolContract.openBalance)/ (10 ** 18)) + (parseInt(props.currentPod.podDetails.pod.poolContract.sponsorshipAndFeeBalance)) / (10 ** 18))}
                 </div>
               </div>
               <div className="pool-together-details-stats-item">
                 <div className="pool-together-details-stats-title">
                   # of current players
                 </div>
-                <div className="pool-together-details-stats-value">8,086</div>
+                <div className="pool-together-details-stats-value">{props.currentPod.podDetails.pod.poolContract.playersCount}</div>
               </div>
             </div>
           </div>
