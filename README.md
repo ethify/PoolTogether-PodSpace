@@ -1,3 +1,19 @@
+## PodSpace
+
+PoolTogether Pods are meant for making social realtionships around PoolTogether. It makes Pod a community where users can join and have discussions. Users can join/create new pods, invite others, chat and hang around.
+
+## Features 
+- Create a Pod
+- Join Existing Pods
+- Chat for Specific Pods
+- Deposit and Withdraw to Pod
+
+## Tech Stack Used
+
+- React
+- 3Box
+- Ethers
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
