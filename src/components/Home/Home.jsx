@@ -5,13 +5,15 @@ import PodListLeftBar from "../PodListLeftBar";
 import "./Home.scss";
 import { getUserPods, getPodQuery, getEstimatedPrize } from "../../services";
 
-
 function Home() {
-  const [userPods, setUserPods] = React.useState([])
-  const [currentPod, setCurrentPod] = React.useState({address: '',members:[]})
-  const [estimatedPrize, setEstimatedPrize] = React.useState('')
+  const [userPods, setUserPods] = React.useState([]);
+  const [currentPod, setCurrentPod] = React.useState({
+    address: "",
+    members: [],
+  });
+  const [estimatedPrize, setEstimatedPrize] = React.useState("");
 
-  React.useEffect(async () => {
+  React.useEffect(() => {
     // let userPods = [{
     //   address: '0x395fcb67ff8fdf5b9e2aeecc02ef7a8de87a6677',
     //   name: 'Family',
@@ -23,27 +25,41 @@ function Home() {
     // }]
     // setUserPods(userPods);
 
-    const userPodsList = await getUserPods()
-    //await getEstimatedPrize()
-    console.log('userPodsList', userPodsList)
-    setUserPods(userPodsList)
-  },[]);
+    setUserPodsList();
+  }, []);
 
+  async function setUserPodsList() {
+    const userPodsList = await getUserPods();
+    //await getEstimatedPrize()
+    console.log("userPodsList", userPodsList);
+    setUserPods(userPodsList);
+  }
   async function setCurrentPodwithDetails(selectedPod) {
-    const currentPodDetails = await getPodQuery(selectedPod.address)
-    console.log('currentPodDetails', currentPodDetails)
-    selectedPod['podDetails'] = currentPodDetails
-    const estimatedPrize = await getEstimatedPrize(selectedPod.podDetails.pod.poolContract.id)
-    setEstimatedPrize(estimatedPrize)
-    console.log('selectedPod', selectedPod)
-    setCurrentPod(selectedPod)
+    const currentPodDetails = await getPodQuery(selectedPod.address);
+    console.log("currentPodDetails", currentPodDetails);
+    selectedPod["podDetails"] = currentPodDetails;
+    const estimatedPrize = await getEstimatedPrize(
+      selectedPod.podDetails.pod.poolContract.id
+    );
+    setEstimatedPrize(estimatedPrize);
+    console.log("selectedPod", selectedPod);
+    setCurrentPod(selectedPod);
   }
 
   return (
     <div className="Home">
-      <PodListLeftBar userPods={userPods} setCurrentPod={setCurrentPodwithDetails}></PodListLeftBar>
-      <PodDetails estimatedPrize={estimatedPrize} currentPod={currentPod}></PodDetails>
-      <MemberListRightBar membersList={currentPod.members} currentPod={currentPod}></MemberListRightBar>
+      <PodListLeftBar
+        userPods={userPods}
+        setCurrentPod={setCurrentPodwithDetails}
+      ></PodListLeftBar>
+      <PodDetails
+        estimatedPrize={estimatedPrize}
+        currentPod={currentPod}
+      ></PodDetails>
+      <MemberListRightBar
+        membersList={currentPod.members}
+        currentPod={currentPod}
+      ></MemberListRightBar>
     </div>
   );
 }
