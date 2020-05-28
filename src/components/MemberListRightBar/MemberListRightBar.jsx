@@ -13,7 +13,7 @@ function MemberListRightBar(props) {
     toggleModal({
       openModal: true,
       modalConfig: {
-        inviteLink: `http://localhost:3001/${currentPod.address}/join`,
+        inviteLink: `https://nifty-sinoussi-7fa2d4.netlify.app/${currentPod.address}/join`,
       },
     });
   };

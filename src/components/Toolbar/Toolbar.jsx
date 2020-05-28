@@ -35,7 +35,7 @@ function Toolbar() {
   };
   return (
     <div className="Toolbar">
-      <div className="app-name">Pod Together</div>
+      <div className="app-name">PodSpace</div>
       <div
         className={"wallet-container " + (walletAddress ? "connected" : null)}
         onClick={signIn}

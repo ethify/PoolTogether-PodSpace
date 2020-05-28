@@ -30,14 +30,14 @@ let userSpace;
 
 const seed =
   "0x7accb0ba544b6bb4f6ad3cfddd375b76a2c1587250f0036f00d1d476bbb679b3";
-const daiAddress = "0x4F96Fe3b7A6Cf9725f59d353F723c1bDb64CA6Aa";
+const daiAddress = "0x6B175474E89094C44Da98b954EedeAC495271d0F";
 
 const userPodListName = "userPodList";
 const globalPodsListName = "globalPodList";
 
 const onboard = Onboard({
   dappId: "052b3fe9-87d5-4614-b2e9-6dd81115979a",
-  networkId: 42,
+  networkId: 1,
   subscriptions: {
     wallet: (wallet) => {
       web3 = new Web3(wallet.provider);
@@ -246,7 +246,13 @@ export const addPodtoUser = async (podAddress) => {
     const selectedPodIndex = globalPods.findIndex(
       (pod) => pod.address === podAddress
     );
-    globalPods[selectedPodIndex].members.push(userAddress);
+    if (
+      !globalPods[selectedPodIndex].members.find(
+        (member) => member === userAddress
+      )
+    ) {
+      globalPods[selectedPodIndex].members.push(userAddress);
+    }
 
     await updateGlobalList(globalPods);
     console.log("getUserPods", await getUserPods());
@@ -254,7 +260,7 @@ export const addPodtoUser = async (podAddress) => {
   } else {
     const newPod = {
       address: podAddress,
-      name: "podName",
+      name: "My Pod#" + Math.floor(Math.random() * 9999 + 1000),
       members: [userAddress],
     };
 
@@ -269,11 +275,7 @@ export const addPodtoUser = async (podAddress) => {
   }
 };
 
-export const getUserPodBalance = async (podAddress) => {
-  if(!web3){
-    await getAccount()
-  }
-  const userAddress = await defaultAddress();
+export const getUserPodBalance = (podAddress, userAddress) => {
   const query = `
   {
     podPlayer(id: "player-${userAddress.toLowerCase()}_pod-${podAddress.toLowerCase()}"){
@@ -281,20 +283,22 @@ export const getUserPodBalance = async (podAddress) => {
     }
   }
   `;
-  console.log('query',query)
+  console.log("query", query);
 
-  request(
-    "https://api.thegraph.com/subgraphs/name/pooltogether/pooltogether-kovan",
+  return request(
+    "https://api.thegraph.com/subgraphs/name/pooltogether/pooltogether",
     query
   ).then((resp) => {
     console.log(resp, "resp");
-    const balance = new BigNumber(resp.podPlayer.balance) / new BigNumber(10 ** 24);
-    
+    if (!resp.podPlayer) {
+      return "0";
+    }
+    const balance =
+      new BigNumber(resp.podPlayer.balance) / new BigNumber(10 ** 24);
+
     return balance.toString();
   });
 };
-
-
 
 export const createPod = async (podName) => {
   const userAddress = await defaultAddress();
@@ -414,7 +418,7 @@ export const getPodQuery = async (podAddress) => {
   `;
 
   return request(
-    "https://api.thegraph.com/subgraphs/name/pooltogether/pooltogether-kovan",
+    "https://api.thegraph.com/subgraphs/name/pooltogether/pooltogether",
     query
   );
 };

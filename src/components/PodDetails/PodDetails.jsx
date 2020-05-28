@@ -8,15 +8,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { shortenAddress } from "../../utils";
 import ChatButton from "../ChatButton";
-import { StateContext, ActionContext } from "../../hooks";
+import { StateContext } from "../../hooks";
 
-import { depositToPod, defaultAddress, redeemFromPod } from "../../services";
+import { depositToPod, redeemFromPod, getUserPodBalance } from "../../services";
 
 function PodDetails(props) {
   const [depositAmount, setDepositAmount] = React.useState("");
   const [withdrawAmount, setWithdrawAmount] = React.useState("");
+  const [userTickets, setUserTickets] = React.useState("0");
 
-  let address = "0xa7B5B93BF8B322023BDa57e2C86B57f4DDb4F4a1";
   const { walletAddress, currentPod, estimatedPrize } = React.useContext(
     StateContext
   );
@@ -29,6 +29,15 @@ function PodDetails(props) {
   const actionWithdrawPod = async () => {
     console.log("address", currentPod.address);
     await redeemFromPod(withdrawAmount);
+  };
+
+  React.useEffect(() => {
+    getUserTickets();
+  });
+
+  const getUserTickets = async () => {
+    const tickets = await getUserPodBalance(currentPod.address, walletAddress);
+    setUserTickets(tickets);
   };
 
   return (
@@ -117,7 +126,7 @@ function PodDetails(props) {
               <div className="pod-details-stats-item">
                 <div className="pod-details-stats-title">Your Balance</div>
                 <div className="pod-details-stats-value">
-                  50 Tickets
+                  {userTickets} Tickets
                 </div>
               </div>
               <div className="pod-details-stats-item">
