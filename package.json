@@ -1,7 +1,7 @@
 {
   "name": "sample-app",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "3box": "^1.19.0",
     "3box-chatbox-react": "^0.1.11",
