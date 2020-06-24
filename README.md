@@ -16,6 +16,11 @@ PoolTogether Pods are meant for making social realtionships around PoolTogether.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Contributors
+
+- (Manank Patni)[https://github.com/Man-Jain]
+- (Mitrasish Mukherjee)[https://github.com/rekpero]
+
 ## Available Scripts
 
 In the project directory, you can run:
